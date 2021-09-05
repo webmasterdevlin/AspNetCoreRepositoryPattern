@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AspNetCoreRepositoryPattern.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AspNetCoreRepositoryPattern.Models;
@@ -13,31 +14,36 @@ namespace AspNetCoreRepositoryPattern.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TodoController : ControllerBase
+    public class TodosController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
-        //private readonly ITodoRepository _repo;
         private readonly IMapper _mapper;
+        
+        // Database CRUD operations in the controller
+        private readonly ApplicationDbContext _context;
 
-        public TodoController(ApplicationDbContext context, IMapper mapper)
+        // for Repository Pattern
+        private readonly ITodoRepository _repo;
+
+        public TodosController(ApplicationDbContext context, IMapper mapper, ITodoRepository repo)
         {
-            _context = context;
             _mapper = mapper;
+            _context = context;
+            _repo = repo;
         }
 
-        // GET: api/Todo
+        // GET: api/todos
         [HttpGet]
         public async Task<ActionResult> GetTodos()
         {
-            var todos = await _context.Todos.ToListAsync();
-            var todoDtos = _mapper.Map<List<TodoDto>>(todos);
+            var todos = await _repo.GetAllAsync();
+            var todoDtos = _mapper.Map<IEnumerable<TodoDto>>(todos);
 
             return Ok(todoDtos);
         }
 
-        // GET: api/Todo/5
+        // GET: api/todos/5074551d-ebd7-454c-9436-0c363b4e36b3
         [HttpGet("{id}")]
-        public async Task<ActionResult<Todo>> GetTodo(Guid id)
+        public async Task<ActionResult<Todo>> GetTodoById(Guid id)
         {
             var todo = await _context.Todos.FindAsync(id);
 
@@ -49,7 +55,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
             return todo;
         }
 
-        // PUT: api/Todo/5
+        // PUT: api/todos/5074551d-ebd7-454c-9436-0c363b4e36b3
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTodo(Guid id, Todo todo)
@@ -80,7 +86,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
             return NoContent();
         }
 
-        // POST: api/Todo
+        // POST: api/todos
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Todo>> PostTodo(Todo todo)
@@ -88,10 +94,10 @@ namespace AspNetCoreRepositoryPattern.Controllers
             _context.Todos.Add(todo);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetTodo", new { id = todo.Id }, todo);
+            return CreatedAtAction("GetTodos", new { id = todo.Id }, todo);
         }
 
-        // DELETE: api/Todo/5
+        // DELETE: api/todos/5074551d-ebd7-454c-9436-0c363b4e36b3
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTodo(Guid id)
         {

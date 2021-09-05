@@ -1,5 +1,7 @@
 ﻿using System;
+using AspNetCoreRepositoryPattern.Contracts;
 using AspNetCoreRepositoryPattern.Models;
+using AspNetCoreRepositoryPattern.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -27,6 +29,9 @@ namespace AspNetCoreRepositoryPattern
             services.AddDbContext<ApplicationDbContext>((opt) => opt.UseInMemoryDatabase("InMemory"));
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddSwaggerGen();
+            
+            // register your contracts and repositories
+            services.AddScoped<ITodoRepository, TodoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
