@@ -10,6 +10,7 @@ using AspNetCoreRepositoryPattern.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Xunit;
+using FluentAssertions;
 
 namespace Tests
 {
@@ -32,10 +33,16 @@ namespace Tests
             var todos = response.Value as IEnumerable<TodoDto>;
             
             //assert
-            Assert.IsAssignableFrom<ActionResult>(result);
+            Assert.IsAssignableFrom<IActionResult>(result);
             Assert.NotNull(todos);
             Assert.Equal(200, response.StatusCode);
             Assert.Equal(4,todos.Count());
+            
+            /* Fluent Assertions version */
+            result.Should().BeAssignableTo<ActionResult>();
+            todos.Should().NotBeNull();
+            response.StatusCode.Should().Be(200);
+            todos.Count().Should().Be(4);
         }
         
         [Theory]
@@ -61,6 +68,10 @@ namespace Tests
             Assert.Equal(200, response.StatusCode);
             Assert.NotNull(todo);
             
+            /* Fluent Assertions version */
+            result.Should().BeAssignableTo<IActionResult>();
+            response.StatusCode.Should().Be(200);
+            todo.Should().NotBeNull();
             
             //arrange
             var invalidItemGuid = new Guid(invalidGuid);
@@ -76,6 +87,9 @@ namespace Tests
 
             //assert
             Assert.Equal(404, notFoundResponse.StatusCode);
+            
+            /* Fluent Assertions version */
+            notFoundResponse.StatusCode.Should().Be(404);
         }
 
         [Theory]
@@ -98,6 +112,10 @@ namespace Tests
             //assert
             Assert.IsAssignableFrom<IActionResult>(result);
             Assert.Equal(204, response.StatusCode);
+            
+            /* Fluent Assertions version */
+            result.Should().BeAssignableTo<IActionResult>();
+            response.StatusCode.Should().Be(204);
         }
 
         [Fact]
@@ -126,6 +144,10 @@ namespace Tests
             Assert.NotNull(todoDto);
             Assert.IsType<Guid>(todoDto.Id);
             Assert.Equal(200, response.StatusCode);
+            
+            /* Fluent Assertions version */
+            todoDto.Should().NotBeNull();
+            response.StatusCode.Should().Be(200);
         }
 
         [Fact]
@@ -148,6 +170,10 @@ namespace Tests
             //assert
             Assert.IsAssignableFrom<IActionResult>(result);
             Assert.Equal(204, response.StatusCode);
+            
+            /* Fluent Assertions version */
+            result.Should().BeAssignableTo<IActionResult>();
+            response.StatusCode.Should().Be(204);
         }
     }
 }

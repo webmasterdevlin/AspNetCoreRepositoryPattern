@@ -23,7 +23,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
 
         // GET: api/todos
         [HttpGet]
-        public async Task<ActionResult> GetTodos()
+        public async Task<IActionResult> GetTodos()
         {
             var todos = await _repo.GetAllAsync();
             var response = Ok(todos);

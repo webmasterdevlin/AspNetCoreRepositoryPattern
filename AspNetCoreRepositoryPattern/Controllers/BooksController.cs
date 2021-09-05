@@ -13,8 +13,8 @@ using Microsoft.AspNetCore.Http;
 namespace AspNetCoreRepositoryPattern.Controllers
 {
     /*
-     * This is KIS.
      * Not using repository pattern.
+     * Not testable.
      */
     [Route("api/[controller]")]
     [ApiController]

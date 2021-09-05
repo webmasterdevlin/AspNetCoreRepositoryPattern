@@ -1,5 +1,6 @@
 ﻿### Repository Pattern in ASP.NET Core
 
+- Check first the installed Nuget packages in the csproj file of the projects inside the solution
 - Delete WeatherForecast model and controller
 - Create entities
 - Create dtos
@@ -17,6 +18,8 @@
 - Add Serilog Nuget packages
 - Configure Serilog in the Program.cs
 - Create a global exception handler in Startup.cs
-- Add Test project and xunit packages
+- Add Test project
+- Add xunit packages
+- Add Fluent Assertions package
 - Add test C# file for each controller
 - Add test for each HTTP method
