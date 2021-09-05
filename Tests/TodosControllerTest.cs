@@ -6,6 +6,7 @@ using AspNetCoreRepositoryPattern.Contracts;
 using AspNetCoreRepositoryPattern.Controllers;
 using AspNetCoreRepositoryPattern.Data;
 using AspNetCoreRepositoryPattern.Models.Dtos;
+using AspNetCoreRepositoryPattern.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Xunit;
@@ -28,12 +29,12 @@ namespace Tests
             //act
             var result = controller.GetTodos();
             var actionResult = await result;
-            var okObjectResult = (OkObjectResult)actionResult;
-            var todos = okObjectResult.Value as IEnumerable<TodoDto>;
+            var response = (OkObjectResult)actionResult;
+            var todos = response.Value as IEnumerable<TodoDto>;
             
             //assert
             await Assert.IsType<Task<ActionResult>>(result);
-            Assert.Equal(200, okObjectResult.StatusCode);
+            Assert.Equal(200, response.StatusCode);
             Assert.NotNull(todos);
             Assert.Equal(4,todos.Count());
         }
@@ -54,12 +55,12 @@ namespace Tests
             //act
             var result = controller.GetTodoById(validItemGuid);
             var actionResult = await result;
-            var okObjectResult = (OkObjectResult)actionResult;
-            var todo = okObjectResult.Value as TodoDto;
+            var response = (OkObjectResult)actionResult;
+            var todo = response.Value as TodoDto;
             
             //assert
             await Assert.IsType<Task<IActionResult>>(result);
-            Assert.Equal(200, okObjectResult.StatusCode);
+            Assert.Equal(200, response.StatusCode);
             Assert.NotNull(todo);
             
             
@@ -74,10 +75,10 @@ namespace Tests
             //act
             var invalidResult = controller.GetTodoById(invalidItemGuid);
             var invalidActionResult = await invalidResult;
-            var notFoundResult = (NotFoundResult)invalidActionResult;
+            var notFoundResponse = (NotFoundResult)invalidActionResult;
 
             //assert
-            Assert.Equal(404, notFoundResult.StatusCode);
+            Assert.Equal(404, notFoundResponse.StatusCode);
         }
 
         [Theory]
@@ -91,22 +92,38 @@ namespace Tests
                     .GetAllAsync())
                 .Returns(Task.FromResult(mockTodoDtos));
             var controller = new TodosController(mockRepo.Object);
-            var validItemGuid = new Guid(validGuid);
+            var validTodoGuid = new Guid(validGuid);
             
             //act
-            var result = controller.DeleteTodo(validItemGuid);
+            var result = controller.DeleteTodo(validTodoGuid);
             var actionResult = await result;
             
-            var okObjectResult = (NoContentResult)actionResult;
+            var response = (NoContentResult)actionResult;
             
             //assert
             await Assert.IsType<Task<IActionResult>>(result);
-            Assert.Equal(204, okObjectResult.StatusCode);
+            Assert.Equal(204, response.StatusCode);
         }
 
+        [Fact]
         public async Task PostTodoTest()
         {
+            //arrange
+            var mockRepo = new Mock<ITodoRepository>();
+            var controller = new TodosController(mockRepo.Object);
+            var newValidTodo = new Todo
+            { 
+                Name = "Booking",
+                Done = false
+            };
+
+            //act
+            var actionResult =  controller.PostTodo(newValidTodo);
+            var response = await actionResult;
             
+            //assert
+            Assert.NotNull(response.Value);
+            Assert.IsType<Guid>(response.Value.Id);
         }
 
         public async Task PutTodoTest()

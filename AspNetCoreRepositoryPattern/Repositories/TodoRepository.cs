@@ -28,6 +28,13 @@ namespace AspNetCoreRepositoryPattern.Repositories
             
             return todoDtos;
         }
+        
+        public async Task<TodoDto> GetByIdAsync(Guid id)
+        {
+            var todo = await _context.Todos.FindAsync(id);
+            var todoDto = _mapper.Map<TodoDto>(todo);
+            return todoDto;
+        }
 
         public async Task<TodoDto> CreateAsync(Todo todo)
         {
@@ -49,13 +56,6 @@ namespace AspNetCoreRepositoryPattern.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<TodoDto> GetByIdAsync(Guid id)
-        {
-            var todo = await _context.Todos.FindAsync(id);
-            var todoDto = _mapper.Map<TodoDto>(todo);
-            return todoDto;
-        }
-
         public async Task<TodoDto> UpdateAsync(Todo todo)
         {
             var exists = await ExistsAsync(todo.Id);
@@ -67,7 +67,7 @@ namespace AspNetCoreRepositoryPattern.Repositories
             var todoDto = _mapper.Map<TodoDto>(todo);
             return todoDto;
         }
-        
+
         public async Task<bool> ExistsAsync(Guid id)
         {
             return await _context.Todos.AnyAsync(t => t.Id == id);
