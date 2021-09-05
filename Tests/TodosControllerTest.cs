@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using AspNetCoreRepositoryPattern.Contracts;
 using AspNetCoreRepositoryPattern.Controllers;
 using AspNetCoreRepositoryPattern.Data;
@@ -16,18 +18,21 @@ namespace Tests
         {
             //arrange
             var mockRepo = new Mock<ITodoRepository>();
-            mockRepo.Setup(repository => repository.GetAll()).Returns(MockData.GetAll());
+            mockRepo.Setup(repository => repository.GetAllAsync()).Returns(Task.FromResult(MockData.GetAll()));
 
             var controller = new TodosController(mockRepo.Object);
 
             //act
             var result = controller.GetTodos();
-
+            var okObjectResult = (OkObjectResult)result;
+            var statusCode = okObjectResult.StatusCode;
+            var todos = okObjectResult.Value as Task<IEnumerable<TodoDto>>;
+            
             //assert
-            var okObjectResult = Assert.IsType<OkObjectResult>(result);
-            var viewResultTodos = Assert.IsAssignableFrom<List<TodoDto>>(okObjectResult.Value);
-            Assert.Equal(4, viewResultTodos.Count);
+            Assert.IsType<OkObjectResult>(result);
+            Assert.Equal(200, statusCode);
+            Assert.NotNull(okObjectResult.Value);
+            Assert.Equal(4,todos?.Result.Count() );
         }
-        
     }
 }

@@ -1,14 +1,9 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using AspNetCoreRepositoryPattern.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using AspNetCoreRepositoryPattern.Models;
 using AspNetCoreRepositoryPattern.Models.Entities;
-using AutoMapper;
-using AspNetCoreRepositoryPattern.Models.Dtos;
 
 namespace AspNetCoreRepositoryPattern.Controllers
 {
@@ -27,7 +22,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
         [HttpGet]
         public ActionResult GetTodos()
         {
-            var todos =  _repo.GetAll();
+            var todos = _repo.GetAllAsync();
             
             return Ok(todos);
         }

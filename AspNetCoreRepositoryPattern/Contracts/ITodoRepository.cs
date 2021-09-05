@@ -9,7 +9,7 @@ namespace AspNetCoreRepositoryPattern.Contracts
     public interface ITodoRepository
     {
         Task<bool> ExistsAsync(Guid id);
-        IEnumerable<TodoDto> GetAll();
+        Task<IEnumerable<TodoDto>> GetAllAsync();
         Task<Todo> GetByIdAsync(Guid id);
         Task<Todo> CreateAsync(Todo todo);
         Task<Todo> UpdateAsync(Todo todo);

@@ -162,3 +162,147 @@ System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport
 09/05/2021 14:20:22 +02:00 Connection id ""0HMBGCU3V4SJL"" completed keep alive response.
 09/05/2021 14:20:22 +02:00 '"TodoDbContext"' disposed.
 09/05/2021 14:20:22 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/todos - - - 200 - application/json;+charset=utf-8 708.8744ms
+09/05/2021 17:05:58 +02:00 Application Starting
+09/05/2021 17:05:59 +02:00 Hosting starting
+09/05/2021 17:19:56 +02:00 Application Starting
+09/05/2021 17:19:57 +02:00 Hosting starting
+09/05/2021 17:19:58 +02:00 Using development certificate: "CN=localhost" (Thumbprint: "934C1C799881051C493CF11929A5E48FD8AE34B0")
+09/05/2021 17:19:58 +02:00 Now listening on: "https://localhost:5001"
+09/05/2021 17:19:58 +02:00 Now listening on: "http://localhost:5000"
+09/05/2021 17:19:58 +02:00 Loaded hosting startup assembly "AspNetCoreRepositoryPattern"
+09/05/2021 17:19:58 +02:00 Application started. Press Ctrl+C to shut down.
+09/05/2021 17:19:58 +02:00 Hosting environment: "Development"
+09/05/2021 17:19:58 +02:00 Content root path: "/Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern"
+09/05/2021 17:19:58 +02:00 Hosting started
+09/05/2021 17:19:58 +02:00 Connection id ""0HMBGG2FQ5GG1"" received FIN.
+09/05/2021 17:19:58 +02:00 Connection id ""0HMBGG2FQ5GG1"" accepted.
+09/05/2021 17:19:58 +02:00 Connection id ""0HMBGG2FQ5GG1"" started.
+09/05/2021 17:19:58 +02:00 Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+09/05/2021 17:19:58 +02:00 Connection id ""0HMBGG2FQ5GG1"" stopped.
+09/05/2021 17:19:58 +02:00 Connection id ""0HMBGG2FQ5GG1"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+09/05/2021 17:19:58 +02:00 Connection id ""0HMBGG2FQ5GG2"" accepted.
+09/05/2021 17:19:58 +02:00 Connection id ""0HMBGG2FQ5GG2"" started.
+09/05/2021 17:19:58 +02:00 Connection id ""0HMBGG2FQ5GG3"" accepted.
+09/05/2021 17:19:58 +02:00 Connection id ""0HMBGG2FQ5GG3"" started.
+09/05/2021 17:19:59 +02:00 Connection ""0HMBGG2FQ5GG3"" established using the following protocol: Tls12
+09/05/2021 17:19:59 +02:00 Connection ""0HMBGG2FQ5GG2"" established using the following protocol: Tls12
+09/05/2021 17:19:59 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/todos - -
+09/05/2021 17:19:59 +02:00 Wildcard detected, all requests with hosts will be allowed.
+09/05/2021 17:19:59 +02:00 The request path "" does not match the path filter
+09/05/2021 17:19:59 +02:00 1 candidate(s) found for the request path '"/api/todos"'
+09/05/2021 17:19:59 +02:00 Endpoint '"AspNetCoreRepositoryPattern.Controllers.TodosController.GetTodos (AspNetCoreRepositoryPattern)"' with route pattern '"api/Todos"' is valid for the request path '"/api/todos"'
+09/05/2021 17:19:59 +02:00 Request matched endpoint '"AspNetCoreRepositoryPattern.Controllers.TodosController.GetTodos (AspNetCoreRepositoryPattern)"'
+09/05/2021 17:19:59 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.TodosController.GetTodos (AspNetCoreRepositoryPattern)"'
+09/05/2021 17:19:59 +02:00 Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+09/05/2021 17:19:59 +02:00 Route matched with "{action = \"GetTodos\", controller = \"Todos\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult GetTodos()" on controller "AspNetCoreRepositoryPattern.Controllers.TodosController" ("AspNetCoreRepositoryPattern").
+09/05/2021 17:19:59 +02:00 Execution plan of "authorization" filters (in the following order): ["None"]
+09/05/2021 17:19:59 +02:00 Execution plan of "resource" filters (in the following order): ["None"]
+09/05/2021 17:19:59 +02:00 Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+09/05/2021 17:19:59 +02:00 Execution plan of "exception" filters (in the following order): ["None"]
+09/05/2021 17:19:59 +02:00 Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+09/05/2021 17:19:59 +02:00 Executing controller factory for controller "AspNetCoreRepositoryPattern.Controllers.TodosController" ("AspNetCoreRepositoryPattern")
+09/05/2021 17:19:59 +02:00 An 'IServiceProvider' was created for internal use by Entity Framework.
+09/05/2021 17:19:59 +02:00 Executed controller factory for controller "AspNetCoreRepositoryPattern.Controllers.TodosController" ("AspNetCoreRepositoryPattern")
+09/05/2021 17:19:59 +02:00 Entity Framework Core "5.0.9" initialized '"TodoDbContext"' using provider '"Microsoft.EntityFrameworkCore.InMemory"' with options: "StoreName=InMemory "
+09/05/2021 17:19:59 +02:00 Compiling query expression: "
+"'"DbSet<Todo>()"'
+09/05/2021 17:19:59 +02:00 Generated query execution expression: "
+"'"queryContext => new QueryingEnumerable<Todo>(
+    queryContext, 
+    InMemoryShapedQueryCompilingExpressionVisitor.Table(
+        queryContext: queryContext, 
+        entityType: EntityType: Todo)
+        .Select(valueBuffer => new ValueBuffer(new object[]
+        { 
+            (object)ExpressionExtensions.ValueBufferTryReadValue<Guid>(
+                valueBuffer: valueBuffer, 
+                index: 0, 
+                property: Property: Todo.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
+            (object)ExpressionExtensions.ValueBufferTryReadValue<bool>(
+                valueBuffer: valueBuffer, 
+                index: 1, 
+                property: Property: Todo.Done (bool) Required), 
+            ExpressionExtensions.ValueBufferTryReadValue<string>(
+                valueBuffer: valueBuffer, 
+                index: 2, 
+                property: Property: Todo.Name (string) Required MaxLength(54)) 
+        })), 
+    Func<QueryContext, ValueBuffer, Todo>, 
+    AspNetCoreRepositoryPattern.Models.TodoDbContext, 
+    False
+)"'
+09/05/2021 17:32:24 +02:00 Application Starting
+09/05/2021 17:32:25 +02:00 Hosting starting
+09/05/2021 17:32:26 +02:00 Using development certificate: "CN=localhost" (Thumbprint: "934C1C799881051C493CF11929A5E48FD8AE34B0")
+09/05/2021 17:32:26 +02:00 Now listening on: "https://localhost:5001"
+09/05/2021 17:32:26 +02:00 Now listening on: "http://localhost:5000"
+09/05/2021 17:32:26 +02:00 Loaded hosting startup assembly "AspNetCoreRepositoryPattern"
+09/05/2021 17:32:26 +02:00 Application started. Press Ctrl+C to shut down.
+09/05/2021 17:32:26 +02:00 Hosting environment: "Development"
+09/05/2021 17:32:26 +02:00 Content root path: "/Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern"
+09/05/2021 17:32:26 +02:00 Hosting started
+09/05/2021 17:32:26 +02:00 Connection id ""0HMBGG9ELA9DT"" received FIN.
+09/05/2021 17:32:26 +02:00 Connection id ""0HMBGG9ELA9DT"" accepted.
+09/05/2021 17:32:26 +02:00 Connection id ""0HMBGG9ELA9DT"" started.
+09/05/2021 17:32:26 +02:00 Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+09/05/2021 17:32:26 +02:00 Connection id ""0HMBGG9ELA9DT"" stopped.
+09/05/2021 17:32:26 +02:00 Connection id ""0HMBGG9ELA9DT"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+09/05/2021 17:32:26 +02:00 Connection id ""0HMBGG9ELA9DU"" accepted.
+09/05/2021 17:32:26 +02:00 Connection id ""0HMBGG9ELA9DU"" started.
+09/05/2021 17:32:26 +02:00 Connection id ""0HMBGG9ELA9DV"" accepted.
+09/05/2021 17:32:26 +02:00 Connection id ""0HMBGG9ELA9DV"" started.
+09/05/2021 17:32:26 +02:00 Connection ""0HMBGG9ELA9DV"" established using the following protocol: Tls12
+09/05/2021 17:32:26 +02:00 Connection ""0HMBGG9ELA9DU"" established using the following protocol: Tls12
+09/05/2021 17:32:26 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/todos - -
+09/05/2021 17:32:26 +02:00 Wildcard detected, all requests with hosts will be allowed.
+09/05/2021 17:32:26 +02:00 The request path "" does not match the path filter
+09/05/2021 17:32:26 +02:00 1 candidate(s) found for the request path '"/api/todos"'
+09/05/2021 17:32:26 +02:00 Endpoint '"AspNetCoreRepositoryPattern.Controllers.TodosController.GetTodos (AspNetCoreRepositoryPattern)"' with route pattern '"api/Todos"' is valid for the request path '"/api/todos"'
+09/05/2021 17:32:26 +02:00 Request matched endpoint '"AspNetCoreRepositoryPattern.Controllers.TodosController.GetTodos (AspNetCoreRepositoryPattern)"'
+09/05/2021 17:32:26 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.TodosController.GetTodos (AspNetCoreRepositoryPattern)"'
+09/05/2021 17:32:26 +02:00 Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+09/05/2021 17:32:26 +02:00 Route matched with "{action = \"GetTodos\", controller = \"Todos\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult GetTodos()" on controller "AspNetCoreRepositoryPattern.Controllers.TodosController" ("AspNetCoreRepositoryPattern").
+09/05/2021 17:32:26 +02:00 Execution plan of "authorization" filters (in the following order): ["None"]
+09/05/2021 17:32:26 +02:00 Execution plan of "resource" filters (in the following order): ["None"]
+09/05/2021 17:32:26 +02:00 Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+09/05/2021 17:32:26 +02:00 Execution plan of "exception" filters (in the following order): ["None"]
+09/05/2021 17:32:26 +02:00 Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+09/05/2021 17:32:26 +02:00 Executing controller factory for controller "AspNetCoreRepositoryPattern.Controllers.TodosController" ("AspNetCoreRepositoryPattern")
+09/05/2021 17:32:27 +02:00 An 'IServiceProvider' was created for internal use by Entity Framework.
+09/05/2021 17:32:27 +02:00 Executed controller factory for controller "AspNetCoreRepositoryPattern.Controllers.TodosController" ("AspNetCoreRepositoryPattern")
+09/05/2021 17:32:27 +02:00 Entity Framework Core "5.0.9" initialized '"TodoDbContext"' using provider '"Microsoft.EntityFrameworkCore.InMemory"' with options: "StoreName=InMemory "
+09/05/2021 17:32:27 +02:00 Compiling query expression: "
+"'"DbSet<Todo>()"'
+09/05/2021 17:32:27 +02:00 Generated query execution expression: "
+"'"queryContext => new QueryingEnumerable<Todo>(
+    queryContext, 
+    InMemoryShapedQueryCompilingExpressionVisitor.Table(
+        queryContext: queryContext, 
+        entityType: EntityType: Todo)
+        .Select(valueBuffer => new ValueBuffer(new object[]
+        { 
+            (object)ExpressionExtensions.ValueBufferTryReadValue<Guid>(
+                valueBuffer: valueBuffer, 
+                index: 0, 
+                property: Property: Todo.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
+            (object)ExpressionExtensions.ValueBufferTryReadValue<bool>(
+                valueBuffer: valueBuffer, 
+                index: 1, 
+                property: Property: Todo.Done (bool) Required), 
+            ExpressionExtensions.ValueBufferTryReadValue<string>(
+                valueBuffer: valueBuffer, 
+                index: 2, 
+                property: Property: Todo.Name (string) Required MaxLength(54)) 
+        })), 
+    Func<QueryContext, ValueBuffer, Todo>, 
+    AspNetCoreRepositoryPattern.Models.TodoDbContext, 
+    False
+)"'

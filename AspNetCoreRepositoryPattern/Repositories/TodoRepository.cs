@@ -20,7 +20,14 @@ namespace AspNetCoreRepositoryPattern.Repositories
             _context = context;
             _mapper = mapper;
         }
-
+        
+        public async Task<IEnumerable<TodoDto>> GetAllAsync()
+        {
+            var todos = await _context.Todos.ToListAsync();
+            var todoDtos = _mapper.Map<IEnumerable<TodoDto>>(todos);
+            
+            return todoDtos;
+        }
 
         public async Task<Todo> CreateAsync(Todo todo)
         {
@@ -43,14 +50,6 @@ namespace AspNetCoreRepositoryPattern.Repositories
             return await _context.Todos.AnyAsync(t => t.Id == id);
         }
 
-        public  IEnumerable<TodoDto> GetAll()
-        {
-            var todos =_context.Todos.ToList();
-            var todoDtos = _mapper.Map<IEnumerable<TodoDto>>(todos);
-            
-            return todoDtos;
-        }
-
         public async Task<Todo> GetByIdAsync(Guid id)
         {
             return await _context.Todos.FindAsync(id);
@@ -60,6 +59,7 @@ namespace AspNetCoreRepositoryPattern.Repositories
         {
             _context.Update(todo);
             await _context.SaveChangesAsync();
+            
             return todo;
         }
     }
