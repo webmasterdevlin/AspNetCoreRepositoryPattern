@@ -26,7 +26,7 @@ namespace AspNetCoreRepositoryPattern
             services.AddAuthorization();
             services.AddControllers();
 
-            services.AddDbContext<TodoDbContext>((opt) => opt.UseInMemoryDatabase("InMemory"));
+            services.AddDbContext<ApplicationDbContext>((opt) => opt.UseInMemoryDatabase("InMemory"));
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddSwaggerGen();
             

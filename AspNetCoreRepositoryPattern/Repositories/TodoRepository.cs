@@ -13,9 +13,9 @@ namespace AspNetCoreRepositoryPattern.Repositories
 {
     public class TodoRepository : ITodoRepository
     {
-        private readonly TodoDbContext _context;
+        private readonly ApplicationDbContext _context;
         private readonly IMapper _mapper;
-        public TodoRepository(TodoDbContext context, IMapper mapper)
+        public TodoRepository(ApplicationDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

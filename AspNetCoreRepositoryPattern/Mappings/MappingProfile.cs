@@ -9,6 +9,7 @@ namespace AspNetCoreRepositoryPattern.Mappings
         public MappingProfile()
         {
             CreateMap<Todo, TodoDto>().ReverseMap();
+            CreateMap<Book, BookDto>().ReverseMap();
         }
     }
 }
