@@ -87,7 +87,7 @@ namespace Tests
             var mockTodoDtos = MockData.GetAllTodos();
             mockRepo.Setup(repository => repository
                     .GetAllAsync())
-                .Returns(Task.FromResult(mockTodoDtos));
+                    .Returns(Task.FromResult(mockTodoDtos));
             var controller = new TodosController(mockRepo.Object);
             var validTodoGuid = new Guid(validGuid);
             

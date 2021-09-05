@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Net;
 using AspNetCoreRepositoryPattern.Contracts;
 using AspNetCoreRepositoryPattern.Models;
 using AspNetCoreRepositoryPattern.Repositories;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,11 +29,16 @@ namespace AspNetCoreRepositoryPattern
             services.AddAuthorization();
             services.AddControllers();
 
+            /* EF Core DbContext */
             services.AddDbContext<ApplicationDbContext>((opt) => opt.UseInMemoryDatabase("InMemory"));
+            
+            /* AutoMapper for mapping Entities to Dtos */
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            
+            /* For Open API documentation */
             services.AddSwaggerGen();
             
-            // register your contracts and repositories
+            /* register your contracts and repositories */
             services.AddScoped<ITodoRepository, TodoRepository>();
         }
 
@@ -44,11 +52,13 @@ namespace AspNetCoreRepositoryPattern
 
             app.UseHttpsRedirection();
 
-            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            /* Enable middleware to serve generated Swagger as a JSON endpoint. */
             app.UseSwagger();
 
-            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
-            // specifying the Swagger JSON endpoint.
+            /*
+            * Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
+            * specifying the Swagger JSON endpoint.
+            */
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
@@ -57,7 +67,26 @@ namespace AspNetCoreRepositoryPattern
             app.UseRouting();
 
             app.UseAuthorization();
-
+            
+            /* Basic Global Exception Handler*/
+            app.UseExceptionHandler(
+                options =>
+                {
+                    options.Run(
+                        async context =>
+                        {
+                            context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                            context.Response.ContentType = "text/html";
+                            var exceptionObject = context.Features.Get<IExceptionHandlerFeature>();
+                            if (null != exceptionObject)
+                            {
+                                var errorMessage = $"{exceptionObject.Error.Message}";
+                                await context.Response.WriteAsync(errorMessage).ConfigureAwait(false);
+                            }
+                        });
+                }
+            );
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

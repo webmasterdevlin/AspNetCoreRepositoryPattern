@@ -7,6 +7,9 @@ using AspNetCoreRepositoryPattern.Models.Entities;
 
 namespace AspNetCoreRepositoryPattern.Controllers
 {
+    /*
+     * Using repository pattern.
+     */
     [Route("api/[controller]")]
     [ApiController]
     public class TodosController : ControllerBase

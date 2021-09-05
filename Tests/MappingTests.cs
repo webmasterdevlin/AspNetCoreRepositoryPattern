@@ -36,7 +36,7 @@ namespace Tests
         public void ShouldSupportMappingFromSourceToDestination(Type source, Type destination)
         {
             var instance = Activator.CreateInstance(source);
-
+            
             _mapper.Map(instance, source, destination);
         }
     }

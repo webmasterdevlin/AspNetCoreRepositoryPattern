@@ -1,5 +1,6 @@
 ﻿### Repository Pattern in ASP.NET Core
 
+- Delete WeatherForecast model and controller
 - Create entities
 - Create dtos
 - Add Automapper package
@@ -15,4 +16,7 @@
 - Configure Swagger UI in the Startup.cs
 - Add Serilog Nuget packages
 - Configure Serilog in the Program.cs
+- Create a global exception handler in Startup.cs
 - Add Test project and xunit packages
+- Add test C# file for each controller
+- Add test for each HTTP method

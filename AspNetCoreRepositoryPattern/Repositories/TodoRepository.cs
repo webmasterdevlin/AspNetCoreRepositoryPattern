@@ -23,54 +23,86 @@ namespace AspNetCoreRepositoryPattern.Repositories
         
         public async Task<IEnumerable<TodoDto>> GetAllAsync()
         {
-            var todos = await _context.Todos.ToListAsync();
-            var todoDtos = _mapper.Map<IEnumerable<TodoDto>>(todos);
+            try
+            {
+                var todos = await _context.Todos.ToListAsync();
+                var todoDtos = _mapper.Map<IEnumerable<TodoDto>>(todos);
             
-            return todoDtos;
+                return todoDtos;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
         
         public async Task<TodoDto> GetByIdAsync(Guid id)
         {
-            var todo = await _context.Todos.FindAsync(id);
-            var todoDto = _mapper.Map<TodoDto>(todo);
-            return todoDto;
+            try
+            {
+                var todo = await _context.Todos.FindAsync(id);
+                var todoDto = _mapper.Map<TodoDto>(todo);
+                return todoDto;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
 
         public async Task<TodoDto> CreateAsync(Todo todo)
         {
-            todo.Id = Guid.NewGuid();
-            _context.Todos.Add(todo);
+            try
+            {
+                todo.Id = Guid.NewGuid();
+                _context.Todos.Add(todo);
 
-            await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
 
-            var todoDto = _mapper.Map<TodoDto>(todo);
-            return todoDto;
+                var todoDto = _mapper.Map<TodoDto>(todo);
+                return todoDto;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
 
         public async Task DeleteAsync(Guid id)
         {
-            var exists = await ExistsAsync(id);
-            if (!exists) throw new Exception("Not Found");
+            try
+            {
+                var exists = await ExistsAsync(id);
+                if (!exists) throw new Exception("Not Found");
             
-            _context.Remove(await _context.Todos.FindAsync(id));
-            await _context.SaveChangesAsync();
+                _context.Remove(await _context.Todos.FindAsync(id));
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
 
         public async Task<TodoDto> UpdateAsync(TodoDto todo)
         {
-            var exists = await ExistsAsync(todo.Id);
+            try
+            {
+                var exists = await ExistsAsync(todo.Id);
 
-            if (!exists) throw new Exception("Not Found");
+                if (!exists) throw new Exception("Not Found");
 
-            _context.Update(todo);
-            await _context.SaveChangesAsync();
-            var todoDto = _mapper.Map<TodoDto>(todo);
-            return todoDto;
+                _context.Update(todo);
+                await _context.SaveChangesAsync();
+                var todoDto = _mapper.Map<TodoDto>(todo);
+                return todoDto;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
 
-        public async Task<bool> ExistsAsync(Guid id)
-        {
-            return await _context.Todos.AnyAsync(t => t.Id == id);
-        }
+        public async Task<bool> ExistsAsync(Guid id) => await _context.Todos.AnyAsync(t => t.Id == id);
     }
 }
