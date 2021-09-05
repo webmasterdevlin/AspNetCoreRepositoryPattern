@@ -20,25 +20,26 @@ namespace AspNetCoreRepositoryPattern.Controllers
 
         // GET: api/todos
         [HttpGet]
-        public ActionResult GetTodos()
+        public async Task<ActionResult> GetTodos()
         {
-            var todos = _repo.GetAllAsync();
+            var todos = await _repo.GetAllAsync();
+            var response = Ok(todos);
             
-            return Ok(todos);
+            return response;
         }
 
         // GET: api/todos/5074551d-ebd7-454c-9436-0c363b4e36b3
         [HttpGet("{id}")]
-        public async Task<ActionResult<Todo>> GetTodoById(Guid id)
+        public async Task<IActionResult> GetTodoById(Guid id)
         {
             var todo = await _repo.GetByIdAsync(id);
 
             if (todo == null)
-            {
                 return NotFound();
-            }
-
-            return todo;
+            
+            var response = Ok(todo);
+            
+            return response;
         }
 
         // PUT: api/todos/5074551d-ebd7-454c-9436-0c363b4e36b3
@@ -46,10 +47,8 @@ namespace AspNetCoreRepositoryPattern.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTodo(Guid id, Todo todo)
         {
-            if (id != todo.Id)
-            {
+            if (id != todo.Id) 
                 return BadRequest();
-            }
 
             try
             {
@@ -59,13 +58,9 @@ namespace AspNetCoreRepositoryPattern.Controllers
             {
                 var exists = await TodoExists(id);
                 if (!exists)
-                {
                     return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+
+                throw;
             }
 
             return NoContent();
@@ -87,10 +82,8 @@ namespace AspNetCoreRepositoryPattern.Controllers
         {
             var todo = await _repo.GetByIdAsync(id);
             if (todo == null)
-            {
                 return NotFound();
-            }
-
+            
             await _repo.DeleteAsync(todo.Id);
 
             return NoContent();

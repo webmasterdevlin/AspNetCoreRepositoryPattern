@@ -10,9 +10,9 @@ namespace AspNetCoreRepositoryPattern.Contracts
     {
         Task<bool> ExistsAsync(Guid id);
         Task<IEnumerable<TodoDto>> GetAllAsync();
-        Task<Todo> GetByIdAsync(Guid id);
-        Task<Todo> CreateAsync(Todo todo);
-        Task<Todo> UpdateAsync(Todo todo);
+        Task<TodoDto> GetByIdAsync(Guid id);
+        Task<TodoDto> CreateAsync(Todo todo);
+        Task<TodoDto> UpdateAsync(Todo todo);
         Task DeleteAsync(Guid id);
     }
 }
