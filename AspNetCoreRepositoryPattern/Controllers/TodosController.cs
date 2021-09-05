@@ -16,36 +16,27 @@ namespace AspNetCoreRepositoryPattern.Controllers
     [ApiController]
     public class TodosController : ControllerBase
     {
-        private readonly IMapper _mapper;
-        
-        // Database CRUD operations in the controller
-        private readonly TodoDbContext _context;
-
-        // for Repository Pattern
         private readonly ITodoRepository _repo;
 
-        public TodosController(TodoDbContext context, IMapper mapper, ITodoRepository repo)
+        public TodosController(ITodoRepository repo)
         {
-            _mapper = mapper;
-            _context = context;
             _repo = repo;
         }
 
         // GET: api/todos
         [HttpGet]
-        public async Task<ActionResult> GetTodos()
+        public ActionResult GetTodos()
         {
-            var todos = await _repo.GetAllAsync();
-            var todoDtos = _mapper.Map<IEnumerable<TodoDto>>(todos);
-
-            return Ok(todoDtos);
+            var todos =  _repo.GetAll();
+            
+            return Ok(todos);
         }
 
         // GET: api/todos/5074551d-ebd7-454c-9436-0c363b4e36b3
         [HttpGet("{id}")]
         public async Task<ActionResult<Todo>> GetTodoById(Guid id)
         {
-            var todo = await _context.Todos.FindAsync(id);
+            var todo = await _repo.GetByIdAsync(id);
 
             if (todo == null)
             {
@@ -65,15 +56,14 @@ namespace AspNetCoreRepositoryPattern.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(todo).State = EntityState.Modified;
-
             try
             {
-                await _context.SaveChangesAsync();
+                await _repo.UpdateAsync(todo);
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TodoExists(id))
+                var exists = await TodoExists(id);
+                if (!exists)
                 {
                     return NotFound();
                 }
@@ -91,8 +81,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
         [HttpPost]
         public async Task<ActionResult<Todo>> PostTodo(Todo todo)
         {
-            _context.Todos.Add(todo);
-            await _context.SaveChangesAsync();
+            await _repo.CreateAsync(todo);
 
             return CreatedAtAction("GetTodos", new { id = todo.Id }, todo);
         }
@@ -101,21 +90,20 @@ namespace AspNetCoreRepositoryPattern.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTodo(Guid id)
         {
-            var todo = await _context.Todos.FindAsync(id);
+            var todo = await _repo.GetByIdAsync(id);
             if (todo == null)
             {
                 return NotFound();
             }
 
-            _context.Todos.Remove(todo);
-            await _context.SaveChangesAsync();
+            await _repo.DeleteAsync(todo.Id);
 
             return NoContent();
         }
 
-        private bool TodoExists(Guid id)
+        private async Task<bool> TodoExists(Guid id)
         {
-            return _context.Todos.Any(e => e.Id == id);
+            return await _repo.ExistsAsync(id);
         }
     }
 }

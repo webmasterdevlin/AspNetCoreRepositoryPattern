@@ -15,3 +15,4 @@
 - Configure Swagger UI in the Startup.cs
 - Add Serilog Nuget packages
 - Configure Serilog in the Program.cs
+- Add Test project and xunit packages

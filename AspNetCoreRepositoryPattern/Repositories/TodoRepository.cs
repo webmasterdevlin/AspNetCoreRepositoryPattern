@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AspNetCoreRepositoryPattern.Contracts;
 using AspNetCoreRepositoryPattern.Models;
+using AspNetCoreRepositoryPattern.Models.Dtos;
 using AspNetCoreRepositoryPattern.Models.Entities;
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 
 namespace AspNetCoreRepositoryPattern.Repositories
@@ -11,10 +14,11 @@ namespace AspNetCoreRepositoryPattern.Repositories
     public class TodoRepository : ITodoRepository
     {
         private readonly TodoDbContext _context;
-
-        public TodoRepository(TodoDbContext context)
+        private readonly IMapper _mapper;
+        public TodoRepository(TodoDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
 
@@ -39,9 +43,12 @@ namespace AspNetCoreRepositoryPattern.Repositories
             return await _context.Todos.AnyAsync(t => t.Id == id);
         }
 
-        public async Task<IEnumerable<Todo>> GetAllAsync()
+        public  IEnumerable<TodoDto> GetAll()
         {
-            return await _context.Todos.ToListAsync();
+            var todos =_context.Todos.ToList();
+            var todoDtos = _mapper.Map<IEnumerable<TodoDto>>(todos);
+            
+            return todoDtos;
         }
 
         public async Task<Todo> GetByIdAsync(Guid id)
