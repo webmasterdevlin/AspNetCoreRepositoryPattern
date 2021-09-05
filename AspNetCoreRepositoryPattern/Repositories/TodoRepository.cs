@@ -10,9 +10,9 @@ namespace AspNetCoreRepositoryPattern.Repositories
 {
     public class TodoRepository : ITodoRepository
     {
-        private readonly ApplicationDbContext _context;
+        private readonly TodoDbContext _context;
 
-        public TodoRepository(ApplicationDbContext context)
+        public TodoRepository(TodoDbContext context)
         {
             _context = context;
         }

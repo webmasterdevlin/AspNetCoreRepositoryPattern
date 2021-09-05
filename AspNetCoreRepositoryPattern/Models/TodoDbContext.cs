@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AspNetCoreRepositoryPattern.Models
 {
-    public class ApplicationDbContext : DbContext
+    public class TodoDbContext : DbContext
     {
         public DbSet<Todo> Todos { get; set; }
 
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        public TodoDbContext(DbContextOptions<TodoDbContext> options) : base(options)
         {
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -19,12 +19,12 @@ namespace AspNetCoreRepositoryPattern.Controllers
         private readonly IMapper _mapper;
         
         // Database CRUD operations in the controller
-        private readonly ApplicationDbContext _context;
+        private readonly TodoDbContext _context;
 
         // for Repository Pattern
         private readonly ITodoRepository _repo;
 
-        public TodosController(ApplicationDbContext context, IMapper mapper, ITodoRepository repo)
+        public TodosController(TodoDbContext context, IMapper mapper, ITodoRepository repo)
         {
             _mapper = mapper;
             _context = context;
