@@ -42,13 +42,11 @@ namespace AspNetCoreRepositoryPattern.Repositories
 
         public async Task DeleteAsync(Guid id)
         {
-            _ = _context.Remove(await _context.Todos.FindAsync(id));
+            var exists = await ExistsAsync(id);
+            if (!exists) throw new Exception("Not Found");
+            
+            _context.Remove(await _context.Todos.FindAsync(id));
             await _context.SaveChangesAsync();
-        }
-
-        public async Task<bool> ExistsAsync(Guid id)
-        {
-            return await _context.Todos.AnyAsync(t => t.Id == id);
         }
 
         public async Task<TodoDto> GetByIdAsync(Guid id)
@@ -60,10 +58,19 @@ namespace AspNetCoreRepositoryPattern.Repositories
 
         public async Task<TodoDto> UpdateAsync(Todo todo)
         {
+            var exists = await ExistsAsync(todo.Id);
+
+            if (!exists) throw new Exception("Not Found");
+
             _context.Update(todo);
             await _context.SaveChangesAsync();
             var todoDto = _mapper.Map<TodoDto>(todo);
             return todoDto;
+        }
+        
+        public async Task<bool> ExistsAsync(Guid id)
+        {
+            return await _context.Todos.AnyAsync(t => t.Id == id);
         }
     }
 }

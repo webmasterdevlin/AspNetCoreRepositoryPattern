@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using AspNetCoreRepositoryPattern.Contracts;
+using AspNetCoreRepositoryPattern.Models.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AspNetCoreRepositoryPattern.Models.Entities;
@@ -41,57 +42,36 @@ namespace AspNetCoreRepositoryPattern.Controllers
             
             return response;
         }
+        
+        // DELETE: api/todos/5074551d-ebd7-454c-9436-0c363b4e36b3
+        [HttpDelete("{id:guid}")]
+        public async Task<IActionResult> DeleteTodo(Guid id)
+        {
+            await _repo.DeleteAsync(id);
+
+            return NoContent();
+        }
+        
+        // POST: api/todos
+        [HttpPost]
+        public async Task<ActionResult<TodoDto>> PostTodo(Todo todo)
+        {
+            var todoDto = await _repo.CreateAsync(todo);
+            var response = Ok(todoDto);
+
+            return response;
+        }
 
         // PUT: api/todos/5074551d-ebd7-454c-9436-0c363b4e36b3
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTodo(Guid id, Todo todo)
         {
             if (id != todo.Id) 
                 return BadRequest();
-
-            try
-            {
-                await _repo.UpdateAsync(todo);
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                var exists = await TodoExists(id);
-                if (!exists)
-                    return NotFound();
-
-                throw;
-            }
-
-            return NoContent();
-        }
-
-        // POST: api/todos
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<Todo>> PostTodo(Todo todo)
-        {
-            await _repo.CreateAsync(todo);
-
-            return CreatedAtAction("GetTodos", new { id = todo.Id }, todo);
-        }
-
-        // DELETE: api/todos/5074551d-ebd7-454c-9436-0c363b4e36b3
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteTodo(Guid id)
-        {
-            var todo = await _repo.GetByIdAsync(id);
-            if (todo == null)
-                return NotFound();
             
-            await _repo.DeleteAsync(todo.Id);
-
+            await _repo.UpdateAsync(todo);
+            
             return NoContent();
-        }
-
-        private async Task<bool> TodoExists(Guid id)
-        {
-            return await _repo.ExistsAsync(id);
         }
     }
 }
