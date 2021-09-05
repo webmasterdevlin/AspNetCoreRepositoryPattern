@@ -20,22 +20,21 @@ namespace Tests
         {
             //arrange
             var mockRepo = new Mock<ITodoRepository>();
-            var mockTodoDtos = MockData.GetAll();
+            var mockTodoDtos = MockData.GetAllTodos();
             mockRepo.Setup(repository => repository
                 .GetAllAsync())
                 .Returns(Task.FromResult(mockTodoDtos));
             var controller = new TodosController(mockRepo.Object);
 
             //act
-            var result = controller.GetTodos();
-            var actionResult = await result;
-            var response = (OkObjectResult)actionResult;
+            var result = await controller.GetTodos();
+            var response = (OkObjectResult)result;
             var todos = response.Value as IEnumerable<TodoDto>;
             
             //assert
-            await Assert.IsType<Task<ActionResult>>(result);
-            Assert.Equal(200, response.StatusCode);
+            Assert.IsAssignableFrom<ActionResult>(result);
             Assert.NotNull(todos);
+            Assert.Equal(200, response.StatusCode);
             Assert.Equal(4,todos.Count());
         }
         
@@ -46,36 +45,34 @@ namespace Tests
             //arrange
             var mockRepo = new Mock<ITodoRepository>();
             var validItemGuid = new Guid(validGuid);
-            var mockTodoDto = MockData.GetAll().FirstOrDefault(t => t.Id == validItemGuid);
+            var mockTodoDto = MockData.GetAllTodos().FirstOrDefault(t => t.Id == validItemGuid);
             mockRepo.Setup(repository => repository
                     .GetByIdAsync(validItemGuid))
                     .Returns(Task.FromResult(mockTodoDto));
             var controller = new TodosController(mockRepo.Object);
             
             //act
-            var result = controller.GetTodoById(validItemGuid);
-            var actionResult = await result;
-            var response = (OkObjectResult)actionResult;
+            var result = await controller.GetTodoById(validItemGuid);
+            var response = (OkObjectResult)result;
             var todo = response.Value as TodoDto;
             
             //assert
-            await Assert.IsType<Task<IActionResult>>(result);
+            Assert.IsAssignableFrom<IActionResult>(result);
             Assert.Equal(200, response.StatusCode);
             Assert.NotNull(todo);
             
             
             //arrange
             var invalidItemGuid = new Guid(invalidGuid);
-            var mockInvalidTodoDto = MockData.GetAll().FirstOrDefault(t => t.Id == invalidItemGuid);
+            var mockInvalidTodoDto = MockData.GetAllTodos().FirstOrDefault(t => t.Id == invalidItemGuid);
             
             mockRepo.Setup(repository => repository
                     .GetByIdAsync(invalidItemGuid))
                     .Returns(Task.FromResult(mockInvalidTodoDto));
                 
             //act
-            var invalidResult = controller.GetTodoById(invalidItemGuid);
-            var invalidActionResult = await invalidResult;
-            var notFoundResponse = (NotFoundResult)invalidActionResult;
+            var invalidResult = await controller.GetTodoById(invalidItemGuid);
+            var notFoundResponse = (NotFoundResult)invalidResult;
 
             //assert
             Assert.Equal(404, notFoundResponse.StatusCode);
@@ -87,7 +84,7 @@ namespace Tests
         {
             //arrange
             var mockRepo = new Mock<ITodoRepository>();
-            var mockTodoDtos = MockData.GetAll();
+            var mockTodoDtos = MockData.GetAllTodos();
             mockRepo.Setup(repository => repository
                     .GetAllAsync())
                 .Returns(Task.FromResult(mockTodoDtos));
@@ -95,13 +92,11 @@ namespace Tests
             var validTodoGuid = new Guid(validGuid);
             
             //act
-            var result = controller.DeleteTodo(validTodoGuid);
-            var actionResult = await result;
-            
-            var response = (NoContentResult)actionResult;
+            var result = await controller.DeleteTodo(validTodoGuid);
+            var response = (NoContentResult)result;
             
             //assert
-            await Assert.IsType<Task<IActionResult>>(result);
+            Assert.IsAssignableFrom<IActionResult>(result);
             Assert.Equal(204, response.StatusCode);
         }
 
@@ -111,24 +106,48 @@ namespace Tests
             //arrange
             var mockRepo = new Mock<ITodoRepository>();
             var controller = new TodosController(mockRepo.Object);
-            var newValidTodo = new Todo
+            var mockTodoDto = MockData.GetOneTodo();
+            var newTodo = new Todo
             { 
-                Name = "Booking",
-                Done = false
+                Name = mockTodoDto.Name,
+                Done = mockTodoDto.Done
             };
+            
+            mockRepo.Setup(repository => repository
+                    .CreateAsync(newTodo))
+                    .Returns(Task.FromResult(mockTodoDto));
 
             //act
-            var actionResult =  controller.PostTodo(newValidTodo);
-            var response = await actionResult;
+            var result = await controller.PostTodo(newTodo);
+            var response = (OkObjectResult)result;
+            var todoDto = response.Value as TodoDto;
             
             //assert
-            Assert.NotNull(response.Value);
-            Assert.IsType<Guid>(response.Value.Id);
+            Assert.NotNull(todoDto);
+            Assert.IsType<Guid>(todoDto.Id);
+            Assert.Equal(200, response.StatusCode);
         }
 
+        [Fact]
         public async Task PutTodoTest()
         {
+            //arrange
+            var mockRepo = new Mock<ITodoRepository>();
+            var controller = new TodosController(mockRepo.Object);
+            var mockTodoDto = MockData.GetOneTodo();
+            mockTodoDto.Done = true;
             
+            mockRepo.Setup(repository => repository
+                    .UpdateAsync(mockTodoDto))
+                    .Returns(Task.FromResult(mockTodoDto));
+            
+            //act
+            var result = await controller.PutTodo(mockTodoDto.Id, mockTodoDto);
+            var response = (NoContentResult)result;
+            
+            //assert
+            Assert.IsAssignableFrom<IActionResult>(result);
+            Assert.Equal(204, response.StatusCode);
         }
     }
 }

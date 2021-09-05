@@ -6,7 +6,7 @@ namespace AspNetCoreRepositoryPattern.Data
 {
     public static class MockData
     {
-        public static IEnumerable<TodoDto>GetAll()
+        public static IEnumerable<TodoDto> GetAllTodos()
         {
             var todoDtos = new List<TodoDto>
             {
@@ -37,6 +37,16 @@ namespace AspNetCoreRepositoryPattern.Data
             };
 
             return todoDtos;
+        }
+        public static TodoDto GetOneTodo()
+        {
+            var todoDto = new TodoDto {  Id= new Guid("45612a92-bab4-4d35-97c8-55f69e49745c"),
+                Name = "Booking",
+                Done = false
+            };
+        
+
+            return todoDto;
         }
     }
 }

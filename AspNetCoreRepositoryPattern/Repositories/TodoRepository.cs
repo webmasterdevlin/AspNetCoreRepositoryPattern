@@ -56,7 +56,7 @@ namespace AspNetCoreRepositoryPattern.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<TodoDto> UpdateAsync(Todo todo)
+        public async Task<TodoDto> UpdateAsync(TodoDto todo)
         {
             var exists = await ExistsAsync(todo.Id);
 
