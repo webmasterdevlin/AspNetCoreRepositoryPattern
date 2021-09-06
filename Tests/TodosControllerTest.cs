@@ -16,16 +16,24 @@ namespace Tests
 {
     public class TodosControllerTest
     {
+        private readonly Mock<ITodoRepository> _mockRepo;
+
+        /* xUnit.net creates a new instance of the test class for every test it contains.
+         This allows you to put the setup code you need in the constructor of this TodosControllerTest class.*/
+        public TodosControllerTest()
+        {
+            _mockRepo = new Mock<ITodoRepository>();
+        }
+        
         [Fact]
         public async Task GetTodosTest()
         {
             //arrange
-            var mockRepo = new Mock<ITodoRepository>();
             var mockTodoDtos = MockData.GetAllTodos();
-            mockRepo.Setup(repository => repository
+            _mockRepo.Setup(repository => repository
                 .GetAllAsync())
                 .Returns(Task.FromResult(mockTodoDtos));
-            var controller = new TodosController(mockRepo.Object);
+            var controller = new TodosController(_mockRepo.Object);
 
             //act
             var result = await controller.GetTodos();
@@ -50,13 +58,12 @@ namespace Tests
         public async Task GetTodoByIdTest(string validGuid, string invalidGuid)
         {
             //arrange
-            var mockRepo = new Mock<ITodoRepository>();
             var validItemGuid = new Guid(validGuid);
             var mockTodoDto = MockData.GetAllTodos().FirstOrDefault(t => t.Id == validItemGuid);
-            mockRepo.Setup(repository => repository
+            _mockRepo.Setup(repository => repository
                     .GetByIdAsync(validItemGuid))
                     .Returns(Task.FromResult(mockTodoDto));
-            var controller = new TodosController(mockRepo.Object);
+            var controller = new TodosController(_mockRepo.Object);
             
             //act
             var result = await controller.GetTodoById(validItemGuid);
@@ -77,9 +84,9 @@ namespace Tests
             var invalidItemGuid = new Guid(invalidGuid);
             var mockInvalidTodoDto = MockData.GetAllTodos().FirstOrDefault(t => t.Id == invalidItemGuid);
             
-            mockRepo.Setup(repository => repository
-                    .GetByIdAsync(invalidItemGuid))
-                    .Returns(Task.FromResult(mockInvalidTodoDto));
+            _mockRepo.Setup(repository => repository
+                     .GetByIdAsync(invalidItemGuid))
+                     .Returns(Task.FromResult(mockInvalidTodoDto));
                 
             //act
             var invalidResult = await controller.GetTodoById(invalidItemGuid);
@@ -97,12 +104,11 @@ namespace Tests
         public async Task DeleteTodoTest(string validGuid)
         {
             //arrange
-            var mockRepo = new Mock<ITodoRepository>();
             var mockTodoDtos = MockData.GetAllTodos();
-            mockRepo.Setup(repository => repository
-                    .GetAllAsync())
-                    .Returns(Task.FromResult(mockTodoDtos));
-            var controller = new TodosController(mockRepo.Object);
+            _mockRepo.Setup(repository => repository
+                     .GetAllAsync())
+                     .Returns(Task.FromResult(mockTodoDtos));
+            var controller = new TodosController(_mockRepo.Object);
             var validTodoGuid = new Guid(validGuid);
             
             //act
@@ -122,8 +128,7 @@ namespace Tests
         public async Task PostTodoTest()
         {
             //arrange
-            var mockRepo = new Mock<ITodoRepository>();
-            var controller = new TodosController(mockRepo.Object);
+            var controller = new TodosController(_mockRepo.Object);
             var mockTodoDto = MockData.GetOneTodo();
             var newTodo = new Todo
             { 
@@ -131,9 +136,9 @@ namespace Tests
                 Done = mockTodoDto.Done
             };
             
-            mockRepo.Setup(repository => repository
-                    .CreateAsync(newTodo))
-                    .Returns(Task.FromResult(mockTodoDto));
+            _mockRepo.Setup(repository => repository
+                     .CreateAsync(newTodo))
+                     .Returns(Task.FromResult(mockTodoDto));
 
             //act
             var result = await controller.PostTodo(newTodo);
@@ -154,14 +159,13 @@ namespace Tests
         public async Task PutTodoTest()
         {
             //arrange
-            var mockRepo = new Mock<ITodoRepository>();
-            var controller = new TodosController(mockRepo.Object);
+            var controller = new TodosController(_mockRepo.Object);
             var mockTodoDto = MockData.GetOneTodo();
             mockTodoDto.Done = true;
             
-            mockRepo.Setup(repository => repository
-                    .UpdateAsync(mockTodoDto))
-                    .Returns(Task.FromResult(mockTodoDto));
+            _mockRepo.Setup(repository => repository
+                     .UpdateAsync(mockTodoDto))
+                     .Returns(Task.FromResult(mockTodoDto));
             
             //act
             var result = await controller.PutTodo(mockTodoDto.Id, mockTodoDto);
