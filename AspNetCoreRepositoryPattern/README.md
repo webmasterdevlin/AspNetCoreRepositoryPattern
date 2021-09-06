@@ -23,3 +23,5 @@
 - Add Fluent Assertions package
 - Add test C# file for each controller
 - Add test for each HTTP method
+- Add Hangfire packages for chron jobs or scheduled jobs or timer jobs
+- Configure Hangfire in the Startup.cs

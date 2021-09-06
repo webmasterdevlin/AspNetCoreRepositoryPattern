@@ -3,6 +3,8 @@ using System.Net;
 using AspNetCoreRepositoryPattern.Contracts;
 using AspNetCoreRepositoryPattern.Models;
 using AspNetCoreRepositoryPattern.Repositories;
+using AspNetCoreRepositoryPattern.Services;
+using Hangfire;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
@@ -37,9 +39,14 @@ namespace AspNetCoreRepositoryPattern
             
             /* For Open API documentation */
             services.AddSwaggerGen();
-            
-            /* register your contracts and repositories */
+
+            /* Hangfire is a timer or chron jobs or scheduled jobs */
+            services.AddHangfire(x => x.UseInMemoryStorage());
+            services.AddHangfireServer();
+
+            /* register your contracts and repositories/services here */
             services.AddScoped<ITodoRepository, TodoRepository>();
+            services.AddScoped<IJobService, JobService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -67,6 +74,9 @@ namespace AspNetCoreRepositoryPattern
             app.UseRouting();
 
             app.UseAuthorization();
+            
+            /* hangfire dashboard */
+            app.UseHangfireDashboard();
             
             /* Basic Global Exception Handler*/
             app.UseExceptionHandler(
