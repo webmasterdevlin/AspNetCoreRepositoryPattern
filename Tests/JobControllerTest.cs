@@ -35,21 +35,40 @@ namespace Tests
         {
             //arrange
             var mockRepo = new Mock<IJobService>();
+            var mockJobClient = new Mock<IBackgroundJobClient>();
+            var mockJobManager = new Mock<IRecurringJobManager>();
             mockRepo.Setup(service => service.RecurringJob()).Verifiable();
+            var controller = new JobController(mockRepo.Object, mockJobClient.Object, mockJobManager.Object);
+            
+            //act
+            var result = controller.CreateRecurringJob();
+            var response = (OkResult)result;
+            
+            //assert
+            Assert.Equal(200, response.StatusCode);
+            
+            /* Fluent Assertions version */
+            response.StatusCode.Should().Be(200);
         }
         [Fact]
         public void DelayedJobTest()
         {
             //arrange
             var mockRepo = new Mock<IJobService>();
+            var mockJobClient = new Mock<IBackgroundJobClient>();
+            var mockJobManager = new Mock<IRecurringJobManager>();
             mockRepo.Setup(service => service.DelayedJob()).Verifiable();
-        }
-        [Fact]
-        public void ContinuationJobTest()
-        {
-            //arrange
-            var mockRepo = new Mock<IJobService>();
-            mockRepo.Setup(service => service.ContinuationJob()).Verifiable();
+            var controller = new JobController(mockRepo.Object, mockJobClient.Object, mockJobManager.Object);
+            
+            //act
+            var result = controller.CreateDelayedJob();
+            var response = (OkResult)result;
+            
+            //assert
+            Assert.Equal(200, response.StatusCode);
+            
+            /* Fluent Assertions version */
+            response.StatusCode.Should().Be(200);
         }
     }
 }
