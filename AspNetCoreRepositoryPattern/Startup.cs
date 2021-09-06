@@ -37,6 +37,9 @@ namespace AspNetCoreRepositoryPattern
             /* AutoMapper for mapping Entities to Dtos */
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             
+            /* CORS */
+            services.AddCors();
+
             /* For Open API documentation */
             services.AddSwaggerGen();
 
@@ -57,6 +60,14 @@ namespace AspNetCoreRepositoryPattern
                 app.UseDeveloperExceptionPage();
             }
 
+            /* CORS Policy */
+            app.UseCors(b =>
+            {
+                b.AllowAnyOrigin();
+                b.AllowAnyHeader();
+                b.AllowAnyMethod();
+            });
+            
             app.UseHttpsRedirection();
 
             /* Enable middleware to serve generated Swagger as a JSON endpoint. */

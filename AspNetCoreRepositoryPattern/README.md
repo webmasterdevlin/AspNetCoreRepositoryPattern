@@ -12,6 +12,7 @@
 - Create repositories (services) (optional)
 - Add Scoped in the Startup.cs for contract and repository
 - Create controller
+- Add and configure CORS Policy in the Startup.cs
 - Add Swashbuckle package
 - Configure Swagger UI in the Startup.cs
 - Edit the launchSettings.json of the Properties folder from weatherforecast to swagger/index.html
