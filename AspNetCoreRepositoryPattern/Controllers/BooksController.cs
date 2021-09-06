@@ -14,7 +14,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
 {
     /*
      * Not using repository pattern.
-     * Not testable.
+     * This is okay if you are not writing any tests because this is not testable.
      */
     [Route("api/[controller]")]
     [ApiController]

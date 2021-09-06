@@ -6,11 +6,11 @@ namespace AspNetCoreRepositoryPattern.Models.Entities
     public class Book
     {
         public Guid Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Author is required")]
         [MinLength(3)]
         [MaxLength(32)]
         public string Author { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Title is required")]
         [MinLength(3)]
         [MaxLength(90)]
         public string Title { get; set; }

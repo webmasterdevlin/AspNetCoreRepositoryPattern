@@ -12,9 +12,9 @@
 - Create repositories (services) (optional)
 - Add Scoped in the Startup.cs for contract and repository
 - Create controller
-- Edit the launchSettings.json of the Properties folder from weatherforecast to api/todos
 - Add Swashbuckle package
 - Configure Swagger UI in the Startup.cs
+- Edit the launchSettings.json of the Properties folder from weatherforecast to swagger/index.html
 - Add Serilog Nuget packages
 - Configure Serilog in the Program.cs
 - Create a global exception handler in Startup.cs
