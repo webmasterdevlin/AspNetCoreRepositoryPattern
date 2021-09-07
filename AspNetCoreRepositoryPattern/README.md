@@ -21,6 +21,8 @@
 - Create a global exception handler in Startup.cs
 - Add Test project
 - Add xunit packages
+- Add reference to the web api project
+- Create a MockData.cs and put it in the Data folder
 - Add Fluent Assertions package
 - Add test C# file for each controller
 - Add test for each HTTP method

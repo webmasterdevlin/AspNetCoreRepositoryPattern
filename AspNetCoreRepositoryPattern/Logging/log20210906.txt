@@ -4122,3 +4122,79 @@ System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport
 09/06/2021 22:17:30 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/favicon-32x32.png - - - 304 - image/png 16.4247ms
 09/06/2021 22:17:30 +02:00 Connection id ""0HMBHEDCPH7KM"" completed keep alive response.
 09/06/2021 22:17:30 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 263.3346ms
+09/06/2021 23:25:06 +02:00 Application Starting
+09/06/2021 23:25:08 +02:00 Hosting starting
+09/06/2021 23:25:08 +02:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+09/06/2021 23:25:08 +02:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+09/06/2021 23:25:08 +02:00 Execution loop BackgroundServerProcess:848fd7a6 has started in 2.446 ms
+09/06/2021 23:25:08 +02:00 Server a06ac142-e57f-46e9-84d5-b1c1c951a3b5 successfully announced in 29.6763 ms
+09/06/2021 23:25:08 +02:00 Execution loop ServerHeartbeatProcess:bd0ca2db has started in 11.382 ms
+09/06/2021 23:25:08 +02:00 Server a06ac142-e57f-46e9-84d5-b1c1c951a3b5 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+09/06/2021 23:25:08 +02:00 Execution loop ServerWatchdog:f29a5d42 has started in 0.1784 ms
+09/06/2021 23:25:08 +02:00 Execution loop ServerJobCancellationWatcher:9c991986 has started in 0.1342 ms
+09/06/2021 23:25:08 +02:00 Execution loop Worker:d72dfc1e has started in 0.3799 ms
+09/06/2021 23:25:08 +02:00 Execution loop Worker:173960e4 has started in 0.4717 ms
+09/06/2021 23:25:08 +02:00 Execution loop Worker:5598353a has started in 0.5855 ms
+09/06/2021 23:25:08 +02:00 Execution loop Worker:21d49228 has started in 0.7047 ms
+09/06/2021 23:25:08 +02:00 Execution loop Worker:e460bd72 has started in 0.8175 ms
+09/06/2021 23:25:08 +02:00 Execution loop Worker:de6305c5 has started in 0.8926 ms
+09/06/2021 23:25:08 +02:00 Execution loop Worker:c961150a has started in 1.0188 ms
+09/06/2021 23:25:08 +02:00 Execution loop Worker:b9c650e6 has started in 1.1137 ms
+09/06/2021 23:25:08 +02:00 Execution loop Worker:2831ff76 has started in 1.239 ms
+09/06/2021 23:25:08 +02:00 Execution loop Worker:504ff451 has started in 1.353 ms
+09/06/2021 23:25:08 +02:00 Execution loop Worker:5081697f has started in 1.4656 ms
+09/06/2021 23:25:08 +02:00 Execution loop Worker:83d17078 has started in 1.6646 ms
+09/06/2021 23:25:08 +02:00 Execution loop Worker:1e0fd4b5 has started in 1.7724 ms
+09/06/2021 23:25:08 +02:00 Execution loop Worker:cc83f875 has started in 1.8809 ms
+09/06/2021 23:25:08 +02:00 Execution loop Worker:9c129b0b has started in 2.0087 ms
+09/06/2021 23:25:08 +02:00 Execution loop Worker:9175c723 has started in 2.1393 ms
+09/06/2021 23:25:08 +02:00 Execution loop Worker:771c6b0f has started in 2.2646 ms
+09/06/2021 23:25:08 +02:00 Execution loop Worker:01d21710 has started in 2.349 ms
+09/06/2021 23:25:08 +02:00 Execution loop Worker:5db8fdd4 has started in 2.5606 ms
+09/06/2021 23:25:08 +02:00 Execution loop Worker:51487171 has started in 2.4597 ms
+09/06/2021 23:25:08 +02:00 Execution loop DelayedJobScheduler:e9e2f7a1 has started in 0.1694 ms
+09/06/2021 23:25:08 +02:00 Server a06ac142-e57f-46e9-84d5-b1c1c951a3b5 all the dispatchers started
+09/06/2021 23:25:08 +02:00 Execution loop RecurringJobScheduler:53123e66 has started in 0.1303 ms
+09/06/2021 23:25:08 +02:00 Using development certificate: "CN=localhost" (Thumbprint: "934C1C799881051C493CF11929A5E48FD8AE34B0")
+09/06/2021 23:25:08 +02:00 Now listening on: "https://localhost:5001"
+09/06/2021 23:25:08 +02:00 Now listening on: "http://localhost:5000"
+09/06/2021 23:25:08 +02:00 Loaded hosting startup assembly "AspNetCoreRepositoryPattern"
+09/06/2021 23:25:08 +02:00 Application started. Press Ctrl+C to shut down.
+09/06/2021 23:25:08 +02:00 Hosting environment: "Development"
+09/06/2021 23:25:08 +02:00 Content root path: "/Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern"
+09/06/2021 23:25:08 +02:00 Hosting started
+09/06/2021 23:25:08 +02:00 Connection id ""0HMBHFJ6Q5CSF"" received FIN.
+09/06/2021 23:25:08 +02:00 Connection id ""0HMBHFJ6Q5CSF"" accepted.
+09/06/2021 23:25:08 +02:00 Connection id ""0HMBHFJ6Q5CSF"" started.
+09/06/2021 23:25:08 +02:00 Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+09/06/2021 23:25:09 +02:00 Connection id ""0HMBHFJ6Q5CSF"" stopped.
+09/06/2021 23:25:09 +02:00 Connection id ""0HMBHFJ6Q5CSF"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+09/06/2021 23:25:09 +02:00 Connection id ""0HMBHFJ6Q5CSG"" accepted.
+09/06/2021 23:25:09 +02:00 Connection id ""0HMBHFJ6Q5CSG"" started.
+09/06/2021 23:25:09 +02:00 Connection id ""0HMBHFJ6Q5CSH"" accepted.
+09/06/2021 23:25:09 +02:00 Connection id ""0HMBHFJ6Q5CSH"" started.
+09/06/2021 23:25:09 +02:00 Connection ""0HMBHFJ6Q5CSH"" established using the following protocol: Tls12
+09/06/2021 23:25:09 +02:00 Connection ""0HMBHFJ6Q5CSG"" established using the following protocol: Tls12
+09/06/2021 23:25:09 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+09/06/2021 23:25:09 +02:00 Wildcard detected, all requests with hosts will be allowed.
+09/06/2021 23:25:09 +02:00 Connection id ""0HMBHFJ6Q5CSH"" completed keep alive response.
+09/06/2021 23:25:09 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 132.1645ms
+09/06/2021 23:25:09 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - -
+09/06/2021 23:25:09 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-bundle.js - -
+09/06/2021 23:25:09 +02:00 Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+09/06/2021 23:25:09 +02:00 Connection id ""0HMBHFJ6Q5CSG"" completed keep alive response.
+09/06/2021 23:25:09 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 58.1044ms
+09/06/2021 23:25:09 +02:00 Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+09/06/2021 23:25:09 +02:00 Connection id ""0HMBHFJ6Q5CSH"" completed keep alive response.
+09/06/2021 23:25:09 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-bundle.js - - - 200 1091362 application/javascript 79.5450ms
+09/06/2021 23:25:09 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/06/2021 23:25:10 +02:00 Connection id ""0HMBHFJ6Q5CSH"" completed keep alive response.
+09/06/2021 23:25:10 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 107.8406ms
