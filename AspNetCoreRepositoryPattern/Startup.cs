@@ -87,7 +87,7 @@ namespace AspNetCoreRepositoryPattern
             app.UseAuthorization();
             
             /* hangfire dashboard */
-            app.UseHangfireDashboard();
+            app.UseHangfireDashboard("/chron-jobs-dashboard");
             
             /* Basic Global Exception Handler*/
             app.UseExceptionHandler(

@@ -13,9 +13,9 @@ namespace AspNetCoreRepositoryPattern.Controllers
         private readonly IBackgroundJobClient _backgroundJobClient;
         private readonly IRecurringJobManager _recurringJobManager;
 
-        public JobController(IJobService jobTestService, IBackgroundJobClient backgroundJobClient, IRecurringJobManager recurringJobManager)
+        public JobController(IJobService jobService, IBackgroundJobClient backgroundJobClient, IRecurringJobManager recurringJobManager)
         {
-            _jobService = jobTestService;
+            _jobService = jobService;
             _backgroundJobClient = backgroundJobClient;
             _recurringJobManager = recurringJobManager;
         }
