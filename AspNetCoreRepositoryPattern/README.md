@@ -8,9 +8,12 @@
 - Configure AutoMapper by creating a mapping
 - Create a class that inherit DbContext
 - Add service of DbContext 
+- Add Connection String for the Database
 - Install or update DotNet CLI below:
 - dotnet tool install --global dotnet-ef 
 - dotnet tool update --global dotnet-ef
+- Go to the terminal and go inside the project to run the EF Core commands
+- Make sure you are not inside the solution folder, but inside the project folder of the Web API
 - Do EF Core migrations below:
 - dotnet ef migrations add initial 
 - dotnet ef database update 
