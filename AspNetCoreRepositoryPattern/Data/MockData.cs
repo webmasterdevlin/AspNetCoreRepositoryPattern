@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using AspNetCoreRepositoryPattern.Models.Dtos;
+using AspNetCoreRepositoryPattern.Models.Entities;
 
 namespace AspNetCoreRepositoryPattern.Data
 {
@@ -38,14 +39,23 @@ namespace AspNetCoreRepositoryPattern.Data
 
             return todoDtos;
         }
-        public static TodoDto GetOneTodo()
+        public static Todo GetOneTodo()
+        {
+            var todo = new Todo {  Id= new Guid("45612a92-bab4-4d35-97c8-55f69e49745c"),
+                Name = "Booking",
+                Done = false
+            };
+            
+            return todo;
+        }
+        
+        public static TodoDto GetOneTodoDto()
         {
             var todoDto = new TodoDto {  Id= new Guid("45612a92-bab4-4d35-97c8-55f69e49745c"),
                 Name = "Booking",
                 Done = false
             };
-        
-
+            
             return todoDto;
         }
     }

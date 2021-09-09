@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using AspNetCoreRepositoryPattern.Contracts;
 using AspNetCoreRepositoryPattern.Models;
@@ -84,7 +83,7 @@ namespace AspNetCoreRepositoryPattern.Repositories
             }
         }
 
-        public async Task<TodoDto> UpdateAsync(TodoDto todo)
+        public async Task<TodoDto> UpdateAsync(Todo todo)
         {
             try
             {

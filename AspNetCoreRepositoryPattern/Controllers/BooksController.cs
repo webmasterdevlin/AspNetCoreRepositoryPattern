@@ -68,7 +68,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
 
         // PUT: api/books/ab2bd817-98cd-4cf3-a80a-53ea0cd9c200
         [HttpPut("{id:guid}")]
-        public async Task<IActionResult> PutBook(Guid id, BookDto book)
+        public async Task<IActionResult> PutBook(Guid id, Book book)
         {
             if (id != book.Id)
                 return BadRequest();

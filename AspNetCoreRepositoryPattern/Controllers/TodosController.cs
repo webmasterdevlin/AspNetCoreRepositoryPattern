@@ -1,7 +1,6 @@
 using System;
 using System.Threading.Tasks;
 using AspNetCoreRepositoryPattern.Contracts;
-using AspNetCoreRepositoryPattern.Models.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using AspNetCoreRepositoryPattern.Models.Entities;
 
@@ -66,7 +65,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
 
         // PUT: api/todos/5074551d-ebd7-454c-9436-0c363b4e36b3
         [HttpPut("{id:guid}")]
-        public async Task<IActionResult> PutTodo(Guid id, TodoDto todo)
+        public async Task<IActionResult> PutTodo(Guid id, Todo todo)
         {
             if (id != todo.Id) 
                 return BadRequest();

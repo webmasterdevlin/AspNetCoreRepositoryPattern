@@ -12,7 +12,7 @@ namespace AspNetCoreRepositoryPattern.Contracts
         Task<IEnumerable<TodoDto>> GetAllAsync();
         Task<TodoDto> GetByIdAsync(Guid id);
         Task<TodoDto> CreateAsync(Todo todo);
-        Task<TodoDto> UpdateAsync(TodoDto todo);
+        Task<TodoDto> UpdateAsync(Todo todo);
         Task DeleteAsync(Guid id);
     }
 }

@@ -129,7 +129,7 @@ namespace Tests
         {
             //arrange
             var controller = new TodosController(_mockRepo.Object);
-            var mockTodoDto = MockData.GetOneTodo();
+            var mockTodoDto = MockData.GetOneTodoDto();
             var newTodo = new Todo
             { 
                 Name = mockTodoDto.Name,
@@ -160,15 +160,16 @@ namespace Tests
         {
             //arrange
             var controller = new TodosController(_mockRepo.Object);
-            var mockTodoDto = MockData.GetOneTodo();
-            mockTodoDto.Done = true;
+            var mockTodo = MockData.GetOneTodo();
+            var mockTodoDto = MockData.GetOneTodoDto();
+            mockTodo.Done = true;
             
             _mockRepo.Setup(repository => repository
-                     .UpdateAsync(mockTodoDto))
+                     .UpdateAsync(mockTodo))
                      .Returns(Task.FromResult(mockTodoDto));
             
             //act
-            var result = await controller.PutTodo(mockTodoDto.Id, mockTodoDto);
+            var result = await controller.PutTodo(mockTodo.Id, mockTodo);
             var response = (NoContentResult)result;
             
             //assert
