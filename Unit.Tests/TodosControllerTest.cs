@@ -12,7 +12,7 @@ using Moq;
 using Xunit;
 using FluentAssertions;
 
-namespace Tests
+namespace Unit.Tests
 {
     public class TodosControllerTest
     {

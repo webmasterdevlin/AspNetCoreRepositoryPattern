@@ -5,7 +5,7 @@ using AspNetCoreRepositoryPattern.Models.Entities;
 using AutoMapper;
 using Xunit;
 
-namespace Tests
+namespace Unit.Tests
 {
     public class MappingTests
     {
