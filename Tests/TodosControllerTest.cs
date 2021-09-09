@@ -17,12 +17,14 @@ namespace Tests
     public class TodosControllerTest
     {
         private readonly Mock<ITodoRepository> _mockRepo;
+        private readonly TodosController _controller;
 
         /* xUnit.net creates a new instance of the test class for every test it contains.
          This allows you to put the setup code you need in the constructor of this TodosControllerTest class.*/
         public TodosControllerTest()
         {
             _mockRepo = new Mock<ITodoRepository>();
+            _controller = new TodosController(_mockRepo.Object);
         }
         
         [Fact]
@@ -33,10 +35,10 @@ namespace Tests
             _mockRepo.Setup(repository => repository
                 .GetAllAsync())
                 .Returns(Task.FromResult(mockTodoDtos));
-            var controller = new TodosController(_mockRepo.Object);
+      
 
             //act
-            var result = await controller.GetTodos();
+            var result = await _controller.GetTodos();
             var response = (OkObjectResult)result;
             var todos = response.Value as IEnumerable<TodoDto>;
             
@@ -63,10 +65,9 @@ namespace Tests
             _mockRepo.Setup(repository => repository
                     .GetByIdAsync(validItemGuid))
                     .Returns(Task.FromResult(mockTodoDto));
-            var controller = new TodosController(_mockRepo.Object);
-            
+
             //act
-            var result = await controller.GetTodoById(validItemGuid);
+            var result = await _controller.GetTodoById(validItemGuid);
             var response = (OkObjectResult)result;
             var todo = response.Value as TodoDto;
             
@@ -89,7 +90,7 @@ namespace Tests
                      .Returns(Task.FromResult(mockInvalidTodoDto));
                 
             //act
-            var invalidResult = await controller.GetTodoById(invalidItemGuid);
+            var invalidResult = await _controller.GetTodoById(invalidItemGuid);
             var notFoundResponse = (NotFoundResult)invalidResult;
 
             //assert
@@ -108,11 +109,10 @@ namespace Tests
             _mockRepo.Setup(repository => repository
                      .GetAllAsync())
                      .Returns(Task.FromResult(mockTodoDtos));
-            var controller = new TodosController(_mockRepo.Object);
             var validTodoGuid = new Guid(validGuid);
             
             //act
-            var result = await controller.DeleteTodo(validTodoGuid);
+            var result = await _controller.DeleteTodo(validTodoGuid);
             var response = (NoContentResult)result;
             
             //assert
@@ -128,7 +128,6 @@ namespace Tests
         public async Task PostTodoTest()
         {
             //arrange
-            var controller = new TodosController(_mockRepo.Object);
             var mockTodoDto = MockData.GetOneTodoDto();
             var newTodo = new Todo
             { 
@@ -141,7 +140,7 @@ namespace Tests
                      .Returns(Task.FromResult(mockTodoDto));
 
             //act
-            var result = await controller.PostTodo(newTodo);
+            var result = await _controller.PostTodo(newTodo);
             var response = (OkObjectResult)result;
             var todoDto = response.Value as TodoDto;
             
@@ -159,7 +158,6 @@ namespace Tests
         public async Task PutTodoTest()
         {
             //arrange
-            var controller = new TodosController(_mockRepo.Object);
             var mockTodo = MockData.GetOneTodo();
             var mockTodoDto = MockData.GetOneTodoDto();
             mockTodo.Done = true;
@@ -169,7 +167,7 @@ namespace Tests
                      .Returns(Task.FromResult(mockTodoDto));
             
             //act
-            var result = await controller.PutTodo(mockTodo.Id, mockTodo);
+            var result = await _controller.PutTodo(mockTodo.Id, mockTodo);
             var response = (NoContentResult)result;
             
             //assert
