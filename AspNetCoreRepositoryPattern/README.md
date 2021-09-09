@@ -7,7 +7,16 @@
 - Add Automapper package
 - Configure AutoMapper by creating a mapping
 - Create a class that inherit DbContext
-- Add service of DbContext
+- Add service of DbContext 
+- Install or update DotNet CLI below:
+- dotnet tool install --global dotnet-ef 
+- dotnet tool update --global dotnet-ef
+- Do EF Core migrations below:
+- dotnet ef migrations add initial 
+- dotnet ef database update 
+- Allow dev-certs in the local machine below:
+- dotnet dev-certs https --clean 
+- dotnet dev-certs https
 - Create contracts (interfaces) (optional)
 - Create repositories (services) (optional)
 - Add Scoped in the Startup.cs for contract and repository
