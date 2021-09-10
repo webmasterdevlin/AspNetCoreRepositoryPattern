@@ -20,28 +20,28 @@ namespace AspNetCoreRepositoryPattern.Controllers
             _recurringJobManager = recurringJobManager;
         }
         
-        [HttpGet("/fire-and-forget-job")]
+        [HttpGet("fire-and-forget-job")]
         public ActionResult CreateFireAndForgetJob()
         {
             _backgroundJobClient.Enqueue(() => _jobService.FireAndForgetJob());
             return Ok();
         }
         
-        [HttpGet("/delayed-job")]
+        [HttpGet("delayed-job")]
         public ActionResult CreateDelayedJob()
         {
             _backgroundJobClient.Schedule(() => _jobService.DelayedJob(), TimeSpan.FromSeconds(60));
             return Ok();
         }
         
-        [HttpGet("/recurring-job")]
+        [HttpGet("recurring-job")]
         public ActionResult CreateRecurringJob()
         {
             _recurringJobManager.AddOrUpdate("jobId", () => _jobService.RecurringJob(), Cron.Minutely);
             return Ok();
         }
         
-        [HttpGet("/continuation-job")]
+        [HttpGet("continuation-job")]
         public ActionResult CreateContinuationJob()
         {
             var parentJobId = _backgroundJobClient.Enqueue(() => _jobService.FireAndForgetJob());

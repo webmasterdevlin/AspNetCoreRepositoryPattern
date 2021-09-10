@@ -1,0 +1,92 @@
+09/10/2021 12:04:07 +02:00 Application Starting
+09/10/2021 12:04:08 +02:00 Hosting starting
+09/10/2021 12:04:08 +02:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+09/10/2021 12:04:08 +02:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+09/10/2021 12:04:08 +02:00 Execution loop BackgroundServerProcess:317d224a has started in 2.7161 ms
+09/10/2021 12:04:08 +02:00 Server 78e9f8c5-707c-42df-9708-4035948b5051 successfully announced in 32.7338 ms
+09/10/2021 12:04:08 +02:00 Execution loop ServerHeartbeatProcess:caea7f98 has started in 1.1597 ms
+09/10/2021 12:04:08 +02:00 Server 78e9f8c5-707c-42df-9708-4035948b5051 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+09/10/2021 12:04:08 +02:00 Execution loop ServerJobCancellationWatcher:260bc5e9 has started in 0.1618 ms
+09/10/2021 12:04:09 +02:00 Execution loop ServerWatchdog:4e0e24c1 has started in 21.4113 ms
+09/10/2021 12:04:09 +02:00 Execution loop Worker:66770e24 has started in 0.3395 ms
+09/10/2021 12:04:09 +02:00 Execution loop Worker:9dadffe4 has started in 0.4809 ms
+09/10/2021 12:04:09 +02:00 Execution loop Worker:7ccb550f has started in 0.5551 ms
+09/10/2021 12:04:09 +02:00 Execution loop Worker:e25ac7ad has started in 0.6731 ms
+09/10/2021 12:04:09 +02:00 Execution loop Worker:c6d3c1a3 has started in 0.7877 ms
+09/10/2021 12:04:09 +02:00 Execution loop Worker:1c7e6bca has started in 0.9054 ms
+09/10/2021 12:04:09 +02:00 Execution loop Worker:5fba3d5f has started in 1.0328 ms
+09/10/2021 12:04:09 +02:00 Execution loop Worker:8eeec50d has started in 1.1276 ms
+09/10/2021 12:04:09 +02:00 Execution loop Worker:8892e0f5 has started in 1.2577 ms
+09/10/2021 12:04:09 +02:00 Execution loop Worker:e2129cdb has started in 1.3529 ms
+09/10/2021 12:04:09 +02:00 Execution loop Worker:e3e7dae8 has started in 1.5097 ms
+09/10/2021 12:04:09 +02:00 Execution loop Worker:13f8a747 has started in 1.5838 ms
+09/10/2021 12:04:09 +02:00 Execution loop Worker:d60b9861 has started in 1.7158 ms
+09/10/2021 12:04:09 +02:00 Execution loop Worker:ee00568c has started in 1.8312 ms
+09/10/2021 12:04:09 +02:00 Execution loop Worker:092fd48f has started in 1.9333 ms
+09/10/2021 12:04:09 +02:00 Execution loop Worker:b8561b34 has started in 2.0554 ms
+09/10/2021 12:04:09 +02:00 Execution loop Worker:a3ac737a has started in 2.1672 ms
+09/10/2021 12:04:09 +02:00 Execution loop Worker:e5d4d419 has started in 2.2895 ms
+09/10/2021 12:04:09 +02:00 Execution loop Worker:8007c048 has started in 2.3812 ms
+09/10/2021 12:04:09 +02:00 Execution loop Worker:c84f5e66 has started in 2.5214 ms
+09/10/2021 12:04:09 +02:00 Execution loop DelayedJobScheduler:248824e8 has started in 0.1916 ms
+09/10/2021 12:04:09 +02:00 Server 78e9f8c5-707c-42df-9708-4035948b5051 all the dispatchers started
+09/10/2021 12:04:09 +02:00 Execution loop RecurringJobScheduler:7b9e0b31 has started in 0.1906 ms
+09/10/2021 12:04:09 +02:00 Using development certificate: "CN=localhost" (Thumbprint: "934C1C799881051C493CF11929A5E48FD8AE34B0")
+09/10/2021 12:04:09 +02:00 Now listening on: "https://localhost:5001"
+09/10/2021 12:04:09 +02:00 Now listening on: "http://localhost:5000"
+09/10/2021 12:04:09 +02:00 Loaded hosting startup assembly "AspNetCoreRepositoryPattern"
+09/10/2021 12:04:09 +02:00 Application started. Press Ctrl+C to shut down.
+09/10/2021 12:04:09 +02:00 Hosting environment: "Development"
+09/10/2021 12:04:09 +02:00 Content root path: "/Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern"
+09/10/2021 12:04:09 +02:00 Hosting started
+09/10/2021 12:04:09 +02:00 Connection id ""0HMBK89AJFKK1"" received FIN.
+09/10/2021 12:04:09 +02:00 Connection id ""0HMBK89AJFKK1"" accepted.
+09/10/2021 12:04:09 +02:00 Connection id ""0HMBK89AJFKK1"" started.
+09/10/2021 12:04:09 +02:00 Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+09/10/2021 12:04:09 +02:00 Connection id ""0HMBK89AJFKK1"" stopped.
+09/10/2021 12:04:09 +02:00 Connection id ""0HMBK89AJFKK1"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+09/10/2021 12:04:09 +02:00 Connection id ""0HMBK89AJFKK2"" accepted.
+09/10/2021 12:04:09 +02:00 Connection id ""0HMBK89AJFKK2"" started.
+09/10/2021 12:04:09 +02:00 Connection id ""0HMBK89AJFKK3"" accepted.
+09/10/2021 12:04:09 +02:00 Connection id ""0HMBK89AJFKK3"" started.
+09/10/2021 12:04:10 +02:00 Connection ""0HMBK89AJFKK2"" established using the following protocol: Tls12
+09/10/2021 12:04:10 +02:00 Connection ""0HMBK89AJFKK3"" established using the following protocol: Tls12
+09/10/2021 12:04:10 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+09/10/2021 12:04:10 +02:00 Wildcard detected, all requests with hosts will be allowed.
+09/10/2021 12:04:10 +02:00 Connection id ""0HMBK89AJFKK2"" completed keep alive response.
+09/10/2021 12:04:10 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 88.0217ms
+09/10/2021 12:04:10 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui.css - -
+09/10/2021 12:04:10 +02:00 Connection id ""0HMBK89AJFKK4"" accepted.
+09/10/2021 12:04:10 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-bundle.js - -
+09/10/2021 12:04:10 +02:00 Connection id ""0HMBK89AJFKK4"" started.
+09/10/2021 12:04:10 +02:00 Connection ""0HMBK89AJFKK4"" established using the following protocol: Tls12
+09/10/2021 12:04:10 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - -
+09/10/2021 12:04:10 +02:00 Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+09/10/2021 12:04:10 +02:00 Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+09/10/2021 12:04:10 +02:00 Connection id ""0HMBK89AJFKK4"" completed keep alive response.
+09/10/2021 12:04:10 +02:00 Connection id ""0HMBK89AJFKK2"" completed keep alive response.
+09/10/2021 12:04:10 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 70.6558ms
+09/10/2021 12:04:10 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui.css - - - 200 143632 text/css 226.9908ms
+09/10/2021 12:04:10 +02:00 Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+09/10/2021 12:04:10 +02:00 Connection id ""0HMBK89AJFKK3"" completed keep alive response.
+09/10/2021 12:04:10 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-bundle.js - - - 200 1091362 application/javascript 163.1390ms
+09/10/2021 12:04:10 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/10/2021 12:04:10 +02:00 Connection id ""0HMBK89AJFKK3"" completed keep alive response.
+09/10/2021 12:04:10 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 120.6961ms
+09/10/2021 12:04:30 +02:00 Application Starting
+09/10/2021 12:04:31 +02:00 Hosting starting
+09/10/2021 12:04:31 +02:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+09/10/2021 12:04:31 +02:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+09/10/2021 12:04:31 +02:00 Execution loop BackgroundServerProcess:351d6845 has started in 3.2139 ms
