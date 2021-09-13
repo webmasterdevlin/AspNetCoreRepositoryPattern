@@ -32,10 +32,10 @@ namespace AspNetCoreRepositoryPattern
             services.AddControllers();
 
             /* EF Core DbContext */
-            var connectionString = Configuration["MSSQLServer:ConnectionString"];
-            services.AddDbContext<ApplicationDbContext>(opt => opt.UseSqlServer(connectionString));
+            // var connectionString = Configuration["MSSQLServer:ConnectionString"];
+            // services.AddDbContext<ApplicationDbContext>(opt => opt.UseSqlServer(connectionString));
             
-            // services.AddDbContext<ApplicationDbContext>(opt => opt.UseInMemoryDatabase("InMemoryDb"));
+            services.AddDbContext<ApplicationDbContext>(opt => opt.UseInMemoryDatabase("InMemoryDb"));
 
             /* AutoMapper for mapping Entities to Dtos */
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
