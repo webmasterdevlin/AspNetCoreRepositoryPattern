@@ -7,6 +7,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [ApiVersion("1.0", Deprecated = true), ApiVersion("1.1"), ApiVersion("2.0")]
     public class JobController : ControllerBase
     {
         private readonly IJobService _jobService;
@@ -21,6 +22,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
         }
         
         [HttpGet("fire-and-forget-job")]
+        [ApiVersion("1.1")]
         public ActionResult CreateFireAndForgetJob()
         {
             _backgroundJobClient.Enqueue(() => _jobService.FireAndForgetJob());
@@ -28,6 +30,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
         }
         
         [HttpGet("delayed-job")]
+        [ApiVersion("1.1")]
         public ActionResult CreateDelayedJob()
         {
             _backgroundJobClient.Schedule(() => _jobService.DelayedJob(), TimeSpan.FromSeconds(60));
@@ -35,6 +38,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
         }
         
         [HttpGet("recurring-job")]
+        [ApiVersion("1.1")]
         public ActionResult CreateRecurringJob()
         {
             _recurringJobManager.AddOrUpdate("jobId", () => _jobService.RecurringJob(), Cron.Minutely);
@@ -42,6 +46,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
         }
         
         [HttpGet("continuation-job")]
+        [ApiVersion("1.1")]
         public ActionResult CreateContinuationJob()
         {
             var parentJobId = _backgroundJobClient.Enqueue(() => _jobService.FireAndForgetJob());

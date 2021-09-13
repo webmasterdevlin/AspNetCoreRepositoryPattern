@@ -1,0 +1,10 @@
+GET https://localhost:5001/api/books?version=1
+Accept: application/json
+
+###
+
+
+GET https://localhost:5001/api/todos
+Accept: application/json
+version: 2
+###

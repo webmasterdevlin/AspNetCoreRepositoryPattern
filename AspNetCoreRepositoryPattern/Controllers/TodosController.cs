@@ -11,6 +11,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
      */
     [Route("api/[controller]")]
     [ApiController]
+    [ApiVersion("1.0", Deprecated = true), ApiVersion("1.1"), ApiVersion("2.0")]
     public class TodosController : ControllerBase
     {
         private readonly ITodoRepository _repo;
@@ -22,6 +23,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
 
         // GET: api/todos
         [HttpGet]
+        [ApiVersion("2.0")]
         public async Task<IActionResult> GetTodos()
         {
             var todos = await _repo.GetAllAsync();
@@ -32,6 +34,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
 
         // GET: api/todos/5074551d-ebd7-454c-9436-0c363b4e36b3
         [HttpGet("{id}")]
+        [ApiVersion("2.0")]
         public async Task<IActionResult> GetTodoById(Guid id)
         {
             var todo = await _repo.GetByIdAsync(id);
@@ -46,6 +49,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
         
         // DELETE: api/todos/5074551d-ebd7-454c-9436-0c363b4e36b3
         [HttpDelete("{id:guid}")]
+        [ApiVersion("2.0")]
         public async Task<IActionResult> DeleteTodo(Guid id)
         {
             await _repo.DeleteAsync(id);
@@ -55,6 +59,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
         
         // POST: api/todos
         [HttpPost]
+        [ApiVersion("2.0")]
         public async Task<IActionResult> PostTodo(Todo todo)
         {
             var todoDto = await _repo.CreateAsync(todo);
@@ -65,6 +70,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
 
         // PUT: api/todos/5074551d-ebd7-454c-9436-0c363b4e36b3
         [HttpPut("{id:guid}")]
+        [ApiVersion("2.0")]
         public async Task<IActionResult> PutTodo(Guid id, Todo todo)
         {
             if (id != todo.Id) 

@@ -18,6 +18,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
      */
     [Route("api/[controller]")]
     [ApiController]
+    [ApiVersion("1.0", Deprecated = true), ApiVersion("1.1"), ApiVersion("2.0")]
     public class BooksController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -31,6 +32,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
 
         // GET: api/books
         [HttpGet]
+        [ApiVersion("1.0")]
         public async Task<ActionResult<IEnumerable<BookDto>>> GetBooks()
         {
             try
@@ -48,6 +50,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
 
         // GET: api/books/ab2bd817-98cd-4cf3-a80a-53ea0cd9c200
         [HttpGet("{id:guid}")]
+        [ApiVersion("1.0")]
         public async Task<ActionResult<BookDto>> GetBook(Guid id)
         {
             try
@@ -68,6 +71,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
 
         // PUT: api/books/ab2bd817-98cd-4cf3-a80a-53ea0cd9c200
         [HttpPut("{id:guid}")]
+        [ApiVersion("1.0")]
         public async Task<IActionResult> PutBook(Guid id, Book book)
         {
             if (id != book.Id)
@@ -91,6 +95,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
 
         // POST: api/books
         [HttpPost]
+        [ApiVersion("1.0")]
         public async Task<ActionResult<BookDto>> PostBook(Book book)
         {
             try
@@ -109,6 +114,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
 
         // DELETE: api/books/ab2bd817-98cd-4cf3-a80a-53ea0cd9c200
         [HttpDelete("{id:guid}")]
+        [ApiVersion("1.0")]
         public async Task<IActionResult> DeleteBook(Guid id)
         {
             try

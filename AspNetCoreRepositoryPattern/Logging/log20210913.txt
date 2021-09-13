@@ -1,0 +1,554 @@
+09/13/2021 20:25:02 +02:00 Application Starting
+09/13/2021 20:25:03 +02:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+09/13/2021 20:25:03 +02:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+09/13/2021 20:25:03 +02:00 Server 18205ed0-a9f3-4fe7-bf08-0e72fec28be4 successfully announced in 24.2063 ms
+09/13/2021 20:25:03 +02:00 Server 18205ed0-a9f3-4fe7-bf08-0e72fec28be4 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+09/13/2021 20:25:03 +02:00 Server 18205ed0-a9f3-4fe7-bf08-0e72fec28be4 all the dispatchers started
+09/13/2021 20:25:04 +02:00 Now listening on: "https://localhost:5001"
+09/13/2021 20:25:04 +02:00 Now listening on: "http://localhost:5000"
+09/13/2021 20:25:04 +02:00 Application started. Press Ctrl+C to shut down.
+09/13/2021 20:25:04 +02:00 Hosting environment: "Development"
+09/13/2021 20:25:04 +02:00 Content root path: "/Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern"
+09/13/2021 20:25:04 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+09/13/2021 20:25:04 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 97.7423ms
+09/13/2021 20:25:04 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - -
+09/13/2021 20:25:04 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-bundle.js - -
+09/13/2021 20:25:05 +02:00 Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+09/13/2021 20:25:05 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 206.6020ms
+09/13/2021 20:25:05 +02:00 Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+09/13/2021 20:25:05 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-bundle.js - - - 200 1091362 application/javascript 226.5054ms
+09/13/2021 20:25:05 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 20:25:05 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 134.6383ms
+09/13/2021 20:25:16 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/Books - -
+09/13/2021 20:25:16 +02:00 Request did not specify a service API version, but multiple candidate actions were found. Candidate actions: "AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"
+09/13/2021 20:25:16 +02:00 Executing endpoint 'null'
+09/13/2021 20:25:16 +02:00 Executing "ObjectResult", writing value of type '"<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]"'.
+09/13/2021 20:25:16 +02:00 Executed endpoint 'null'
+09/13/2021 20:25:16 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/Books - - - 400 - application/json;+charset=utf-8 52.1963ms
+09/13/2021 20:25:49 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/Books?version=1.1 - -
+09/13/2021 20:25:49 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:25:49 +02:00 Route matched with "{action = \"GetBooks\", controller = \"Books\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AspNetCoreRepositoryPattern.Models.Dtos.BookDto]]] GetBooks()" on controller "AspNetCoreRepositoryPattern.Controllers.BooksController" ("AspNetCoreRepositoryPattern").
+09/13/2021 20:25:50 +02:00 Entity Framework Core "5.0.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.InMemory"' with options: "StoreName=InMemoryDb "
+09/13/2021 20:25:50 +02:00 Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.BookDto, AspNetCoreRepositoryPattern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+09/13/2021 20:25:50 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)" in 619.6793ms
+09/13/2021 20:25:50 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:25:50 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/Books?version=1.1 - - - 200 - application/json;+charset=utf-8 646.7838ms
+09/13/2021 20:26:29 +02:00 Application Starting
+09/13/2021 20:26:30 +02:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+09/13/2021 20:26:30 +02:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+09/13/2021 20:26:30 +02:00 Server 8c436103-00be-41e1-be6b-aa5b7e27af65 successfully announced in 20.7982 ms
+09/13/2021 20:26:30 +02:00 Server 8c436103-00be-41e1-be6b-aa5b7e27af65 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+09/13/2021 20:26:30 +02:00 Server 8c436103-00be-41e1-be6b-aa5b7e27af65 all the dispatchers started
+09/13/2021 20:26:31 +02:00 Now listening on: "https://localhost:5001"
+09/13/2021 20:26:31 +02:00 Now listening on: "http://localhost:5000"
+09/13/2021 20:26:31 +02:00 Application started. Press Ctrl+C to shut down.
+09/13/2021 20:26:31 +02:00 Hosting environment: "Development"
+09/13/2021 20:26:31 +02:00 Content root path: "/Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern"
+09/13/2021 20:26:31 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+09/13/2021 20:26:31 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 83.8305ms
+09/13/2021 20:26:32 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 20:26:32 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 83.8817ms
+09/13/2021 20:26:51 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/Books?version=1.1 - -
+09/13/2021 20:26:51 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:26:51 +02:00 Route matched with "{action = \"GetBooks\", controller = \"Books\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AspNetCoreRepositoryPattern.Models.Dtos.BookDto]]] GetBooks()" on controller "AspNetCoreRepositoryPattern.Controllers.BooksController" ("AspNetCoreRepositoryPattern").
+09/13/2021 20:26:52 +02:00 Entity Framework Core "5.0.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+09/13/2021 20:26:53 +02:00 Executed DbCommand ("44"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Description], [b].[Title]
+FROM [Books] AS [b]"
+09/13/2021 20:26:53 +02:00 Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.BookDto, AspNetCoreRepositoryPattern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+09/13/2021 20:26:53 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)" in 1290.7567ms
+09/13/2021 20:26:53 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:26:53 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/Books?version=1.1 - - - 200 - application/json;+charset=utf-8 1369.0472ms
+09/13/2021 20:26:53 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/favicon.ico - -
+09/13/2021 20:26:53 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/favicon.ico - - - 404 0 - 0.7379ms
+09/13/2021 20:28:46 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/books?version=1.1 - -
+09/13/2021 20:28:46 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:28:46 +02:00 Route matched with "{action = \"GetBooks\", controller = \"Books\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AspNetCoreRepositoryPattern.Models.Dtos.BookDto]]] GetBooks()" on controller "AspNetCoreRepositoryPattern.Controllers.BooksController" ("AspNetCoreRepositoryPattern").
+09/13/2021 20:28:46 +02:00 Entity Framework Core "5.0.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+09/13/2021 20:28:46 +02:00 Executed DbCommand ("51"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Description], [b].[Title]
+FROM [Books] AS [b]"
+09/13/2021 20:28:46 +02:00 Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.BookDto, AspNetCoreRepositoryPattern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+09/13/2021 20:28:46 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)" in 67.8441ms
+09/13/2021 20:28:46 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:28:46 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/books?version=1.1 - - - 200 - application/json;+charset=utf-8 69.9625ms
+09/13/2021 20:29:13 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/todos?version=2 - -
+09/13/2021 20:29:13 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.TodosController.GetTodos (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:29:13 +02:00 Route matched with "{action = \"GetTodos\", controller = \"Todos\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos()" on controller "AspNetCoreRepositoryPattern.Controllers.TodosController" ("AspNetCoreRepositoryPattern").
+09/13/2021 20:29:13 +02:00 Entity Framework Core "5.0.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+09/13/2021 20:29:13 +02:00 Executed DbCommand ("28"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[Done], [t].[Name]
+FROM [Todos] AS [t]"
+09/13/2021 20:29:13 +02:00 Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.TodoDto, AspNetCoreRepositoryPattern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+09/13/2021 20:29:13 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.TodosController.GetTodos (AspNetCoreRepositoryPattern)" in 134.7083ms
+09/13/2021 20:29:13 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.TodosController.GetTodos (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:29:13 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/todos?version=2 - - - 200 - application/json;+charset=utf-8 138.0287ms
+09/13/2021 20:29:48 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/todos - -
+09/13/2021 20:29:48 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.TodosController.GetTodos (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:29:48 +02:00 Route matched with "{action = \"GetTodos\", controller = \"Todos\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos()" on controller "AspNetCoreRepositoryPattern.Controllers.TodosController" ("AspNetCoreRepositoryPattern").
+09/13/2021 20:29:48 +02:00 Entity Framework Core "5.0.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+09/13/2021 20:29:48 +02:00 Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[Done], [t].[Name]
+FROM [Todos] AS [t]"
+09/13/2021 20:29:48 +02:00 Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.TodoDto, AspNetCoreRepositoryPattern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+09/13/2021 20:29:48 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.TodosController.GetTodos (AspNetCoreRepositoryPattern)" in 28.989ms
+09/13/2021 20:29:48 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.TodosController.GetTodos (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:29:48 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/todos - - - 200 - application/json;+charset=utf-8 31.1518ms
+09/13/2021 20:30:03 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/todos - -
+09/13/2021 20:30:03 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.TodosController.GetTodos (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:30:03 +02:00 Route matched with "{action = \"GetTodos\", controller = \"Todos\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos()" on controller "AspNetCoreRepositoryPattern.Controllers.TodosController" ("AspNetCoreRepositoryPattern").
+09/13/2021 20:30:03 +02:00 Entity Framework Core "5.0.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+09/13/2021 20:30:03 +02:00 Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[Done], [t].[Name]
+FROM [Todos] AS [t]"
+09/13/2021 20:30:03 +02:00 Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.TodoDto, AspNetCoreRepositoryPattern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+09/13/2021 20:30:03 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.TodosController.GetTodos (AspNetCoreRepositoryPattern)" in 4.5054ms
+09/13/2021 20:30:03 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.TodosController.GetTodos (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:30:03 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/todos - - - 200 - application/json;+charset=utf-8 5.8553ms
+09/13/2021 20:30:05 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/books?version=1.1 - -
+09/13/2021 20:30:05 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:30:05 +02:00 Route matched with "{action = \"GetBooks\", controller = \"Books\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AspNetCoreRepositoryPattern.Models.Dtos.BookDto]]] GetBooks()" on controller "AspNetCoreRepositoryPattern.Controllers.BooksController" ("AspNetCoreRepositoryPattern").
+09/13/2021 20:30:05 +02:00 Entity Framework Core "5.0.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+09/13/2021 20:30:05 +02:00 Executed DbCommand ("49"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Description], [b].[Title]
+FROM [Books] AS [b]"
+09/13/2021 20:30:05 +02:00 Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.BookDto, AspNetCoreRepositoryPattern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+09/13/2021 20:30:05 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)" in 101.9898ms
+09/13/2021 20:30:05 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:30:05 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/books?version=1.1 - - - 200 - application/json;+charset=utf-8 103.6224ms
+09/13/2021 20:34:19 +02:00 Application Starting
+09/13/2021 20:34:20 +02:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+09/13/2021 20:34:20 +02:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+09/13/2021 20:34:20 +02:00 Server 86bb9e03-5056-45b4-9519-5d5e4f49e157 successfully announced in 34.1099 ms
+09/13/2021 20:34:20 +02:00 Server 86bb9e03-5056-45b4-9519-5d5e4f49e157 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+09/13/2021 20:34:20 +02:00 Server 86bb9e03-5056-45b4-9519-5d5e4f49e157 all the dispatchers started
+09/13/2021 20:34:20 +02:00 Now listening on: "https://localhost:5001"
+09/13/2021 20:34:20 +02:00 Now listening on: "http://localhost:5000"
+09/13/2021 20:34:20 +02:00 Application started. Press Ctrl+C to shut down.
+09/13/2021 20:34:20 +02:00 Hosting environment: "Development"
+09/13/2021 20:34:20 +02:00 Content root path: "/Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern"
+09/13/2021 20:34:21 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+09/13/2021 20:34:21 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 133.4362ms
+09/13/2021 20:34:22 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 20:34:22 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 85.5987ms
+09/13/2021 20:34:24 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/Books - -
+09/13/2021 20:34:24 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:34:24 +02:00 Route matched with "{action = \"GetBooks\", controller = \"Books\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AspNetCoreRepositoryPattern.Models.Dtos.BookDto]]] GetBooks()" on controller "AspNetCoreRepositoryPattern.Controllers.BooksController" ("AspNetCoreRepositoryPattern").
+09/13/2021 20:34:25 +02:00 Entity Framework Core "5.0.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+09/13/2021 20:34:26 +02:00 Executed DbCommand ("35"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Description], [b].[Title]
+FROM [Books] AS [b]"
+09/13/2021 20:34:26 +02:00 Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.BookDto, AspNetCoreRepositoryPattern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+09/13/2021 20:34:26 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)" in 1515.8898ms
+09/13/2021 20:34:26 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:34:26 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/Books - - - 200 - application/json;+charset=utf-8 1578.7100ms
+09/13/2021 20:36:58 +02:00 Application Starting
+09/13/2021 20:36:59 +02:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+09/13/2021 20:36:59 +02:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+09/13/2021 20:36:59 +02:00 Server 9edbd3a6-8289-4a74-9bb4-bb0d4eb0d2d9 successfully announced in 20.7989 ms
+09/13/2021 20:36:59 +02:00 Server 9edbd3a6-8289-4a74-9bb4-bb0d4eb0d2d9 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+09/13/2021 20:37:00 +02:00 Server 9edbd3a6-8289-4a74-9bb4-bb0d4eb0d2d9 all the dispatchers started
+09/13/2021 20:37:00 +02:00 Now listening on: "https://localhost:5001"
+09/13/2021 20:37:00 +02:00 Now listening on: "http://localhost:5000"
+09/13/2021 20:37:00 +02:00 Application started. Press Ctrl+C to shut down.
+09/13/2021 20:37:00 +02:00 Hosting environment: "Development"
+09/13/2021 20:37:00 +02:00 Content root path: "/Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern"
+09/13/2021 20:37:00 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+09/13/2021 20:37:00 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 80.3258ms
+09/13/2021 20:37:01 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 20:37:01 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 47.7858ms
+09/13/2021 20:37:40 +02:00 Application Starting
+09/13/2021 20:37:41 +02:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+09/13/2021 20:37:41 +02:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+09/13/2021 20:37:41 +02:00 Server 7984102c-d3d0-4e03-9c2d-dc209a603b54 successfully announced in 29.9039 ms
+09/13/2021 20:37:41 +02:00 Server 7984102c-d3d0-4e03-9c2d-dc209a603b54 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+09/13/2021 20:37:41 +02:00 Server 7984102c-d3d0-4e03-9c2d-dc209a603b54 all the dispatchers started
+09/13/2021 20:37:41 +02:00 Now listening on: "https://localhost:5001"
+09/13/2021 20:37:41 +02:00 Now listening on: "http://localhost:5000"
+09/13/2021 20:37:41 +02:00 Application started. Press Ctrl+C to shut down.
+09/13/2021 20:37:41 +02:00 Hosting environment: "Development"
+09/13/2021 20:37:41 +02:00 Content root path: "/Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern"
+09/13/2021 20:37:42 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+09/13/2021 20:37:42 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 124.3665ms
+09/13/2021 20:37:43 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 20:37:43 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 38.4272ms
+09/13/2021 20:38:07 +02:00 Application Starting
+09/13/2021 20:38:09 +02:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+09/13/2021 20:38:09 +02:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+09/13/2021 20:38:09 +02:00 Server 907686f0-46c7-41bf-9cbe-c2b7c2fb0091 successfully announced in 30.5406 ms
+09/13/2021 20:38:09 +02:00 Server 907686f0-46c7-41bf-9cbe-c2b7c2fb0091 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+09/13/2021 20:38:09 +02:00 Server 907686f0-46c7-41bf-9cbe-c2b7c2fb0091 all the dispatchers started
+09/13/2021 20:38:09 +02:00 Now listening on: "https://localhost:5001"
+09/13/2021 20:38:09 +02:00 Now listening on: "http://localhost:5000"
+09/13/2021 20:38:09 +02:00 Application started. Press Ctrl+C to shut down.
+09/13/2021 20:38:09 +02:00 Hosting environment: "Development"
+09/13/2021 20:38:09 +02:00 Content root path: "/Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern"
+09/13/2021 20:38:10 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+09/13/2021 20:38:10 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 102.3376ms
+09/13/2021 20:38:10 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 20:38:10 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 37.8420ms
+09/13/2021 20:38:15 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 20:38:15 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1.1087ms
+09/13/2021 20:41:37 +02:00 Application Starting
+09/13/2021 20:41:38 +02:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+09/13/2021 20:41:38 +02:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+09/13/2021 20:41:38 +02:00 Server 8918c2ab-354f-4c12-9011-395ff6f4c998 successfully announced in 38.2623 ms
+09/13/2021 20:41:38 +02:00 Server 8918c2ab-354f-4c12-9011-395ff6f4c998 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+09/13/2021 20:41:38 +02:00 Server 8918c2ab-354f-4c12-9011-395ff6f4c998 all the dispatchers started
+09/13/2021 20:41:38 +02:00 Now listening on: "https://localhost:5001"
+09/13/2021 20:41:38 +02:00 Now listening on: "http://localhost:5000"
+09/13/2021 20:41:38 +02:00 Application started. Press Ctrl+C to shut down.
+09/13/2021 20:41:38 +02:00 Hosting environment: "Development"
+09/13/2021 20:41:38 +02:00 Content root path: "/Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern"
+09/13/2021 20:41:39 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+09/13/2021 20:41:39 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 102.5366ms
+09/13/2021 20:41:40 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 20:41:40 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 90.2706ms
+09/13/2021 20:42:01 +02:00 Application Starting
+09/13/2021 20:42:03 +02:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+09/13/2021 20:42:03 +02:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+09/13/2021 20:42:03 +02:00 Server 143e892f-943e-4555-b345-bfb91a18f376 successfully announced in 30.1852 ms
+09/13/2021 20:42:03 +02:00 Server 143e892f-943e-4555-b345-bfb91a18f376 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+09/13/2021 20:42:03 +02:00 Server 143e892f-943e-4555-b345-bfb91a18f376 all the dispatchers started
+09/13/2021 20:42:03 +02:00 Now listening on: "https://localhost:5001"
+09/13/2021 20:42:03 +02:00 Now listening on: "http://localhost:5000"
+09/13/2021 20:42:03 +02:00 Application started. Press Ctrl+C to shut down.
+09/13/2021 20:42:03 +02:00 Hosting environment: "Development"
+09/13/2021 20:42:03 +02:00 Content root path: "/Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern"
+09/13/2021 20:42:04 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+09/13/2021 20:42:04 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 103.0850ms
+09/13/2021 20:42:04 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 20:42:04 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 91.1186ms
+09/13/2021 20:42:13 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+09/13/2021 20:42:13 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 1.2981ms
+09/13/2021 20:42:14 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 20:42:14 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 7.3874ms
+09/13/2021 20:42:14 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/favicon-32x32.png - -
+09/13/2021 20:42:14 +02:00 Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"'
+09/13/2021 20:42:14 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/favicon-32x32.png - - - 200 628 image/png 21.2626ms
+09/13/2021 20:42:32 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/Books?version=1.1 - -
+09/13/2021 20:42:32 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:42:32 +02:00 Route matched with "{action = \"GetBooks\", controller = \"Books\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AspNetCoreRepositoryPattern.Models.Dtos.BookDto]]] GetBooks()" on controller "AspNetCoreRepositoryPattern.Controllers.BooksController" ("AspNetCoreRepositoryPattern").
+09/13/2021 20:42:33 +02:00 Entity Framework Core "5.0.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+09/13/2021 20:42:33 +02:00 Executed DbCommand ("34"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Description], [b].[Title]
+FROM [Books] AS [b]"
+09/13/2021 20:42:34 +02:00 Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.BookDto, AspNetCoreRepositoryPattern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+09/13/2021 20:42:34 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)" in 1203.6291ms
+09/13/2021 20:42:34 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:42:34 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/Books?version=1.1 - - - 200 - application/json;+charset=utf-8 1262.9606ms
+09/13/2021 20:54:10 +02:00 Application Starting
+09/13/2021 20:54:11 +02:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+09/13/2021 20:54:11 +02:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+09/13/2021 20:54:11 +02:00 Server 80381459-5093-4e1a-8bdd-97f1e728e07c successfully announced in 11.9158 ms
+09/13/2021 20:54:11 +02:00 Server 80381459-5093-4e1a-8bdd-97f1e728e07c is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+09/13/2021 20:54:11 +02:00 Server 80381459-5093-4e1a-8bdd-97f1e728e07c all the dispatchers started
+09/13/2021 20:54:12 +02:00 Now listening on: "https://localhost:5001"
+09/13/2021 20:54:12 +02:00 Now listening on: "http://localhost:5000"
+09/13/2021 20:54:12 +02:00 Application started. Press Ctrl+C to shut down.
+09/13/2021 20:54:12 +02:00 Hosting environment: "Development"
+09/13/2021 20:54:12 +02:00 Content root path: "/Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern"
+09/13/2021 20:54:12 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+09/13/2021 20:54:12 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 83.8593ms
+09/13/2021 20:54:13 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 20:54:13 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 99.8597ms
+09/13/2021 20:54:36 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v2/swagger.json - -
+09/13/2021 20:54:36 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 7.2874ms
+09/13/2021 20:54:41 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - -
+09/13/2021 20:54:41 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - - - 200 - application/json;charset=utf-8 3.7714ms
+09/13/2021 20:54:43 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 20:54:43 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 7.0956ms
+09/13/2021 20:54:44 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - -
+09/13/2021 20:54:44 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - - - 200 - application/json;charset=utf-8 3.4288ms
+09/13/2021 20:54:46 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v2/swagger.json - -
+09/13/2021 20:54:46 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 5.8800ms
+09/13/2021 20:54:48 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 20:54:48 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 8.7061ms
+09/13/2021 20:54:51 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - -
+09/13/2021 20:54:51 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - - - 200 - application/json;charset=utf-8 6.6956ms
+09/13/2021 20:54:54 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 20:54:54 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 4.5801ms
+09/13/2021 20:55:42 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v2/swagger.json - -
+09/13/2021 20:55:42 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 9.6112ms
+09/13/2021 20:56:22 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/books?version=1.1 - -
+09/13/2021 20:56:22 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:56:22 +02:00 Route matched with "{action = \"GetBooks\", controller = \"Books\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AspNetCoreRepositoryPattern.Models.Dtos.BookDto]]] GetBooks()" on controller "AspNetCoreRepositoryPattern.Controllers.BooksController" ("AspNetCoreRepositoryPattern").
+09/13/2021 20:56:23 +02:00 Entity Framework Core "5.0.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+09/13/2021 20:56:24 +02:00 Executed DbCommand ("31"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Description], [b].[Title]
+FROM [Books] AS [b]"
+09/13/2021 20:56:24 +02:00 Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.BookDto, AspNetCoreRepositoryPattern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+09/13/2021 20:56:24 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)" in 1207.7236ms
+09/13/2021 20:56:24 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:56:24 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/books?version=1.1 - - - 200 - application/json;+charset=utf-8 1270.5381ms
+09/13/2021 20:56:28 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/todos - -
+09/13/2021 20:56:28 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.TodosController.GetTodos (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:56:28 +02:00 Route matched with "{action = \"GetTodos\", controller = \"Todos\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos()" on controller "AspNetCoreRepositoryPattern.Controllers.TodosController" ("AspNetCoreRepositoryPattern").
+09/13/2021 20:56:28 +02:00 Entity Framework Core "5.0.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+09/13/2021 20:56:28 +02:00 Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[Done], [t].[Name]
+FROM [Todos] AS [t]"
+09/13/2021 20:56:28 +02:00 Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.TodoDto, AspNetCoreRepositoryPattern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+09/13/2021 20:56:28 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.TodosController.GetTodos (AspNetCoreRepositoryPattern)" in 27.7799ms
+09/13/2021 20:56:28 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.TodosController.GetTodos (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:56:28 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/todos - - - 200 - application/json;+charset=utf-8 32.0114ms
+09/13/2021 20:57:28 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/books?version=1 - -
+09/13/2021 20:57:28 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:57:28 +02:00 Route matched with "{action = \"GetBooks\", controller = \"Books\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AspNetCoreRepositoryPattern.Models.Dtos.BookDto]]] GetBooks()" on controller "AspNetCoreRepositoryPattern.Controllers.BooksController" ("AspNetCoreRepositoryPattern").
+09/13/2021 20:57:28 +02:00 Entity Framework Core "5.0.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+09/13/2021 20:57:28 +02:00 Executed DbCommand ("27"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Description], [b].[Title]
+FROM [Books] AS [b]"
+09/13/2021 20:57:28 +02:00 Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.BookDto, AspNetCoreRepositoryPattern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+09/13/2021 20:57:28 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)" in 53.967ms
+09/13/2021 20:57:28 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:57:28 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/books?version=1 - - - 200 - application/json;+charset=utf-8 55.9804ms
+09/13/2021 20:57:34 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/books - -
+09/13/2021 20:57:34 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:57:34 +02:00 Route matched with "{action = \"GetBooks\", controller = \"Books\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AspNetCoreRepositoryPattern.Models.Dtos.BookDto]]] GetBooks()" on controller "AspNetCoreRepositoryPattern.Controllers.BooksController" ("AspNetCoreRepositoryPattern").
+09/13/2021 20:57:34 +02:00 Entity Framework Core "5.0.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+09/13/2021 20:57:34 +02:00 Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Description], [b].[Title]
+FROM [Books] AS [b]"
+09/13/2021 20:57:34 +02:00 Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.BookDto, AspNetCoreRepositoryPattern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+09/13/2021 20:57:34 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)" in 9.2792ms
+09/13/2021 20:57:34 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 20:57:34 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/books - - - 200 - application/json;+charset=utf-8 11.1696ms
+09/13/2021 21:00:42 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 21:00:42 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 7.1832ms
+09/13/2021 21:00:44 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - -
+09/13/2021 21:00:44 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - - - 200 - application/json;charset=utf-8 4.0354ms
+09/13/2021 21:00:46 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v2/swagger.json - -
+09/13/2021 21:00:46 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 5.0145ms
+09/13/2021 21:00:59 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 21:00:59 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 5.2375ms
+09/13/2021 21:01:00 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - -
+09/13/2021 21:01:00 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - - - 200 - application/json;charset=utf-8 3.8857ms
+09/13/2021 21:01:03 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v2/swagger.json - -
+09/13/2021 21:01:03 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 6.1311ms
+09/13/2021 21:02:07 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - -
+09/13/2021 21:02:07 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - - - 200 - application/json;charset=utf-8 5.6807ms
+09/13/2021 21:02:08 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 21:02:08 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 4.8298ms
+09/13/2021 21:02:10 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - -
+09/13/2021 21:02:10 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - - - 200 - application/json;charset=utf-8 3.9184ms
+09/13/2021 21:02:11 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v2/swagger.json - -
+09/13/2021 21:02:11 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 5.8831ms
+09/13/2021 21:02:12 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 21:02:12 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 4.5490ms
+09/13/2021 21:18:59 +02:00 Application Starting
+09/13/2021 21:19:00 +02:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+09/13/2021 21:19:00 +02:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+09/13/2021 21:19:00 +02:00 Server ed41159f-ac62-48ff-abd4-0aa9c7f6b22b successfully announced in 13.1884 ms
+09/13/2021 21:19:00 +02:00 Server ed41159f-ac62-48ff-abd4-0aa9c7f6b22b is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+09/13/2021 21:19:00 +02:00 Server ed41159f-ac62-48ff-abd4-0aa9c7f6b22b all the dispatchers started
+09/13/2021 21:19:01 +02:00 Now listening on: "https://localhost:5001"
+09/13/2021 21:19:01 +02:00 Now listening on: "http://localhost:5000"
+09/13/2021 21:19:01 +02:00 Application started. Press Ctrl+C to shut down.
+09/13/2021 21:19:01 +02:00 Hosting environment: "Development"
+09/13/2021 21:19:01 +02:00 Content root path: "/Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern"
+09/13/2021 21:19:02 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+09/13/2021 21:19:02 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 124.2626ms
+09/13/2021 21:19:02 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 21:19:02 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 112.3615ms
+09/13/2021 21:19:08 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/books - -
+09/13/2021 21:19:08 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 21:19:08 +02:00 Route matched with "{action = \"GetBooks\", controller = \"Books\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AspNetCoreRepositoryPattern.Models.Dtos.BookDto]]] GetBooks()" on controller "AspNetCoreRepositoryPattern.Controllers.BooksController" ("AspNetCoreRepositoryPattern").
+09/13/2021 21:19:08 +02:00 Entity Framework Core "5.0.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+09/13/2021 21:19:09 +02:00 Executed DbCommand ("36"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Description], [b].[Title]
+FROM [Books] AS [b]"
+09/13/2021 21:19:09 +02:00 Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.BookDto, AspNetCoreRepositoryPattern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+09/13/2021 21:19:09 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)" in 1113.9932ms
+09/13/2021 21:19:09 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 21:19:09 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/books - - - 200 - application/json;+charset=utf-8 1173.7798ms
+09/13/2021 21:19:24 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/books?version=3 - -
+09/13/2021 21:19:24 +02:00 Multiple candidate actions were found, but none matched the requested service API version '"3"'. Candidate actions: "AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"
+09/13/2021 21:19:24 +02:00 Executing endpoint 'null'
+09/13/2021 21:19:24 +02:00 Executing "ObjectResult", writing value of type '"<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]"'.
+09/13/2021 21:19:24 +02:00 Executed endpoint 'null'
+09/13/2021 21:19:24 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/books?version=3 - - - 400 - application/json;+charset=utf-8 22.5073ms
+09/13/2021 21:19:30 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/books?version=1.1 - -
+09/13/2021 21:19:30 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 21:19:30 +02:00 Route matched with "{action = \"GetBooks\", controller = \"Books\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AspNetCoreRepositoryPattern.Models.Dtos.BookDto]]] GetBooks()" on controller "AspNetCoreRepositoryPattern.Controllers.BooksController" ("AspNetCoreRepositoryPattern").
+09/13/2021 21:19:31 +02:00 Entity Framework Core "5.0.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+09/13/2021 21:19:31 +02:00 Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Description], [b].[Title]
+FROM [Books] AS [b]"
+09/13/2021 21:19:31 +02:00 Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.BookDto, AspNetCoreRepositoryPattern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+09/13/2021 21:19:31 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)" in 21.5332ms
+09/13/2021 21:19:31 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 21:19:31 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/books?version=1.1 - - - 200 - application/json;+charset=utf-8 23.1167ms
+09/13/2021 21:20:03 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/books?version=1 - -
+09/13/2021 21:20:03 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 21:20:03 +02:00 Route matched with "{action = \"GetBooks\", controller = \"Books\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AspNetCoreRepositoryPattern.Models.Dtos.BookDto]]] GetBooks()" on controller "AspNetCoreRepositoryPattern.Controllers.BooksController" ("AspNetCoreRepositoryPattern").
+09/13/2021 21:20:03 +02:00 Entity Framework Core "5.0.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+09/13/2021 21:20:03 +02:00 Executed DbCommand ("28"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Description], [b].[Title]
+FROM [Books] AS [b]"
+09/13/2021 21:20:03 +02:00 Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.BookDto, AspNetCoreRepositoryPattern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+09/13/2021 21:20:03 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)" in 58.3807ms
+09/13/2021 21:20:03 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 21:20:03 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/books?version=1 - - - 200 - application/json;+charset=utf-8 60.0733ms
+09/13/2021 21:22:59 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/books?version=1 - -
+09/13/2021 21:22:59 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 21:22:59 +02:00 Route matched with "{action = \"GetBooks\", controller = \"Books\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AspNetCoreRepositoryPattern.Models.Dtos.BookDto]]] GetBooks()" on controller "AspNetCoreRepositoryPattern.Controllers.BooksController" ("AspNetCoreRepositoryPattern").
+09/13/2021 21:22:59 +02:00 Entity Framework Core "5.0.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+09/13/2021 21:22:59 +02:00 Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Description], [b].[Title]
+FROM [Books] AS [b]"
+09/13/2021 21:22:59 +02:00 Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.BookDto, AspNetCoreRepositoryPattern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+09/13/2021 21:22:59 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)" in 29.4347ms
+09/13/2021 21:22:59 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 21:22:59 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/books?version=1 - - - 200 - application/json;+charset=utf-8 31.4272ms
+09/13/2021 21:23:31 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v2/swagger.json - -
+09/13/2021 21:23:31 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 9.2709ms
+09/13/2021 21:23:41 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/Books?version=2.0 - -
+09/13/2021 21:23:41 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 21:23:41 +02:00 Route matched with "{action = \"GetBooks\", controller = \"Books\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AspNetCoreRepositoryPattern.Models.Dtos.BookDto]]] GetBooks()" on controller "AspNetCoreRepositoryPattern.Controllers.BooksController" ("AspNetCoreRepositoryPattern").
+09/13/2021 21:23:41 +02:00 Entity Framework Core "5.0.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+09/13/2021 21:23:41 +02:00 Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Description], [b].[Title]
+FROM [Books] AS [b]"
+09/13/2021 21:23:41 +02:00 Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.BookDto, AspNetCoreRepositoryPattern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+09/13/2021 21:23:41 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)" in 4.7041ms
+09/13/2021 21:23:41 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 21:23:41 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/Books?version=2.0 - - - 200 - application/json;+charset=utf-8 5.8274ms
+09/13/2021 21:23:53 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/Books?version=1.0 - -
+09/13/2021 21:23:53 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 21:23:53 +02:00 Route matched with "{action = \"GetBooks\", controller = \"Books\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AspNetCoreRepositoryPattern.Models.Dtos.BookDto]]] GetBooks()" on controller "AspNetCoreRepositoryPattern.Controllers.BooksController" ("AspNetCoreRepositoryPattern").
+09/13/2021 21:23:53 +02:00 Entity Framework Core "5.0.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+09/13/2021 21:23:53 +02:00 Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Description], [b].[Title]
+FROM [Books] AS [b]"
+09/13/2021 21:23:53 +02:00 Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.BookDto, AspNetCoreRepositoryPattern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+09/13/2021 21:23:53 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)" in 29.2978ms
+09/13/2021 21:23:53 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 21:23:53 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/Books?version=1.0 - - - 200 - application/json;+charset=utf-8 30.5653ms
+09/13/2021 21:24:01 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/Books?version=1.0 - -
+09/13/2021 21:24:01 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 21:24:01 +02:00 Route matched with "{action = \"GetBooks\", controller = \"Books\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AspNetCoreRepositoryPattern.Models.Dtos.BookDto]]] GetBooks()" on controller "AspNetCoreRepositoryPattern.Controllers.BooksController" ("AspNetCoreRepositoryPattern").
+09/13/2021 21:24:01 +02:00 Entity Framework Core "5.0.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+09/13/2021 21:24:01 +02:00 Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Description], [b].[Title]
+FROM [Books] AS [b]"
+09/13/2021 21:24:01 +02:00 Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.BookDto, AspNetCoreRepositoryPattern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+09/13/2021 21:24:01 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)" in 3.5971ms
+09/13/2021 21:24:01 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/13/2021 21:24:01 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/Books?version=1.0 - - - 200 - application/json;+charset=utf-8 5.5498ms
+09/13/2021 21:24:20 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/Books?version=3.0 - -
+09/13/2021 21:24:20 +02:00 Multiple candidate actions were found, but none matched the requested service API version '"3.0"'. Candidate actions: "AspNetCoreRepositoryPattern.Controllers.BooksController.GetBooks (AspNetCoreRepositoryPattern)"
+09/13/2021 21:24:20 +02:00 Executing endpoint 'null'
+09/13/2021 21:24:20 +02:00 Executing "ObjectResult", writing value of type '"<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]"'.
+09/13/2021 21:24:20 +02:00 Executed endpoint 'null'
+09/13/2021 21:24:20 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/Books?version=3.0 - - - 400 - application/json;+charset=utf-8 1.3662ms
+09/13/2021 21:24:47 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/Todos?version=1.0 - -
+09/13/2021 21:24:47 +02:00 Multiple candidate actions were found, but none matched the requested service API version '"1.0"'. Candidate actions: "AspNetCoreRepositoryPattern.Controllers.TodosController.GetTodos (AspNetCoreRepositoryPattern)"
+09/13/2021 21:24:47 +02:00 Executing endpoint 'null'
+09/13/2021 21:24:47 +02:00 Executing "ObjectResult", writing value of type '"<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]], Microsoft.AspNetCore.Mvc.Versioning, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]"'.
+09/13/2021 21:24:47 +02:00 Executed endpoint 'null'
+09/13/2021 21:24:47 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/Todos?version=1.0 - - - 405 - application/json;+charset=utf-8 6.9308ms
+09/13/2021 21:26:28 +02:00 Application Starting
+09/13/2021 21:26:30 +02:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+09/13/2021 21:26:30 +02:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+09/13/2021 21:26:30 +02:00 Server baf78c09-280a-4f54-9284-6a18823098f6 successfully announced in 34.5304 ms
+09/13/2021 21:26:30 +02:00 Server baf78c09-280a-4f54-9284-6a18823098f6 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+09/13/2021 21:26:30 +02:00 Server baf78c09-280a-4f54-9284-6a18823098f6 all the dispatchers started
+09/13/2021 21:26:30 +02:00 Now listening on: "https://localhost:5001"
+09/13/2021 21:26:30 +02:00 Now listening on: "http://localhost:5000"
+09/13/2021 21:26:30 +02:00 Application started. Press Ctrl+C to shut down.
+09/13/2021 21:26:30 +02:00 Hosting environment: "Development"
+09/13/2021 21:26:30 +02:00 Content root path: "/Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern"
+09/13/2021 21:26:31 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+09/13/2021 21:26:31 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 101.6879ms
+09/13/2021 21:26:32 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 21:26:32 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 98.4094ms
+09/13/2021 21:26:41 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - -
+09/13/2021 21:26:41 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - - - 200 - application/json;charset=utf-8 2.6755ms
+09/13/2021 21:26:44 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v2/swagger.json - -
+09/13/2021 21:26:44 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 2.7763ms
+09/13/2021 21:26:46 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - -
+09/13/2021 21:26:46 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - - - 200 - application/json;charset=utf-8 1.6358ms
+09/13/2021 21:26:49 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 21:26:49 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 4.3299ms
+09/13/2021 21:26:51 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - -
+09/13/2021 21:26:51 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - - - 200 - application/json;charset=utf-8 1.8187ms
+09/13/2021 21:26:53 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 21:26:53 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 4.3035ms
+09/13/2021 21:27:49 +02:00 Application Starting
+09/13/2021 21:27:51 +02:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+09/13/2021 21:27:51 +02:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+09/13/2021 21:27:51 +02:00 Server 3b7ca944-fce9-47e3-9dc7-32dee4b0f073 successfully announced in 12.3826 ms
+09/13/2021 21:27:51 +02:00 Server 3b7ca944-fce9-47e3-9dc7-32dee4b0f073 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+09/13/2021 21:27:51 +02:00 Server 3b7ca944-fce9-47e3-9dc7-32dee4b0f073 all the dispatchers started
+09/13/2021 21:27:51 +02:00 Now listening on: "https://localhost:5001"
+09/13/2021 21:27:51 +02:00 Now listening on: "http://localhost:5000"
+09/13/2021 21:27:51 +02:00 Application started. Press Ctrl+C to shut down.
+09/13/2021 21:27:51 +02:00 Hosting environment: "Development"
+09/13/2021 21:27:51 +02:00 Content root path: "/Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern"
+09/13/2021 21:27:52 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+09/13/2021 21:27:52 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 200.0800ms
+09/13/2021 21:27:52 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 21:27:52 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 93.7001ms
+09/13/2021 21:27:57 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v2/swagger.json - -
+09/13/2021 21:27:57 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 3.5269ms
+09/13/2021 21:28:01 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - -
+09/13/2021 21:28:01 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - - - 200 - application/json;charset=utf-8 2.1319ms
+09/13/2021 21:28:02 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 21:28:02 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 4.1212ms
+09/13/2021 21:28:04 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - -
+09/13/2021 21:28:04 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - - - 200 - application/json;charset=utf-8 1.7983ms
+09/13/2021 21:28:08 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v2/swagger.json - -
+09/13/2021 21:28:08 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 3.3943ms
+09/13/2021 21:28:10 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - -
+09/13/2021 21:28:10 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - - - 200 - application/json;charset=utf-8 1.7491ms
+09/13/2021 21:28:11 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/13/2021 21:28:11 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 3.9886ms
