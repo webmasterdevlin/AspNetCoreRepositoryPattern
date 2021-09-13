@@ -23,12 +23,13 @@
 - Create contracts (interfaces) (optional)
 - Create repositories (services) (optional)
 - Add Scoped in the Startup.cs for contract and repository
-- Create controller
 - Add and configure CORS Policy in the Startup.cs
 - Add API versioning
 - Add Swashbuckle package
 - Configure Swagger UI in the Startup.cs
 - Create helpers and extensions for API versioning with Swagger UI integration
+- Create a base controller name ApiController
+- Create controllers and inherit from ApiController
 - Edit the launchSettings.json of the Properties folder from weatherforecast to swagger/index.html
 - Add Serilog Nuget packages
 - Configure Serilog in the Program.cs

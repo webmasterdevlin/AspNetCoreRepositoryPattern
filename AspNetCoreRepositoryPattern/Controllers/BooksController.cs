@@ -16,10 +16,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
      * Not using repository pattern.
      * This is okay if you are not writing any tests because this is not testable.
      */
-    [Route("api/[controller]")]
-    [ApiController]
-    [ApiVersion("1.0", Deprecated = true), ApiVersion("1.1"), ApiVersion("2.0")]
-    public class BooksController : ControllerBase
+    public class BooksController : ApiController
     {
         private readonly ApplicationDbContext _context;
         private readonly IMapper _mapper;

@@ -9,10 +9,7 @@ namespace AspNetCoreRepositoryPattern.Controllers
     /*
      * Using repository pattern.
      */
-    [Route("api/[controller]")]
-    [ApiController]
-    [ApiVersion("1.0", Deprecated = true), ApiVersion("1.1"), ApiVersion("2.0")]
-    public class TodosController : ControllerBase
+    public class TodosController : ApiController
     {
         private readonly ITodoRepository _repo;
 
