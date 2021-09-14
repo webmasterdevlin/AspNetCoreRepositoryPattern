@@ -5,6 +5,8 @@ namespace AspNetCoreRepositoryPattern.Extensions
 {
     public static class AppExtensions
     {
+        /* Custom middleware */
+        
         public static void UseSwaggerExtension(this IApplicationBuilder app, IApiVersionDescriptionProvider provider)
         {
             app.UseSwagger();

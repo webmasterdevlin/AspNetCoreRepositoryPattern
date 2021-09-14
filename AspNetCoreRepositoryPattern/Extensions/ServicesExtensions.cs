@@ -9,6 +9,8 @@ namespace AspNetCoreRepositoryPattern.Extensions
 {
     public static class ServicesExtensions
     {
+        /* Custom Service Collection */
+        
         public static void AddApiVersioningExtension(this IServiceCollection services)
         {
             services.AddApiVersioning(config =>
@@ -22,6 +24,8 @@ namespace AspNetCoreRepositoryPattern.Extensions
             });
         }
 
+        /* Custom Service Collection */
+        
         public static void AddVersionedApiExplorerExtension(this IServiceCollection services)
         {
             services.AddVersionedApiExplorer(options =>
@@ -30,6 +34,8 @@ namespace AspNetCoreRepositoryPattern.Extensions
             });
         }
 
+        /* Custom Service Collection */
+        
         public static void AddSwaggerGenExtension(this IServiceCollection services)
         {
             services.AddSwaggerGen(c =>
