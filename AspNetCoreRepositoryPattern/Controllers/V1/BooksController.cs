@@ -2,15 +2,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using AspNetCoreRepositoryPattern.Controllers.Base;
 using AspNetCoreRepositoryPattern.Models;
 using AspNetCoreRepositoryPattern.Models.Dtos;
 using AspNetCoreRepositoryPattern.Models.Entities;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
-namespace AspNetCoreRepositoryPattern.Controllers
+namespace AspNetCoreRepositoryPattern.Controllers.V1
 {
     /*
      * Not using repository pattern.

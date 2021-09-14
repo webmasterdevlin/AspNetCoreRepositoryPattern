@@ -1,5 +1,5 @@
 using AspNetCoreRepositoryPattern.Contracts;
-using AspNetCoreRepositoryPattern.Controllers;
+using AspNetCoreRepositoryPattern.Controllers.V1._1;
 using FluentAssertions;
 using Hangfire;
 using Microsoft.AspNetCore.Mvc;

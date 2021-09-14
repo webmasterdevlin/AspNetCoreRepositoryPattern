@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AspNetCoreRepositoryPattern.Contracts;
-using AspNetCoreRepositoryPattern.Controllers;
+using AspNetCoreRepositoryPattern.Controllers.V2;
 using AspNetCoreRepositoryPattern.Data;
 using AspNetCoreRepositoryPattern.Models.Dtos;
 using AspNetCoreRepositoryPattern.Models.Entities;

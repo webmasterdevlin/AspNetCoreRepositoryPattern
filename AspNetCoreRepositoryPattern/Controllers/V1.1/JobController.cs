@@ -1,9 +1,10 @@
 using System;
 using AspNetCoreRepositoryPattern.Contracts;
+using AspNetCoreRepositoryPattern.Controllers.Base;
 using Hangfire;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AspNetCoreRepositoryPattern.Controllers
+namespace AspNetCoreRepositoryPattern.Controllers.V1._1
 {
     public class JobController : ApiController
     {

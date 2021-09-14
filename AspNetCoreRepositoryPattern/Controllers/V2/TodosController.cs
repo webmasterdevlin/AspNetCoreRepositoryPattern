@@ -1,10 +1,11 @@
 using System;
 using System.Threading.Tasks;
 using AspNetCoreRepositoryPattern.Contracts;
-using Microsoft.AspNetCore.Mvc;
+using AspNetCoreRepositoryPattern.Controllers.Base;
 using AspNetCoreRepositoryPattern.Models.Entities;
+using Microsoft.AspNetCore.Mvc;
 
-namespace AspNetCoreRepositoryPattern.Controllers
+namespace AspNetCoreRepositoryPattern.Controllers.V2
 {
     /*
      * Using repository pattern.
