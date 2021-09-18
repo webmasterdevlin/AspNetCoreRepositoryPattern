@@ -61,3 +61,9 @@
 - Configure ApplicationDbContext
 - Add Customers controller on v1 and v2 without using repository pattern
 - Update the database using dotnet cli
+- Add code coverage packages
+- Run commands below:
+- dotnet tool install -g dotnet-reportgenerator-globaltool
+- dotnet test --collect:"XPlat Code Coverage"
+- reportgenerator -reports:"Unit.Tests/TestResults/*/coverage.cobertura.xml" -targetdir:"Unit.Tests/coveragereport" -reporttypes:Html
+- npx http-server Unit.Tests/coveragereport
