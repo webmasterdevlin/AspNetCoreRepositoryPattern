@@ -406,7 +406,10 @@ ASALocalRun/
 
 
 # tests
-Unit.Tests/TestResults/**
-coveragereport/*
+**/TestResults/*
+**/coveragereport/*
+
+Unit.Tests/TestResults
+Unit.Tests/coveragereport
 
 AspNetCoreRepositoryPattern/Migrations/
