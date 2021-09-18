@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Net;
-using AspNetCoreRepositoryPattern.Contracts;
 using AspNetCoreRepositoryPattern.Extensions;
 using AspNetCoreRepositoryPattern.Helpers;
 using AspNetCoreRepositoryPattern.Models;
@@ -17,7 +16,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
-using Scrutor;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace AspNetCoreRepositoryPattern
