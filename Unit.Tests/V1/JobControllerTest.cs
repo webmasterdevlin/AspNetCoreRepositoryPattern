@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Xunit;
 
-namespace Unit.Tests
+namespace Unit.Tests.V1
 {
     public class JobControllerTest
     {

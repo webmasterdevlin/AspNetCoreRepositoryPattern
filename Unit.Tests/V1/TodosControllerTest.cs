@@ -7,12 +7,12 @@ using AspNetCoreRepositoryPattern.Controllers.V1;
 using AspNetCoreRepositoryPattern.Data;
 using AspNetCoreRepositoryPattern.Models.Dtos;
 using AspNetCoreRepositoryPattern.Models.Entities;
+using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Xunit;
-using FluentAssertions;
 
-namespace Unit.Tests
+namespace Unit.Tests.V1
 {
     public class TodosControllerTest
     {

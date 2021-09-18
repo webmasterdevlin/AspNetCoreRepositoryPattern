@@ -12,7 +12,10 @@ namespace AspNetCoreRepositoryPattern.Controllers.V1
     public class UsersController :ControllerBase
     {
         private readonly IUserService _userService;
-        public UsersController(IUserService userService) => _userService = userService;
+        public UsersController(IUserService userService)
+        {
+            _userService = userService;
+        }
 
         [HttpPost("auth")]
         public IActionResult Authenticate(AuthenticateRequest model)
