@@ -41,7 +41,7 @@ namespace AspNetCoreRepositoryPattern
             
             // services.AddDbContext<ApplicationDbContext>(opt => opt.UseInMemoryDatabase("InMemoryDb"));
 
-            
+            /* Redis Cache */
             services.AddStackExchangeRedisCache(options =>
             {
                 options.Configuration = Configuration["RedisServer:ConnectionString"];
@@ -50,7 +50,6 @@ namespace AspNetCoreRepositoryPattern
             /* AutoMapper for mapping Entities to Dtos */
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             
-           
             /* CORS */
             services.AddCors();
 

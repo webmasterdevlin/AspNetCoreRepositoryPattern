@@ -12,6 +12,8 @@ using Newtonsoft.Json;
 
 namespace AspNetCoreRepositoryPattern.Controllers.V2
 {
+    /* using redis */
+    
     [ApiVersion("2.0")]
     public class CustomersController : ApiController
     {
