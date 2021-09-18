@@ -403,3 +403,8 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/
+
+
+# tests
+Unit.Tests/TestResults/**
+coveragereport/*

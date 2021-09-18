@@ -6,10 +6,13 @@
         <IsPackable>false</IsPackable>
     </PropertyGroup>
 
+    
     <ItemGroup>
         <PackageReference Include="FluentAssertions" Version="6.1.0" />
+        <PackageReference Include="Microsoft.CodeCoverage" Version="16.11.0" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
         <PackageReference Include="Moq" Version="4.16.1" />
+        <PackageReference Include="ReportGenerator" Version="4.8.12" />
         <PackageReference Include="xunit" Version="2.4.1" />
         <PackageReference Include="xunit.runner.console" Version="2.4.1">
           <PrivateAssets>all</PrivateAssets>
@@ -23,10 +26,15 @@
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
+        <PackageReference Include="XunitXml.TestLogger" Version="3.0.66" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\AspNetCoreRepositoryPattern\AspNetCoreRepositoryPattern.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="tools\reportgenerator" />
     </ItemGroup>
 
 </Project>
