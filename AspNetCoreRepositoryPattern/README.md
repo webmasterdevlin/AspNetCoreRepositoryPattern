@@ -22,6 +22,7 @@
 - dotnet dev-certs https
 - Create contracts (interfaces) (optional)
 - Create repositories (services) (optional)
+- Add Scrutor package configure the Startup.cs
 - Add Scoped in the Startup.cs for contract and repository
 - Add and configure CORS Policy in the Startup.cs
 - Add API versioning

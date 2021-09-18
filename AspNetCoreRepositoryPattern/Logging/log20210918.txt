@@ -51,3 +51,320 @@
 09/18/2021 08:31:05 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 98.5403ms
 09/18/2021 08:31:11 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/health - -
 09/18/2021 08:31:11 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/health - - - 200 - text/plain 35.3093ms
+09/18/2021 08:48:12 +02:00 Application Starting
+09/18/2021 08:48:14 +02:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+09/18/2021 08:48:14 +02:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+09/18/2021 08:48:14 +02:00 Server c4b86df1-11bf-4bdf-80c4-d44a808e0c7d successfully announced in 2.8468 ms
+09/18/2021 08:48:14 +02:00 Server c4b86df1-11bf-4bdf-80c4-d44a808e0c7d is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+09/18/2021 08:48:14 +02:00 Server c4b86df1-11bf-4bdf-80c4-d44a808e0c7d all the dispatchers started
+09/18/2021 08:48:14 +02:00 Now listening on: "https://localhost:5001"
+09/18/2021 08:48:14 +02:00 Now listening on: "http://localhost:5000"
+09/18/2021 08:48:14 +02:00 Application started. Press Ctrl+C to shut down.
+09/18/2021 08:48:14 +02:00 Hosting environment: "Development"
+09/18/2021 08:48:14 +02:00 Content root path: "/Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern"
+09/18/2021 08:48:15 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+09/18/2021 08:48:15 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 93.1044ms
+09/18/2021 08:48:16 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/18/2021 08:48:16 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 94.1459ms
+09/18/2021 08:48:58 +02:00 Application Starting
+09/18/2021 08:48:59 +02:00 The Application failed to start
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse': Unable to resolve service for type 'System.String' while attempting to activate 'AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse'.) (Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Helpers.JwtMiddleware Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Helpers.JwtMiddleware': Unable to resolve service for type 'Microsoft.AspNetCore.Http.RequestDelegate' while attempting to activate 'AspNetCoreRepositoryPattern.Helpers.JwtMiddleware'.) (Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Controllers.V2.TodosController Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Controllers.V2.TodosController': Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.ITodoRepository' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V2.TodosController'.) (Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Controllers.V1.UsersController Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Controllers.V1.UsersController': Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.IUserService' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V1.UsersController'.) (Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Controllers.V1._1.JobController Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Controllers.V1._1.JobController': Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.IJobService' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V1._1.JobController'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse': Unable to resolve service for type 'System.String' while attempting to activate 'AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'System.String' while attempting to activate 'AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at AspNetCoreRepositoryPattern.Program.Main(String[] args) in /Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern/Program.cs:line 25
+ ---> (Inner Exception #1) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Helpers.JwtMiddleware Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Helpers.JwtMiddleware': Unable to resolve service for type 'Microsoft.AspNetCore.Http.RequestDelegate' while attempting to activate 'AspNetCoreRepositoryPattern.Helpers.JwtMiddleware'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Http.RequestDelegate' while attempting to activate 'AspNetCoreRepositoryPattern.Helpers.JwtMiddleware'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #2) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Controllers.V2.TodosController Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Controllers.V2.TodosController': Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.ITodoRepository' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V2.TodosController'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.ITodoRepository' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V2.TodosController'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #3) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Controllers.V1.UsersController Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Controllers.V1.UsersController': Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.IUserService' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V1.UsersController'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.IUserService' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V1.UsersController'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #4) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Controllers.V1._1.JobController Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Controllers.V1._1.JobController': Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.IJobService' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V1._1.JobController'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.IJobService' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V1._1.JobController'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)<---
+
+09/18/2021 08:49:15 +02:00 Application Starting
+09/18/2021 08:49:16 +02:00 The Application failed to start
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse': Unable to resolve service for type 'System.String' while attempting to activate 'AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse'.) (Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Helpers.JwtMiddleware Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Helpers.JwtMiddleware': Unable to resolve service for type 'Microsoft.AspNetCore.Http.RequestDelegate' while attempting to activate 'AspNetCoreRepositoryPattern.Helpers.JwtMiddleware'.) (Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Controllers.V2.TodosController Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Controllers.V2.TodosController': Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.ITodoRepository' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V2.TodosController'.) (Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Controllers.V1.UsersController Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Controllers.V1.UsersController': Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.IUserService' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V1.UsersController'.) (Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Controllers.V1._1.JobController Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Controllers.V1._1.JobController': Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.IJobService' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V1._1.JobController'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse': Unable to resolve service for type 'System.String' while attempting to activate 'AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'System.String' while attempting to activate 'AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at AspNetCoreRepositoryPattern.Program.Main(String[] args) in /Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern/Program.cs:line 25
+ ---> (Inner Exception #1) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Helpers.JwtMiddleware Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Helpers.JwtMiddleware': Unable to resolve service for type 'Microsoft.AspNetCore.Http.RequestDelegate' while attempting to activate 'AspNetCoreRepositoryPattern.Helpers.JwtMiddleware'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Http.RequestDelegate' while attempting to activate 'AspNetCoreRepositoryPattern.Helpers.JwtMiddleware'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #2) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Controllers.V2.TodosController Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Controllers.V2.TodosController': Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.ITodoRepository' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V2.TodosController'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.ITodoRepository' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V2.TodosController'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #3) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Controllers.V1.UsersController Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Controllers.V1.UsersController': Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.IUserService' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V1.UsersController'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.IUserService' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V1.UsersController'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #4) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Controllers.V1._1.JobController Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Controllers.V1._1.JobController': Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.IJobService' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V1._1.JobController'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.IJobService' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V1._1.JobController'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)<---
+
+09/18/2021 08:49:36 +02:00 Application Starting
+09/18/2021 08:49:37 +02:00 The Application failed to start
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse': Unable to resolve service for type 'System.String' while attempting to activate 'AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse'.) (Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Helpers.JwtMiddleware Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Helpers.JwtMiddleware': Unable to resolve service for type 'Microsoft.AspNetCore.Http.RequestDelegate' while attempting to activate 'AspNetCoreRepositoryPattern.Helpers.JwtMiddleware'.) (Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Controllers.V2.TodosController Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Controllers.V2.TodosController': Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.ITodoRepository' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V2.TodosController'.) (Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Controllers.V1.UsersController Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Controllers.V1.UsersController': Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.IUserService' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V1.UsersController'.) (Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Controllers.V1._1.JobController Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Controllers.V1._1.JobController': Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.IJobService' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V1._1.JobController'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse': Unable to resolve service for type 'System.String' while attempting to activate 'AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'System.String' while attempting to activate 'AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at AspNetCoreRepositoryPattern.Program.Main(String[] args) in /Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern/Program.cs:line 25
+ ---> (Inner Exception #1) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Helpers.JwtMiddleware Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Helpers.JwtMiddleware': Unable to resolve service for type 'Microsoft.AspNetCore.Http.RequestDelegate' while attempting to activate 'AspNetCoreRepositoryPattern.Helpers.JwtMiddleware'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Http.RequestDelegate' while attempting to activate 'AspNetCoreRepositoryPattern.Helpers.JwtMiddleware'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #2) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Controllers.V2.TodosController Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Controllers.V2.TodosController': Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.ITodoRepository' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V2.TodosController'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.ITodoRepository' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V2.TodosController'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #3) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Controllers.V1.UsersController Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Controllers.V1.UsersController': Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.IUserService' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V1.UsersController'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.IUserService' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V1.UsersController'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #4) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: AspNetCoreRepositoryPattern.Controllers.V1._1.JobController Lifetime: Transient ImplementationType: AspNetCoreRepositoryPattern.Controllers.V1._1.JobController': Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.IJobService' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V1._1.JobController'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'AspNetCoreRepositoryPattern.Contracts.IJobService' while attempting to activate 'AspNetCoreRepositoryPattern.Controllers.V1._1.JobController'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)<---
+
+09/18/2021 08:50:06 +02:00 Application Starting
+09/18/2021 08:50:08 +02:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+09/18/2021 08:50:08 +02:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+09/18/2021 08:50:08 +02:00 Server cfd6128f-9aa7-4b46-b950-eee3513b2b8b successfully announced in 2.8143 ms
+09/18/2021 08:50:08 +02:00 Server cfd6128f-9aa7-4b46-b950-eee3513b2b8b is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+09/18/2021 08:50:08 +02:00 Server cfd6128f-9aa7-4b46-b950-eee3513b2b8b all the dispatchers started
+09/18/2021 08:50:08 +02:00 Now listening on: "https://localhost:5001"
+09/18/2021 08:50:08 +02:00 Now listening on: "http://localhost:5000"
+09/18/2021 08:50:08 +02:00 Application started. Press Ctrl+C to shut down.
+09/18/2021 08:50:08 +02:00 Hosting environment: "Development"
+09/18/2021 08:50:08 +02:00 Content root path: "/Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern"
+09/18/2021 08:50:09 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+09/18/2021 08:50:09 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 96.7423ms
+09/18/2021 08:50:10 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/18/2021 08:50:10 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 112.7631ms
+09/18/2021 08:50:16 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/Books?version=1.0 - -
+09/18/2021 08:50:16 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/18/2021 08:50:16 +02:00 Route matched with "{action = \"GetBooks\", controller = \"Books\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AspNetCoreRepositoryPattern.Models.Dtos.BookDto]]] GetBooks()" on controller "AspNetCoreRepositoryPattern.Controllers.V1.BooksController" ("AspNetCoreRepositoryPattern").
+09/18/2021 08:50:16 +02:00 Authorization failed for the request at filter '"AspNetCoreRepositoryPattern.Helpers.AuthorizeAttribute"'.
+09/18/2021 08:50:16 +02:00 Executing JsonResult, writing value of type '"<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+09/18/2021 08:50:16 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1.BooksController.GetBooks (AspNetCoreRepositoryPattern)" in 5.8892ms
+09/18/2021 08:50:16 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/18/2021 08:50:16 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/Books?version=1.0 - - - 401 - application/json;+charset=utf-8 69.8988ms
+09/18/2021 08:50:25 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v2/swagger.json - -
+09/18/2021 08:50:25 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 2.7735ms
+09/18/2021 08:50:29 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/Todos?version=2.0 - -
+09/18/2021 08:50:29 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V2.TodosController.GetTodos (AspNetCoreRepositoryPattern)"'
+09/18/2021 08:50:29 +02:00 Route matched with "{action = \"GetTodos\", controller = \"Todos\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos()" on controller "AspNetCoreRepositoryPattern.Controllers.V2.TodosController" ("AspNetCoreRepositoryPattern").
+09/18/2021 08:50:29 +02:00 Authorization failed for the request at filter '"AspNetCoreRepositoryPattern.Helpers.AuthorizeAttribute"'.
+09/18/2021 08:50:29 +02:00 Executing JsonResult, writing value of type '"<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+09/18/2021 08:50:29 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V2.TodosController.GetTodos (AspNetCoreRepositoryPattern)" in 0.5471ms
+09/18/2021 08:50:29 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V2.TodosController.GetTodos (AspNetCoreRepositoryPattern)"'
+09/18/2021 08:50:29 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/Todos?version=2.0 - - - 401 - application/json;+charset=utf-8 4.8881ms
+09/18/2021 08:50:33 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - -
+09/18/2021 08:50:33 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1.1/swagger.json - - - 200 - application/json;charset=utf-8 1.5661ms
+09/18/2021 08:50:38 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/Job/fire-and-forget-job?version=1.1 - -
+09/18/2021 08:50:38 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateFireAndForgetJob (AspNetCoreRepositoryPattern)"'
+09/18/2021 08:50:38 +02:00 Route matched with "{action = \"CreateFireAndForgetJob\", controller = \"Job\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult CreateFireAndForgetJob()" on controller "AspNetCoreRepositoryPattern.Controllers.V1._1.JobController" ("AspNetCoreRepositoryPattern").
+09/18/2021 08:50:38 +02:00 Authorization failed for the request at filter '"AspNetCoreRepositoryPattern.Helpers.AuthorizeAttribute"'.
+09/18/2021 08:50:38 +02:00 Executing JsonResult, writing value of type '"<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+09/18/2021 08:50:38 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateFireAndForgetJob (AspNetCoreRepositoryPattern)" in 0.5103ms
+09/18/2021 08:50:38 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateFireAndForgetJob (AspNetCoreRepositoryPattern)"'
+09/18/2021 08:50:38 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/Job/fire-and-forget-job?version=1.1 - - - 401 - application/json;+charset=utf-8 4.9070ms
+09/18/2021 08:50:43 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/18/2021 08:50:43 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 22.8924ms
+09/18/2021 08:51:27 +02:00 Request starting HTTP/1.1 POST https://localhost:5001/api/Users/auth?version=1.0 application/json 68
+09/18/2021 08:51:27 +02:00 CORS policy execution successful.
+09/18/2021 08:51:27 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern)"'
+09/18/2021 08:51:27 +02:00 Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateRequest)" on controller "AspNetCoreRepositoryPattern.Controllers.V1.UsersController" ("AspNetCoreRepositoryPattern").
+09/18/2021 08:51:28 +02:00 Executing "OkObjectResult", writing value of type '"AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse"'.
+09/18/2021 08:51:28 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern)" in 222.5731ms
+09/18/2021 08:51:28 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern)"'
+09/18/2021 08:51:28 +02:00 Request finished HTTP/1.1 POST https://localhost:5001/api/Users/auth?version=1.0 application/json 68 - 200 - application/json;+charset=utf-8 231.7515ms
+09/18/2021 08:58:47 +02:00 Application Starting
+09/18/2021 08:58:49 +02:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+09/18/2021 08:58:49 +02:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+09/18/2021 08:58:49 +02:00 Server f7b8ff5c-9dac-4b9b-98c5-223aeef9f21e successfully announced in 11.1844 ms
+09/18/2021 08:58:49 +02:00 Server f7b8ff5c-9dac-4b9b-98c5-223aeef9f21e is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+09/18/2021 08:58:49 +02:00 Server f7b8ff5c-9dac-4b9b-98c5-223aeef9f21e all the dispatchers started
+09/18/2021 08:58:49 +02:00 Now listening on: "https://localhost:5001"
+09/18/2021 08:58:49 +02:00 Now listening on: "http://localhost:5000"
+09/18/2021 08:58:49 +02:00 Application started. Press Ctrl+C to shut down.
+09/18/2021 08:58:49 +02:00 Hosting environment: "Development"
+09/18/2021 08:58:49 +02:00 Content root path: "/Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern"
+09/18/2021 08:58:50 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+09/18/2021 08:58:50 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 112.4784ms
+09/18/2021 08:58:50 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/18/2021 08:58:51 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 99.4031ms
+09/18/2021 08:59:09 +02:00 Request starting HTTP/1.1 POST https://localhost:5001/api/Users/auth?version=1.0 application/json 47
+09/18/2021 08:59:09 +02:00 CORS policy execution successful.
+09/18/2021 08:59:10 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern)"'
+09/18/2021 08:59:10 +02:00 Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateRequest)" on controller "AspNetCoreRepositoryPattern.Controllers.V1.UsersController" ("AspNetCoreRepositoryPattern").
+09/18/2021 08:59:10 +02:00 Executing "BadRequestObjectResult", writing value of type '"<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+09/18/2021 08:59:10 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern)" in 29.6158ms
+09/18/2021 08:59:10 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern)"'
+09/18/2021 08:59:10 +02:00 Request finished HTTP/1.1 POST https://localhost:5001/api/Users/auth?version=1.0 application/json 47 - 400 - application/json;+charset=utf-8 89.3466ms
+09/18/2021 08:59:24 +02:00 Request starting HTTP/1.1 POST https://localhost:5001/api/Users/auth?version=1.0 application/json 68
+09/18/2021 08:59:24 +02:00 CORS policy execution successful.
+09/18/2021 08:59:24 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern)"'
+09/18/2021 08:59:24 +02:00 Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateRequest)" on controller "AspNetCoreRepositoryPattern.Controllers.V1.UsersController" ("AspNetCoreRepositoryPattern").
+09/18/2021 08:59:24 +02:00 Executing "OkObjectResult", writing value of type '"AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse"'.
+09/18/2021 08:59:24 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern)" in 179.9636ms
+09/18/2021 08:59:24 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern)"'
+09/18/2021 08:59:24 +02:00 Request finished HTTP/1.1 POST https://localhost:5001/api/Users/auth?version=1.0 application/json 68 - 200 - application/json;+charset=utf-8 182.6264ms
+09/18/2021 08:59:44 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/Books?version=1.0 - -
+09/18/2021 08:59:44 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/18/2021 08:59:44 +02:00 Route matched with "{action = \"GetBooks\", controller = \"Books\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AspNetCoreRepositoryPattern.Models.Dtos.BookDto]]] GetBooks()" on controller "AspNetCoreRepositoryPattern.Controllers.V1.BooksController" ("AspNetCoreRepositoryPattern").
+09/18/2021 08:59:45 +02:00 Entity Framework Core "5.0.10" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+09/18/2021 08:59:46 +02:00 Executed DbCommand ("52"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Description], [b].[Title]
+FROM [Books] AS [b]"
+09/18/2021 08:59:46 +02:00 Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.BookDto, AspNetCoreRepositoryPattern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+09/18/2021 08:59:46 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1.BooksController.GetBooks (AspNetCoreRepositoryPattern)" in 1383.7735ms
+09/18/2021 08:59:46 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.BooksController.GetBooks (AspNetCoreRepositoryPattern)"'
+09/18/2021 08:59:46 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/Books?version=1.0 - - - 200 - application/json;+charset=utf-8 1438.8304ms

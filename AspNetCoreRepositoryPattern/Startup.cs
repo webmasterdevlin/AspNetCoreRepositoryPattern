@@ -17,6 +17,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
+using Scrutor;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace AspNetCoreRepositoryPattern
@@ -67,11 +68,21 @@ namespace AspNetCoreRepositoryPattern
             /* health checks */
             services.AddHealthChecks();
             
+            /* scrutor */
+            services.Scan(scan => 
+                scan.FromCallingAssembly()                    
+                    .AddClasses()
+                    .AsMatchingInterface());
+            
             /* register your contracts and repositories/services here through the built-in dependency injections */
             services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
-            services.AddScoped<ITodoRepository, TodoRepository>();
-            services.AddScoped<IJobService, JobService>();
-            services.AddScoped<IUserService, UserService>();
+            
+            /* auto map from interface to service because of scrutor e.g.
+             from services.AddScoped<IPerson, Person>
+             to services.AddScoped<Person> only */
+            services.AddScoped<TodoRepository>();
+            services.AddScoped<JobService>();
+            services.AddScoped<UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
