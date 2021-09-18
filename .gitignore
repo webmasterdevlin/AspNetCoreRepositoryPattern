@@ -408,3 +408,5 @@ ASALocalRun/
 # tests
 Unit.Tests/TestResults/**
 coveragereport/*
+
+AspNetCoreRepositoryPattern/Migrations/
