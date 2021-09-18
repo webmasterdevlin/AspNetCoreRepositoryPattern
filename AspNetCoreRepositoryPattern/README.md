@@ -30,7 +30,9 @@
 - Configure Swagger UI in the Startup.cs
 - Create helpers and extensions for API versioning with Swagger UI integration
 - Create a base controller name ApiController
-- Create controllers and inherit from ApiController
+- Create todos controller on v1 only using repository pattern 
+- inherit the todos controller from ApiController
+- Use the repository in todos controller
 - Edit the launchSettings.json of the Properties folder from weatherforecast to swagger/index.html
 - Add Serilog Nuget packages
 - Configure Serilog in the Program.cs
@@ -42,9 +44,20 @@
 - Add Fluent Assertions package
 - Add test C# file for each controller
 - Add test for each HTTP method
+- Add books controller without repository pattern
 - Add Hangfire packages for chron jobs or scheduled jobs or timer jobs
 - Configure Hangfire in the Startup.cs
+- Add jobs controller on v1 and v1.1
 - Add authentication and authorization
 - Start with Entity, Dto, Interface, Service, Helpers, Controller, add JWT Secret in appsettings.json, register Auth, IUserService/UserService, and add JwtMiddleware in the Startup.cs
 - Add authorize attribute in the base controller ApiController.cs
 - Add health checks in Startup.cs
+- Install redis on your local machine
+- To install on macbook, run the command below:
+- brew install redis
+- Add Redis Cache
+- Configure Startup.cs
+- Configure appsettings.json
+- Configure ApplicationDbContext
+- Add Customers controller on v1 and v2 without using repository pattern
+- Update the database using dotnet cli

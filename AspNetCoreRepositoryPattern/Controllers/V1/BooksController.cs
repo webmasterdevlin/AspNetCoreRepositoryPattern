@@ -17,6 +17,7 @@ namespace AspNetCoreRepositoryPattern.Controllers.V1
      * Not using repository pattern.
      * This is okay if you are not writing any tests because this is not testable.
      */
+    [ApiVersion("1.0")]
     public class BooksController : ApiController
     {
         private readonly ApplicationDbContext _context;
@@ -30,7 +31,6 @@ namespace AspNetCoreRepositoryPattern.Controllers.V1
 
         // GET: api/books
         [HttpGet]
-        [ApiVersion("1.0")]
         public async Task<ActionResult<IEnumerable<BookDto>>> GetBooks()
         {
             try
@@ -48,7 +48,6 @@ namespace AspNetCoreRepositoryPattern.Controllers.V1
 
         // GET: api/books/ab2bd817-98cd-4cf3-a80a-53ea0cd9c200
         [HttpGet("{id:guid}")]
-        [ApiVersion("1.0")]
         public async Task<ActionResult<BookDto>> GetBook(Guid id)
         {
             try
@@ -69,7 +68,6 @@ namespace AspNetCoreRepositoryPattern.Controllers.V1
 
         // PUT: api/books/ab2bd817-98cd-4cf3-a80a-53ea0cd9c200
         [HttpPut("{id:guid}")]
-        [ApiVersion("1.0")]
         public async Task<IActionResult> PutBook(Guid id, Book book)
         {
             if (id != book.Id)
@@ -93,7 +91,6 @@ namespace AspNetCoreRepositoryPattern.Controllers.V1
 
         // POST: api/books
         [HttpPost]
-        [ApiVersion("1.0")]
         public async Task<ActionResult<BookDto>> PostBook(Book book)
         {
             try
@@ -112,7 +109,6 @@ namespace AspNetCoreRepositoryPattern.Controllers.V1
 
         // DELETE: api/books/ab2bd817-98cd-4cf3-a80a-53ea0cd9c200
         [HttpDelete("{id:guid}")]
-        [ApiVersion("1.0")]
         public async Task<IActionResult> DeleteBook(Guid id)
         {
             try

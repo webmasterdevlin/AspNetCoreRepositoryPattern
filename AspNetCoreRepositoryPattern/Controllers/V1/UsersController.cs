@@ -5,12 +5,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AspNetCoreRepositoryPattern.Controllers.V1
 {
-
-    [ApiController]
     [ApiVersion("1.0")]
     [AllowAnonymous]
+    [ApiController]
     [Route("api/[controller]")]
-    public class UsersController : ControllerBase
+    public class UsersController :ControllerBase
     {
         private readonly IUserService _userService;
         public UsersController(IUserService userService) => _userService = userService;
