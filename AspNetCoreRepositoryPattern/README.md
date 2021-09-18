@@ -46,3 +46,4 @@
 - Add authentication and authorization
 - Start with Entity, Dto, Interface, Service, Helpers, Controller, add JWT Secret in appsettings.json, register Auth, IUserService/UserService, and add JwtMiddleware in the Startup.cs
 - Add authorize attribute in the base controller ApiController.cs
+- Add health checks in Startup.cs

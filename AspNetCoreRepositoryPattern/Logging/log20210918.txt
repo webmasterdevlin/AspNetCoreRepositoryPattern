@@ -1,0 +1,53 @@
+09/18/2021 08:30:30 +02:00 Application Starting
+09/18/2021 08:30:31 +02:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+09/18/2021 08:30:31 +02:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+09/18/2021 08:30:31 +02:00 Server ca2cd548-beb0-456a-b5f3-4cdf8451b8f4 successfully announced in 2.8028 ms
+09/18/2021 08:30:31 +02:00 Server ca2cd548-beb0-456a-b5f3-4cdf8451b8f4 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+09/18/2021 08:30:32 +02:00 Server ca2cd548-beb0-456a-b5f3-4cdf8451b8f4 all the dispatchers started
+09/18/2021 08:30:32 +02:00 Now listening on: "https://localhost:5001"
+09/18/2021 08:30:32 +02:00 Now listening on: "http://localhost:5000"
+09/18/2021 08:30:32 +02:00 Application started. Press Ctrl+C to shut down.
+09/18/2021 08:30:32 +02:00 Hosting environment: "Development"
+09/18/2021 08:30:32 +02:00 Content root path: "/Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern"
+09/18/2021 08:30:33 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+09/18/2021 08:30:33 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 128.4620ms
+09/18/2021 08:30:33 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui.css - -
+09/18/2021 08:30:33 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-bundle.js - -
+09/18/2021 08:30:33 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - -
+09/18/2021 08:30:33 +02:00 Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+09/18/2021 08:30:33 +02:00 Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+09/18/2021 08:30:33 +02:00 Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+09/18/2021 08:30:33 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui.css - - - 200 143632 text/css 214.5854ms
+09/18/2021 08:30:33 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 126.8774ms
+09/18/2021 08:30:33 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-bundle.js - - - 200 1091362 application/javascript 165.1303ms
+09/18/2021 08:30:33 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/18/2021 08:30:33 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 108.8020ms
+09/18/2021 08:30:38 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/health - -
+09/18/2021 08:30:38 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/health - - - 200 - text/plain 32.7723ms
+09/18/2021 08:30:39 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/favicon.ico - -
+09/18/2021 08:30:39 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/favicon.ico - - - 404 0 - 0.7568ms
+09/18/2021 08:31:02 +02:00 Application Starting
+09/18/2021 08:31:04 +02:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+09/18/2021 08:31:04 +02:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+09/18/2021 08:31:04 +02:00 Server 09349cfa-f940-4fa1-87e4-3b0f643c676e successfully announced in 11.4722 ms
+09/18/2021 08:31:04 +02:00 Server 09349cfa-f940-4fa1-87e4-3b0f643c676e is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+09/18/2021 08:31:04 +02:00 Server 09349cfa-f940-4fa1-87e4-3b0f643c676e all the dispatchers started
+09/18/2021 08:31:04 +02:00 Now listening on: "https://localhost:5001"
+09/18/2021 08:31:04 +02:00 Now listening on: "http://localhost:5000"
+09/18/2021 08:31:04 +02:00 Application started. Press Ctrl+C to shut down.
+09/18/2021 08:31:04 +02:00 Hosting environment: "Development"
+09/18/2021 08:31:04 +02:00 Content root path: "/Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern"
+09/18/2021 08:31:04 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+09/18/2021 08:31:05 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 91.7662ms
+09/18/2021 08:31:05 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+09/18/2021 08:31:05 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 98.5403ms
+09/18/2021 08:31:11 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/health - -
+09/18/2021 08:31:11 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/health - - - 200 - text/plain 35.3093ms

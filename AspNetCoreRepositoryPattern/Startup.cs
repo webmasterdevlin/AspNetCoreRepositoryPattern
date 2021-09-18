@@ -64,6 +64,8 @@ namespace AspNetCoreRepositoryPattern
             /* auth */
             services.Configure<AuthSettings>(Configuration.GetSection(nameof(AuthSettings)));
 
+            /* health checks */
+            services.AddHealthChecks();
             
             /* register your contracts and repositories/services here through the built-in dependency injections */
             services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
@@ -98,6 +100,9 @@ namespace AspNetCoreRepositoryPattern
             
             /* hangfire dashboard */
             app.UseHangfireDashboard("/chron-jobs-dashboard");
+            
+            /* health check */
+            app.UseHealthChecks("/api/health");
             
             /* Basic Global Exception Handler*/
             app.UseExceptionHandler(
