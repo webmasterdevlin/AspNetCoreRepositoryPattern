@@ -12,6 +12,6 @@ namespace AspNetCoreRepositoryPattern.Models.Entities
         public string Name { get; set; }
         [Required(ErrorMessage = "Done is required")]
         public bool Done { get; set; }
-        public DateTime CreatedAt => DateTime.Now;
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
     }
 }

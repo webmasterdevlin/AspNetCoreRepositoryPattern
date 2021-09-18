@@ -29,5 +29,7 @@ namespace AspNetCoreRepositoryPattern.Models.Entities
         
         [Required(ErrorMessage = "Date of birth is required")]
         public DateTime DateOfBirth { get; set; }
+        
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
     }
 }

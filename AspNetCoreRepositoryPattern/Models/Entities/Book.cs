@@ -17,6 +17,7 @@ namespace AspNetCoreRepositoryPattern.Models.Entities
         [MinLength(12)]
         [MaxLength(180)]
         public string Description { get; set; }
-        public DateTime CreatedAt => DateTime.Now;
+        
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
     }
 }
