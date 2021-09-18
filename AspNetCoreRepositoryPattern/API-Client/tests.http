@@ -1,3 +1,12 @@
+POST https://localhost:5001/api/users/auth
+Content-Type: application/json
+
+{
+  "email": "webmasterdevlin@gmail.com",
+  "password": "Pass123!"
+}
+
+###
 GET https://localhost:5001/api/books?version=1
 Accept: application/json
 
@@ -8,3 +17,5 @@ GET https://localhost:5001/api/todos
 Accept: application/json
 version: 2
 ###
+
+

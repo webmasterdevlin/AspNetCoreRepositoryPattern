@@ -43,3 +43,6 @@
 - Add test for each HTTP method
 - Add Hangfire packages for chron jobs or scheduled jobs or timer jobs
 - Configure Hangfire in the Startup.cs
+- Add authentication and authorization
+- Start with Entity, Dto, Interface, Service, Helpers, Controller, add JWT Secret in appsettings.json, register Auth, IUserService/UserService, and add JwtMiddleware in the Startup.cs
+- Add authorize attribute in the base controller ApiController.cs

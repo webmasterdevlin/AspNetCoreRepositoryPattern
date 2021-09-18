@@ -61,14 +61,15 @@ namespace AspNetCoreRepositoryPattern
             services.AddHangfire(x => x.UseInMemoryStorage());
             services.AddHangfireServer();
             
+            /* auth */
+            services.Configure<AuthSettings>(Configuration.GetSection(nameof(AuthSettings)));
 
-
-            /* register your contracts and repositories/services here */
-            services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
             
+            /* register your contracts and repositories/services here through the built-in dependency injections */
+            services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
             services.AddScoped<ITodoRepository, TodoRepository>();
             services.AddScoped<IJobService, JobService>();
-
+            services.AddScoped<IUserService, UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -92,7 +93,7 @@ namespace AspNetCoreRepositoryPattern
 
             app.UseRouting();
 
-
+            app.UseMiddleware<JwtMiddleware>();
             app.UseAuthorization();
             
             /* hangfire dashboard */
