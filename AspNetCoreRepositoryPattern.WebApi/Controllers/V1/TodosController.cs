@@ -31,7 +31,7 @@ namespace AspNetCoreRepositoryPattern.Controllers.V1
         }
 
         // GET: api/todos/5074551d-ebd7-454c-9436-0c363b4e36b3
-        [HttpGet("{id}")]
+        [HttpGet("{id:guid}")]
         public async Task<IActionResult> GetTodoById(Guid id)
         {
             var todo = await _repo.GetByIdAsync(id);
