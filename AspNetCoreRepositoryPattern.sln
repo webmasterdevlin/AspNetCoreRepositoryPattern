@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.810.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreRepositoryPattern", "AspNetCoreRepositoryPattern\AspNetCoreRepositoryPattern.csproj", "{C2EDC2FF-D89B-4DCA-B4B5-E8195EBC6A6A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreRepositoryPattern.WebApi", "AspNetCoreRepositoryPattern.WebApi\AspNetCoreRepositoryPattern.WebApi.csproj", "{C2EDC2FF-D89B-4DCA-B4B5-E8195EBC6A6A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit.Tests", "Unit.Tests\Unit.Tests.csproj", "{DE535C1F-8C6B-4477-B117-FF9BD18298FD}"
 EndProject

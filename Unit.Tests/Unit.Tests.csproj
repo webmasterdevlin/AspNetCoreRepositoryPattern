@@ -30,7 +30,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\AspNetCoreRepositoryPattern\AspNetCoreRepositoryPattern.csproj" />
+      <ProjectReference Include="..\AspNetCoreRepositoryPattern.WebApi\AspNetCoreRepositoryPattern.WebApi.csproj" />
     </ItemGroup>
 
     <ItemGroup>
