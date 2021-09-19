@@ -67,3 +67,4 @@
 - dotnet test --collect:"XPlat Code Coverage"
 - reportgenerator -reports:"Unit.Tests/TestResults/*/coverage.cobertura.xml" -targetdir:"Unit.Tests/coveragereport" -reporttypes:Html
 - npx http-server Unit.Tests/coveragereport
+- Check http://localhost:8080 to see generated test coverage UI
