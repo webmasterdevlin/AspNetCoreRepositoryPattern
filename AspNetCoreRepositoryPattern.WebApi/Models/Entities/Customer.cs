@@ -1,8 +1,10 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AspNetCoreRepositoryPattern.Models.Entities
 {
+    [Table("Customers")]
     public class Customer
     {
         public Guid Id { get; set; }
