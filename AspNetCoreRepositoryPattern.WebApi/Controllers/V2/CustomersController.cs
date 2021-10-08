@@ -15,6 +15,7 @@ namespace AspNetCoreRepositoryPattern.Controllers.V2
     /* using redis */
     
     [ApiVersion("2.0")]
+    [Route("api/customers")]
     public class CustomersController : ApiController
     {
         private readonly ApplicationDbContext _context;

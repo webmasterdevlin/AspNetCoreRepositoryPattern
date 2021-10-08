@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace AspNetCoreRepositoryPattern.Controllers.V1._1
 {
     [ApiVersion("1.1")]
+    [Route("api/job")]
     public class JobController : ApiController
     {
         private readonly IJobService _jobService;

@@ -615,3 +615,233 @@ FROM [Todos] AS [t]"
 10/08/2021 16:29:34 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1.TodosController.GetTodos (AspNetCoreRepositoryPattern.WebApi)" in 143.8961ms
 10/08/2021 16:29:34 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.TodosController.GetTodos (AspNetCoreRepositoryPattern.WebApi)"'
 10/08/2021 16:29:34 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/todos - - - 200 - application/json;+charset=utf-8 150.6833ms
+10/08/2021 19:30:08 +02:00 Application Starting
+10/08/2021 19:30:09 +02:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+10/08/2021 19:30:09 +02:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+10/08/2021 19:30:09 +02:00 Server 8e6f6be3-42a7-4f8c-a04c-a3bf5fdf55fb successfully announced in 3.103 ms
+10/08/2021 19:30:09 +02:00 Server 8e6f6be3-42a7-4f8c-a04c-a3bf5fdf55fb is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+10/08/2021 19:30:09 +02:00 Server 8e6f6be3-42a7-4f8c-a04c-a3bf5fdf55fb all the dispatchers started
+10/08/2021 19:30:10 +02:00 Application startup exception
+System.InvalidOperationException: Action 'AspNetCoreRepositoryPattern.Controllers.V2.CustomersController.GetAllCustomersUsingRedisCache (AspNetCoreRepositoryPattern.WebApi)' does not have an attribute route. Action methods on controllers annotated with ApiControllerAttribute must be attribute routed.
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.EnsureActionIsAttributeRouted(ActionModel actionModel)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApplicationModelFactory.CreateApplicationModel(IEnumerable`1 controllerTypes)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.Initialize()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.DefaultApiVersionDescriptionProvider.EnumerateApiVersions(IActionDescriptorCollectionProvider actionDescriptorCollectionProvider)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.DefaultApiVersionDescriptionProvider.LazyApiVersionDescriptions.EnumerateApiVersions()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.DefaultApiVersionDescriptionProvider.get_ApiVersionDescriptions()
+   at AspNetCoreRepositoryPattern.Extensions.AppExtensions.<>c__DisplayClass0_0.<UseSwaggerExtension>b__0(SwaggerUIOptions c) in /Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern.WebApi/Extensions/AppExtensions.cs:line 15
+   at Microsoft.AspNetCore.Builder.SwaggerUIBuilderExtensions.UseSwaggerUI(IApplicationBuilder app, Action`1 setupAction)
+   at AspNetCoreRepositoryPattern.Extensions.AppExtensions.UseSwaggerExtension(IApplicationBuilder app, IApiVersionDescriptionProvider provider) in /Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern.WebApi/Extensions/AppExtensions.cs:line 13
+   at AspNetCoreRepositoryPattern.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider) in /Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern.WebApi/Startup.cs:line 97
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass15_0.<UseStartup>b__1(IApplicationBuilder app)
+   at Microsoft.Extensions.DependencyInjection.AutoRegisterMiddleware.<>c__DisplayClass4_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+10/08/2021 19:30:10 +02:00 Server 8e6f6be3-42a7-4f8c-a04c-a3bf5fdf55fb caught stopping signal...
+10/08/2021 19:30:10 +02:00 Server 8e6f6be3-42a7-4f8c-a04c-a3bf5fdf55fb caught stopped signal...
+10/08/2021 19:30:10 +02:00 Server 8e6f6be3-42a7-4f8c-a04c-a3bf5fdf55fb All dispatchers stopped
+10/08/2021 19:30:10 +02:00 Server 8e6f6be3-42a7-4f8c-a04c-a3bf5fdf55fb successfully reported itself as stopped in 0.5598 ms
+10/08/2021 19:30:10 +02:00 Server 8e6f6be3-42a7-4f8c-a04c-a3bf5fdf55fb has been stopped in total 145.7415 ms
+10/08/2021 19:30:10 +02:00 The Application failed to start
+System.InvalidOperationException: Action 'AspNetCoreRepositoryPattern.Controllers.V2.CustomersController.GetAllCustomersUsingRedisCache (AspNetCoreRepositoryPattern.WebApi)' does not have an attribute route. Action methods on controllers annotated with ApiControllerAttribute must be attribute routed.
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.EnsureActionIsAttributeRouted(ActionModel actionModel)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApplicationModelFactory.CreateApplicationModel(IEnumerable`1 controllerTypes)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.Initialize()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.DefaultApiVersionDescriptionProvider.EnumerateApiVersions(IActionDescriptorCollectionProvider actionDescriptorCollectionProvider)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.DefaultApiVersionDescriptionProvider.LazyApiVersionDescriptions.EnumerateApiVersions()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.DefaultApiVersionDescriptionProvider.get_ApiVersionDescriptions()
+   at AspNetCoreRepositoryPattern.Extensions.AppExtensions.<>c__DisplayClass0_0.<UseSwaggerExtension>b__0(SwaggerUIOptions c) in /Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern.WebApi/Extensions/AppExtensions.cs:line 15
+   at Microsoft.AspNetCore.Builder.SwaggerUIBuilderExtensions.UseSwaggerUI(IApplicationBuilder app, Action`1 setupAction)
+   at AspNetCoreRepositoryPattern.Extensions.AppExtensions.UseSwaggerExtension(IApplicationBuilder app, IApiVersionDescriptionProvider provider) in /Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern.WebApi/Extensions/AppExtensions.cs:line 13
+   at AspNetCoreRepositoryPattern.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider) in /Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern.WebApi/Startup.cs:line 97
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass15_0.<UseStartup>b__1(IApplicationBuilder app)
+   at Microsoft.Extensions.DependencyInjection.AutoRegisterMiddleware.<>c__DisplayClass4_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at AspNetCoreRepositoryPattern.Program.Main(String[] args) in /Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern.WebApi/Program.cs:line 25
+10/08/2021 19:30:23 +02:00 Application Starting
+10/08/2021 19:30:24 +02:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+10/08/2021 19:30:24 +02:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+10/08/2021 19:30:24 +02:00 Server eb5868b9-9cc4-4657-940b-2c15358e5545 successfully announced in 2.813 ms
+10/08/2021 19:30:24 +02:00 Server eb5868b9-9cc4-4657-940b-2c15358e5545 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+10/08/2021 19:30:25 +02:00 Server eb5868b9-9cc4-4657-940b-2c15358e5545 all the dispatchers started
+10/08/2021 19:30:25 +02:00 Application startup exception
+System.InvalidOperationException: Action 'AspNetCoreRepositoryPattern.Controllers.V2.CustomersController.GetAllCustomersUsingRedisCache (AspNetCoreRepositoryPattern.WebApi)' does not have an attribute route. Action methods on controllers annotated with ApiControllerAttribute must be attribute routed.
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.EnsureActionIsAttributeRouted(ActionModel actionModel)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApplicationModelFactory.CreateApplicationModel(IEnumerable`1 controllerTypes)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.Initialize()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.DefaultApiVersionDescriptionProvider.EnumerateApiVersions(IActionDescriptorCollectionProvider actionDescriptorCollectionProvider)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.DefaultApiVersionDescriptionProvider.LazyApiVersionDescriptions.EnumerateApiVersions()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.DefaultApiVersionDescriptionProvider.get_ApiVersionDescriptions()
+   at AspNetCoreRepositoryPattern.Extensions.AppExtensions.<>c__DisplayClass0_0.<UseSwaggerExtension>b__0(SwaggerUIOptions c) in /Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern.WebApi/Extensions/AppExtensions.cs:line 15
+   at Microsoft.AspNetCore.Builder.SwaggerUIBuilderExtensions.UseSwaggerUI(IApplicationBuilder app, Action`1 setupAction)
+   at AspNetCoreRepositoryPattern.Extensions.AppExtensions.UseSwaggerExtension(IApplicationBuilder app, IApiVersionDescriptionProvider provider) in /Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern.WebApi/Extensions/AppExtensions.cs:line 13
+   at AspNetCoreRepositoryPattern.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider) in /Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern.WebApi/Startup.cs:line 97
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass15_0.<UseStartup>b__1(IApplicationBuilder app)
+   at Microsoft.Extensions.DependencyInjection.AutoRegisterMiddleware.<>c__DisplayClass4_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+10/08/2021 19:30:25 +02:00 Server eb5868b9-9cc4-4657-940b-2c15358e5545 caught stopping signal...
+10/08/2021 19:30:25 +02:00 Server eb5868b9-9cc4-4657-940b-2c15358e5545 caught stopped signal...
+10/08/2021 19:30:25 +02:00 Server eb5868b9-9cc4-4657-940b-2c15358e5545 All dispatchers stopped
+10/08/2021 19:30:25 +02:00 Server eb5868b9-9cc4-4657-940b-2c15358e5545 successfully reported itself as stopped in 0.3923 ms
+10/08/2021 19:30:25 +02:00 Server eb5868b9-9cc4-4657-940b-2c15358e5545 has been stopped in total 119.9719 ms
+10/08/2021 19:30:25 +02:00 The Application failed to start
+System.InvalidOperationException: Action 'AspNetCoreRepositoryPattern.Controllers.V2.CustomersController.GetAllCustomersUsingRedisCache (AspNetCoreRepositoryPattern.WebApi)' does not have an attribute route. Action methods on controllers annotated with ApiControllerAttribute must be attribute routed.
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.EnsureActionIsAttributeRouted(ActionModel actionModel)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApplicationModelFactory.CreateApplicationModel(IEnumerable`1 controllerTypes)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.Initialize()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.DefaultApiVersionDescriptionProvider.EnumerateApiVersions(IActionDescriptorCollectionProvider actionDescriptorCollectionProvider)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.DefaultApiVersionDescriptionProvider.LazyApiVersionDescriptions.EnumerateApiVersions()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.DefaultApiVersionDescriptionProvider.get_ApiVersionDescriptions()
+   at AspNetCoreRepositoryPattern.Extensions.AppExtensions.<>c__DisplayClass0_0.<UseSwaggerExtension>b__0(SwaggerUIOptions c) in /Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern.WebApi/Extensions/AppExtensions.cs:line 15
+   at Microsoft.AspNetCore.Builder.SwaggerUIBuilderExtensions.UseSwaggerUI(IApplicationBuilder app, Action`1 setupAction)
+   at AspNetCoreRepositoryPattern.Extensions.AppExtensions.UseSwaggerExtension(IApplicationBuilder app, IApiVersionDescriptionProvider provider) in /Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern.WebApi/Extensions/AppExtensions.cs:line 13
+   at AspNetCoreRepositoryPattern.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider) in /Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern.WebApi/Startup.cs:line 97
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass15_0.<UseStartup>b__1(IApplicationBuilder app)
+   at Microsoft.Extensions.DependencyInjection.AutoRegisterMiddleware.<>c__DisplayClass4_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at AspNetCoreRepositoryPattern.Program.Main(String[] args) in /Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern.WebApi/Program.cs:line 25
+10/08/2021 19:31:13 +02:00 Application Starting
+10/08/2021 19:31:14 +02:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+10/08/2021 19:31:14 +02:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+10/08/2021 19:31:14 +02:00 Server a735b3cd-7b59-468c-9ebd-c0111a28c036 successfully announced in 2.7523 ms
+10/08/2021 19:31:14 +02:00 Server a735b3cd-7b59-468c-9ebd-c0111a28c036 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+10/08/2021 19:31:15 +02:00 Server a735b3cd-7b59-468c-9ebd-c0111a28c036 all the dispatchers started
+10/08/2021 19:31:15 +02:00 Now listening on: "https://localhost:5001"
+10/08/2021 19:31:15 +02:00 Now listening on: "http://localhost:5000"
+10/08/2021 19:31:15 +02:00 Application started. Press Ctrl+C to shut down.
+10/08/2021 19:31:15 +02:00 Hosting environment: "Development"
+10/08/2021 19:31:15 +02:00 Content root path: "/Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern.WebApi"
+10/08/2021 19:31:16 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+10/08/2021 19:31:16 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 100.5035ms
+10/08/2021 19:31:16 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui.css - -
+10/08/2021 19:31:16 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-bundle.js - -
+10/08/2021 19:31:16 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - -
+10/08/2021 19:31:16 +02:00 Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+10/08/2021 19:31:16 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui.css - - - 200 143632 text/css 175.6583ms
+10/08/2021 19:31:16 +02:00 Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+10/08/2021 19:31:16 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 144.0221ms
+10/08/2021 19:31:16 +02:00 Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+10/08/2021 19:31:16 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-bundle.js - - - 200 1091362 application/javascript 237.4667ms
+10/08/2021 19:31:17 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+10/08/2021 19:31:17 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 107.0280ms
+10/08/2021 19:31:40 +02:00 Request starting HTTP/1.1 POST https://localhost:5001/api/users/auth application/json 68
+10/08/2021 19:31:40 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern.WebApi)"'
+10/08/2021 19:31:40 +02:00 Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateRequest)" on controller "AspNetCoreRepositoryPattern.Controllers.V1.UsersController" ("AspNetCoreRepositoryPattern.WebApi").
+10/08/2021 19:31:40 +02:00 Entity Framework Core "5.0.10" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+10/08/2021 19:31:41 +02:00 Executed DbCommand ("43"ms) [Parameters=["@__model_Email_0='?' (Size = 54), @__model_Password_1='?' (Size = 54)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE ([u].[Email] = @__model_Email_0) AND ([u].[Password] = @__model_Password_1)"
+10/08/2021 19:31:41 +02:00 Executing "OkObjectResult", writing value of type '"AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse"'.
+10/08/2021 19:31:41 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern.WebApi)" in 1262.8752ms
+10/08/2021 19:31:41 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern.WebApi)"'
+10/08/2021 19:31:41 +02:00 Request finished HTTP/1.1 POST https://localhost:5001/api/users/auth application/json 68 - 200 - application/json;+charset=utf-8 1469.7375ms
+10/08/2021 19:32:46 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/books?version=1 - -
+10/08/2021 19:32:47 +02:00 Entity Framework Core "5.0.10" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+10/08/2021 19:32:47 +02:00 Executed DbCommand ("4"ms) [Parameters=["@__id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0"
+10/08/2021 19:32:47 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.BooksController.GetBooks (AspNetCoreRepositoryPattern.WebApi)"'
+10/08/2021 19:32:47 +02:00 Route matched with "{action = \"GetBooks\", controller = \"Books\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AspNetCoreRepositoryPattern.Models.Dtos.BookDto]]] GetBooks()" on controller "AspNetCoreRepositoryPattern.Controllers.V1.BooksController" ("AspNetCoreRepositoryPattern.WebApi").
+10/08/2021 19:32:47 +02:00 Executed DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[CreatedAt], [b].[Description], [b].[Title]
+FROM [Books] AS [b]"
+10/08/2021 19:32:47 +02:00 Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.BookDto, AspNetCoreRepositoryPattern.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+10/08/2021 19:32:47 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1.BooksController.GetBooks (AspNetCoreRepositoryPattern.WebApi)" in 224.6927ms
+10/08/2021 19:32:47 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.BooksController.GetBooks (AspNetCoreRepositoryPattern.WebApi)"'
+10/08/2021 19:32:47 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/books?version=1 - - - 200 - application/json;+charset=utf-8 299.0735ms
+10/08/2021 19:32:50 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/api/todos - -
+10/08/2021 19:32:50 +02:00 Entity Framework Core "5.0.10" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+10/08/2021 19:32:50 +02:00 Executed DbCommand ("2"ms) [Parameters=["@__id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0"
+10/08/2021 19:32:50 +02:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.TodosController.GetTodos (AspNetCoreRepositoryPattern.WebApi)"'
+10/08/2021 19:32:50 +02:00 Route matched with "{action = \"GetTodos\", controller = \"Todos\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos()" on controller "AspNetCoreRepositoryPattern.Controllers.V1.TodosController" ("AspNetCoreRepositoryPattern.WebApi").
+10/08/2021 19:32:50 +02:00 Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[CreatedAt], [t].[Done], [t].[Name]
+FROM [Todos] AS [t]"
+10/08/2021 19:32:50 +02:00 Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.TodoDto, AspNetCoreRepositoryPattern.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+10/08/2021 19:32:50 +02:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1.TodosController.GetTodos (AspNetCoreRepositoryPattern.WebApi)" in 20.7237ms
+10/08/2021 19:32:50 +02:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.TodosController.GetTodos (AspNetCoreRepositoryPattern.WebApi)"'
+10/08/2021 19:32:50 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/api/todos - - - 200 - application/json;+charset=utf-8 31.8983ms

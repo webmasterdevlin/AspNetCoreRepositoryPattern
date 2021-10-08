@@ -8,7 +8,7 @@ namespace AspNetCoreRepositoryPattern.Controllers.V1
     [ApiVersion("1.0")]
     [AllowAnonymous]
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/users")]
     public class UsersController :ControllerBase
     {
         private readonly IUserService _userService;

@@ -18,6 +18,7 @@ namespace AspNetCoreRepositoryPattern.Controllers.V1
      * This is okay if you are not writing any tests because this is not testable.
      */
     [ApiVersion("1.0")]
+    [Route("api/books")]
     public class BooksController : ApiController
     {
         private readonly ApplicationDbContext _context;

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace AspNetCoreRepositoryPattern.Controllers.V1
 {
     [ApiVersion("1.0", Deprecated = true)]
+    [Route("api/customers")]
     public class CustomersController : ApiController
     {
         // GET: api/customers

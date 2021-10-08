@@ -11,6 +11,7 @@ namespace AspNetCoreRepositoryPattern.Controllers.V1
      * Using repository pattern.
      */
     [ApiVersion("1.0")]
+    [Route("api/todos")]
     public class TodosController : ApiController
     {
         private readonly ITodoRepository _repo;

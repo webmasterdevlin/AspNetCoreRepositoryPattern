@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace AspNetCoreRepositoryPattern.Controllers.V1
 {
     [ApiVersion("1.0", Deprecated = true)]
+    [Route("api/job")]
     public class JobController : ApiController
     {
         [HttpGet("fire-and-forget-job")]
