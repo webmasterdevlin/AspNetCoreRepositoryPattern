@@ -1,11 +1,11 @@
 using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using AspNetCoreRepositoryPattern.Contracts;
 using AspNetCoreRepositoryPattern.Helpers;
+using AspNetCoreRepositoryPattern.Models;
 using AspNetCoreRepositoryPattern.Models.Dtos;
 using AspNetCoreRepositoryPattern.Models.Entities;
 using Microsoft.Extensions.Options;
@@ -15,24 +15,19 @@ namespace AspNetCoreRepositoryPattern.Services
 {
     public class UserService : IUserService
     {
-        private readonly List<User> _users = new()
-        {
-            new User
-            {
-                Id = new Guid("b01e8a73-3b16-4a3b-bb3a-cc6974281447"),
-                FirstName = "Devlin",
-                LastName = "Duldulao",
-                Email = "webmasterdevlin@gmail.com",
-                Password = "Pass123!"
-            }
-        };
+        private readonly ApplicationDbContext _context;
 
         private readonly AuthSettings _authSettings;
-        public UserService(IOptions<AuthSettings> appSettings) => _authSettings = appSettings.Value;
+        
+        public UserService(IOptions<AuthSettings> appSettings, ApplicationDbContext context)
+        {
+            _context = context;
+            _authSettings = appSettings.Value;
+        }
 
         public AuthenticateResponse Authenticate(AuthenticateRequest model)
         {
-            var user = _users.SingleOrDefault(u => u.Email == model.Email && u.Password == model.Password);
+            var user = _context.Users.SingleOrDefault(u => u.Email == model.Email && u.Password == model.Password);
 
             if (user == null)
                 return null;
@@ -43,7 +38,7 @@ namespace AspNetCoreRepositoryPattern.Services
         }
 
 
-        public User GetById(Guid id) => _users.FirstOrDefault(u => u.Id == id);
+        public User GetById(Guid id) => _context.Users.FirstOrDefault(u => u.Id == id);
 
         private string GenerateJwtToken(User user)
         {

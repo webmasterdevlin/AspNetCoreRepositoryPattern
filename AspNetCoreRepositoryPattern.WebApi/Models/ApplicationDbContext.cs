@@ -125,6 +125,25 @@ namespace AspNetCoreRepositoryPattern.Models
                     CreatedAt = DateTime.Now
                 }
                 );
+
+            modelBuilder.Entity<User>().HasData(
+                new User
+                {
+                    Id = new Guid("b01e8a73-3b16-4a3b-bb3a-cc6974281447"),
+                    FirstName = "Devlin",
+                    LastName = "Duldulao",
+                    Email = "webmasterdevlin@gmail.com",
+                    Password = "Pass123!"
+                },
+                new User
+                {
+                    Id = new Guid("8e20e519-85d1-4e6e-b44b-024a28a2f870"),
+                    FirstName = "Ruby Jane",
+                    LastName = "Cabagnot",
+                    Email = "rubyjane88@gmail.com",
+                    Password = "Pass123!"
+                }
+                );
             
             base.OnModelCreating(modelBuilder);
         }
