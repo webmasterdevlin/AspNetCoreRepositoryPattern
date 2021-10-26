@@ -43,11 +43,11 @@ namespace AspNetCoreRepositoryPattern.Controllers.V1
                                                     .Where(b => b.Author.Contains(author))
                                                     .ToListAsync();
 
-                    if (books == null || books.Count == 0) return new List<BookDto>();
-                    var bookDtos = _mapper.Map<List<BookDto>>(books);
-                    return bookDtos;
-                }
+                    if (books == null || books.Count == 0)
+                        return new List<BookDto>();
 
+                    return _mapper.Map<List<BookDto>>(books);
+                }
                 else
                 {
                     var books = await _context.Books.ToListAsync();
