@@ -131,14 +131,6 @@ namespace AspNetCoreRepositoryPattern.Controllers.V1
 
         private bool BookExists(Guid id) => _context.Books.Any(e => e.Id == id);
         
-        private async Task<ActionResult<IEnumerable<BookDto>>> AllBooksFromAllAuthors()
-        {
-            var books = await _context.Books.ToListAsync();
-            var bookDtos = _mapper.Map<List<BookDto>>(books);
-
-            return bookDtos;
-        }
-
         private async Task<ActionResult<IEnumerable<BookDto>>> BooksFromAnAuthor(string author)
         {
             var books = await _context
@@ -150,6 +142,14 @@ namespace AspNetCoreRepositoryPattern.Controllers.V1
                 return new List<BookDto>();
 
             return _mapper.Map<List<BookDto>>(books);
+        }
+        
+        private async Task<ActionResult<IEnumerable<BookDto>>> AllBooksFromAllAuthors()
+        {
+            var books = await _context.Books.ToListAsync();
+            var bookDtos = _mapper.Map<List<BookDto>>(books);
+
+            return bookDtos;
         }
     }
 }
