@@ -32,14 +32,14 @@ namespace AspNetCoreRepositoryPattern.Controllers.V1
 
         // GET: api/books
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<BookDto>>> GetBooks([FromQuery(Name = "by_author")] string author)
+        public async Task<ActionResult<IEnumerable<BookDto>>> GetBooks(string author)
         {
             try
             {
-                if (!string.IsNullOrEmpty(author))
-                    return await BooksFromAnAuthor(author);
-                
-                return await AllBooksFromAllAuthors();
+                if (string.IsNullOrEmpty(author))
+                    return await AllBooksFromAllAuthors();
+              
+                return await BooksFromAnAuthor(author);
             }
             catch (Exception e)
             {
