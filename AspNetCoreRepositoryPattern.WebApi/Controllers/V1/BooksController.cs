@@ -37,31 +37,16 @@ namespace AspNetCoreRepositoryPattern.Controllers.V1
             try
             {
                 if (!string.IsNullOrEmpty(author))
-                {
-                    var books = await _context
-                                                    .Books
-                                                    .Where(b => b.Author.Contains(author))
-                                                    .ToListAsync();
-
-                    if (books == null || books.Count == 0)
-                        return new List<BookDto>();
-
-                    return _mapper.Map<List<BookDto>>(books);
-                }
-                else
-                {
-                    var books = await _context.Books.ToListAsync();
-                    var bookDtos = _mapper.Map<List<BookDto>>(books);
-
-                    return bookDtos;
-                }
+                    return await BooksFromAnAuthor(author);
+                
+                return await AllBooksFromAllAuthors();
             }
             catch (Exception e)
             {
                 return new StatusCodeResult(StatusCodes.Status500InternalServerError);
             }
         }
-
+        
         // GET: api/books/ab2bd817-98cd-4cf3-a80a-53ea0cd9c200
         [HttpGet("{id:guid}")]
         public async Task<ActionResult<BookDto>> GetBook(Guid id)
@@ -145,5 +130,26 @@ namespace AspNetCoreRepositoryPattern.Controllers.V1
         }
 
         private bool BookExists(Guid id) => _context.Books.Any(e => e.Id == id);
+        
+        private async Task<ActionResult<IEnumerable<BookDto>>> AllBooksFromAllAuthors()
+        {
+            var books = await _context.Books.ToListAsync();
+            var bookDtos = _mapper.Map<List<BookDto>>(books);
+
+            return bookDtos;
+        }
+
+        private async Task<ActionResult<IEnumerable<BookDto>>> BooksFromAnAuthor(string author)
+        {
+            var books = await _context
+                .Books
+                .Where(b => b.Author.Contains(author))
+                .ToListAsync();
+
+            if (books == null || books.Count == 0)
+                return new List<BookDto>();
+
+            return _mapper.Map<List<BookDto>>(books);
+        }
     }
 }
