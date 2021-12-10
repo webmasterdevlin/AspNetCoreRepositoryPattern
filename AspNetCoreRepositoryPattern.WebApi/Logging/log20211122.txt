@@ -1,0 +1,73 @@
+11/22/2021 12:42:51 +01:00 Application Starting
+11/22/2021 12:43:10 +01:00 Starting Hangfire Server using job storage: 'Hangfire.InMemory.InMemoryStorage'
+11/22/2021 12:43:10 +01:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+11/22/2021 12:43:10 +01:00 Server 471b2d51-6474-4f77-9847-6dad591500cc successfully announced in 7.2192 ms
+11/22/2021 12:43:10 +01:00 Server 471b2d51-6474-4f77-9847-6dad591500cc is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+11/22/2021 12:43:10 +01:00 Server 471b2d51-6474-4f77-9847-6dad591500cc all the dispatchers started
+11/22/2021 12:43:19 +01:00 Now listening on: "https://localhost:5001"
+11/22/2021 12:43:19 +01:00 Now listening on: "http://localhost:5000"
+11/22/2021 12:43:19 +01:00 Application started. Press Ctrl+C to shut down.
+11/22/2021 12:43:19 +01:00 Hosting environment: "Development"
+11/22/2021 12:43:19 +01:00 Content root path: "/Users/inmetadeveloper/Projects/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern.WebApi"
+11/22/2021 12:43:22 +01:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+11/22/2021 12:43:22 +01:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 134.0556ms
+11/22/2021 12:43:22 +01:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-bundle.js - -
+11/22/2021 12:43:22 +01:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui.css - -
+11/22/2021 12:43:23 +01:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - -
+11/22/2021 12:43:23 +01:00 Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+11/22/2021 12:43:23 +01:00 Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+11/22/2021 12:43:23 +01:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 15.9092ms
+11/22/2021 12:43:23 +01:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui.css - - - 200 143632 text/css 150.7022ms
+11/22/2021 12:43:23 +01:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - -
+11/22/2021 12:43:23 +01:00 Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+11/22/2021 12:43:23 +01:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 2.6467ms
+11/22/2021 12:43:23 +01:00 Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+11/22/2021 12:43:23 +01:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 191.8420ms
+11/22/2021 12:43:23 +01:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-bundle.js - -
+11/22/2021 12:43:23 +01:00 Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+11/22/2021 12:43:23 +01:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 34.5182ms
+11/22/2021 12:43:23 +01:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+11/22/2021 12:43:23 +01:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/favicon-32x32.png - -
+11/22/2021 12:43:23 +01:00 Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"'
+11/22/2021 12:43:23 +01:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/favicon-32x32.png - - - 200 628 image/png 11.9786ms
+11/22/2021 12:43:23 +01:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 184.6328ms
+11/22/2021 12:43:32 +01:00 Request starting HTTP/1.1 GET https://localhost:5001/api/books?version=1.0 - -
+11/22/2021 12:43:33 +01:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.BooksController.GetBooks (AspNetCoreRepositoryPattern.WebApi)"'
+11/22/2021 12:43:33 +01:00 Route matched with "{action = \"GetBooks\", controller = \"Books\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AspNetCoreRepositoryPattern.Models.Dtos.BookDto]]] GetBooks(System.String)" on controller "AspNetCoreRepositoryPattern.Controllers.V1.BooksController" ("AspNetCoreRepositoryPattern.WebApi").
+11/22/2021 12:43:33 +01:00 Authorization failed for the request at filter '"AspNetCoreRepositoryPattern.Helpers.AuthorizeAttribute"'.
+11/22/2021 12:43:33 +01:00 Executing JsonResult, writing value of type '"<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+11/22/2021 12:43:33 +01:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1.BooksController.GetBooks (AspNetCoreRepositoryPattern.WebApi)" in 5.9478ms
+11/22/2021 12:43:33 +01:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.BooksController.GetBooks (AspNetCoreRepositoryPattern.WebApi)"'
+11/22/2021 12:43:33 +01:00 Request finished HTTP/1.1 GET https://localhost:5001/api/books?version=1.0 - - - 401 - application/json;+charset=utf-8 228.3139ms
+11/22/2021 12:43:59 +01:00 Request starting HTTP/1.1 POST https://localhost:5001/api/users/auth?version=1.0 application/json 68
+11/22/2021 12:43:59 +01:00 CORS policy execution successful.
+11/22/2021 12:43:59 +01:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern.WebApi)"'
+11/22/2021 12:43:59 +01:00 Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateRequest)" on controller "AspNetCoreRepositoryPattern.Controllers.V1.UsersController" ("AspNetCoreRepositoryPattern.WebApi").
+11/22/2021 12:43:59 +01:00 Entity Framework Core "5.0.11" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+11/22/2021 12:44:00 +01:00 Executed DbCommand ("49"ms) [Parameters=["@__model_Email_0='?' (Size = 54), @__model_Password_1='?' (Size = 54)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE ([u].[Email] = @__model_Email_0) AND ([u].[Password] = @__model_Password_1)"
+11/22/2021 12:44:00 +01:00 Executing "OkObjectResult", writing value of type '"AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse"'.
+11/22/2021 12:44:00 +01:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern.WebApi)" in 1447.0724ms
+11/22/2021 12:44:00 +01:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern.WebApi)"'
+11/22/2021 12:44:00 +01:00 Request finished HTTP/1.1 POST https://localhost:5001/api/users/auth?version=1.0 application/json 68 - 200 - application/json;+charset=utf-8 1456.7018ms
+11/22/2021 12:44:17 +01:00 Request starting HTTP/1.1 GET https://localhost:5001/api/books?version=1.0 - -
+11/22/2021 12:44:17 +01:00 Entity Framework Core "5.0.11" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+11/22/2021 12:44:17 +01:00 Executed DbCommand ("4"ms) [Parameters=["@__id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0"
+11/22/2021 12:44:17 +01:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.BooksController.GetBooks (AspNetCoreRepositoryPattern.WebApi)"'
+11/22/2021 12:44:17 +01:00 Route matched with "{action = \"GetBooks\", controller = \"Books\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AspNetCoreRepositoryPattern.Models.Dtos.BookDto]]] GetBooks(System.String)" on controller "AspNetCoreRepositoryPattern.Controllers.V1.BooksController" ("AspNetCoreRepositoryPattern.WebApi").
+11/22/2021 12:44:17 +01:00 Executed DbCommand ("16"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[CreatedAt], [b].[Description], [b].[Title]
+FROM [Books] AS [b]"
+11/22/2021 12:44:17 +01:00 Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.BookDto, AspNetCoreRepositoryPattern.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+11/22/2021 12:44:17 +01:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1.BooksController.GetBooks (AspNetCoreRepositoryPattern.WebApi)" in 260.343ms
+11/22/2021 12:44:17 +01:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.BooksController.GetBooks (AspNetCoreRepositoryPattern.WebApi)"'
+11/22/2021 12:44:17 +01:00 Request finished HTTP/1.1 GET https://localhost:5001/api/books?version=1.0 - - - 200 - application/json;+charset=utf-8 331.2700ms
