@@ -8,7 +8,7 @@
 ## Building a Data Model
 - Create entities
 - Create dtos
-- Add Automapper package
+- Add Automapper package configure the Program.cs file
 - Configure AutoMapper by creating a mapping
 
 ## Setting up Database
@@ -32,16 +32,16 @@
 ## Repository Pattern in ASP.NET Core
 - Create contracts (interfaces) (optional)
 - Create repositories (services) (optional)
-- Add Scrutor package configure the Startup.cs
-- Add Scoped in the Startup.cs for contract and repository
+- Add Scrutor package configure the Program.cs file
+- Add Scoped in the Program.cs file for contract and repository
 
 ## CORS
-- Add and configure CORS Policy in the Startup.cs
+- Add and configure CORS Policy in the Program.cs file
 
 ## Open API (Swagger)
 - Add API versioning
 - Add Swashbuckle package
-- Configure Swagger UI in the Startup.cs
+- Configure Swagger UI in the Program.cs file
 - Create helpers and extensions for API versioning with Swagger UI integration
 
 ## Base Controller
@@ -58,7 +58,7 @@
 - Configure Serilog in the Program.cs
 
 ## Global Exception
-- Create a global exception handler in Startup.cs
+- Create a global exception handler in Program.cs file
 
 ## Automated Tests
 - Add Test project
@@ -73,7 +73,7 @@
 
 ## Scheduler/Cron Jobs/Timer
 - Add Hangfire packages for chron jobs or scheduled jobs or timer jobs
-- Configure Hangfire in the Startup.cs
+- Configure Hangfire in the Program.cs file
 - Add jobs controller on v1 and v1.1
 
 ## Security
@@ -82,14 +82,14 @@
 - Add authorize attribute in the base controller ApiController.cs
 
 ## Actuator
-- Add health checks in Startup.cs
+- Add health checks in Program.cs file
 
 ## Redis Caching
 - Install redis on your local machine
 - To install on macbook, run the command below:
 - brew install redis
 - Add Redis Cache
-- Configure Startup.cs
+- Configure Program.cs file
 
 - Configure appsettings.json
 - Configure ApplicationDbContext
