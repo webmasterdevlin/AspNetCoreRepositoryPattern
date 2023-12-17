@@ -48,7 +48,16 @@ builder.Services.AddStackExchangeRedisCache(options =>
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 /* CORS */
-builder.Services.AddCors();
+const string CorsPolicyName = "AllowAll";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(CorsPolicyName, builder =>
+    {
+        builder.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    });
+});
 
 /* API versioning */
 builder.Services.AddApiVersioningExtension();
@@ -97,12 +106,7 @@ if (app.Environment.IsDevelopment())
 }
 
 /* CORS Policy */
-app.UseCors(b =>
-{
-    b.AllowAnyOrigin();
-    b.AllowAnyHeader();
-    b.AllowAnyMethod();
-});
+app.UseCors(CorsPolicyName);
 
 app.UseHttpsRedirection();
 

@@ -634,3 +634,21 @@ WHERE [u].[Id] = @__id_0"
 12/17/2023 13:02:16 +01:00 Server d514438d-3264-48f0-869b-706aae657f59 All dispatchers stopped
 12/17/2023 13:02:16 +01:00 Server d514438d-3264-48f0-869b-706aae657f59 successfully reported itself as stopped in 0.5898 ms
 12/17/2023 13:02:16 +01:00 Server d514438d-3264-48f0-869b-706aae657f59 has been stopped in total 5.5797 ms
+12/17/2023 13:51:09 +01:00 Now listening on: "https://localhost:5001"
+12/17/2023 13:51:09 +01:00 Now listening on: "http://localhost:5000"
+12/17/2023 13:51:09 +01:00 Starting Hangfire Server using job storage: 'In-Memory Storage'
+12/17/2023 13:51:09 +01:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+12/17/2023 13:51:09 +01:00 Server d8c68938-f264-4e5b-af67-33428a94c833 successfully announced in 2.2585 ms
+12/17/2023 13:51:09 +01:00 Server d8c68938-f264-4e5b-af67-33428a94c833 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+12/17/2023 13:51:09 +01:00 Application started. Press Ctrl+C to shut down.
+12/17/2023 13:51:10 +01:00 Hosting environment: "Development"
+12/17/2023 13:51:10 +01:00 Content root path: "/Users/devlinduldulao/Documents/DEVELOPMENT/ASP.NET/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern.WebApi"
+12/17/2023 13:51:10 +01:00 Server d8c68938-f264-4e5b-af67-33428a94c833 all the dispatchers started
+12/17/2023 13:51:11 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - null null
+12/17/2023 13:51:11 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 605.0507ms
+12/17/2023 13:51:12 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - null null
+12/17/2023 13:51:12 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 120.1227ms

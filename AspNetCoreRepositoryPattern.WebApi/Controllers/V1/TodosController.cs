@@ -27,10 +27,6 @@ public class TodosController(ITodoRepository repo) : ApiController
     public async Task<IActionResult> GetTodoById(Guid id)
     {
         var todo = await repo.GetByIdAsync(id);
-
-        if (todo == null)
-            return NotFound();
-            
         var response = Ok(todo);
             
         return response;

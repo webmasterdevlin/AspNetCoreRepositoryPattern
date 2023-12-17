@@ -1,10 +1,8 @@
-﻿using System;
-namespace AspNetCoreRepositoryPattern.Models.Dtos
+﻿namespace AspNetCoreRepositoryPattern.Models.Dtos;
+
+public class TodoDto
 {
-    public class TodoDto
-    {
-        public Guid Id { get; set; }
-        public string Name { get; set; }
-        public bool Done { get; set; }
-    }
+    public Guid Id { get; set; }
+    public string Name { get; set; }
+    public bool Done { get; set; }
 }

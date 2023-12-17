@@ -13,24 +13,16 @@ namespace AspNetCoreRepositoryPattern.Controllers.V2
     
     [ApiVersion("2.0")]
     [Route("api/customers")]
-    public class CustomersController : ApiController
+    public class CustomersController(ApplicationDbContext context, IDistributedCache distributedCache)
+        : ApiController
     {
-        private readonly ApplicationDbContext _context;
-        private readonly IDistributedCache _distributedCache;
-
-        public CustomersController(ApplicationDbContext context, IDistributedCache distributedCache)
-        {
-            _context = context;
-            _distributedCache = distributedCache;
-        }
-        
         // GET: api/customers
         [HttpGet]
         public async Task<IActionResult> GetAllCustomersUsingRedisCache()
         {
             const string cacheKey = "customerList";
 
-            var redisCustomerList = await _distributedCache.GetAsync(cacheKey);
+            var redisCustomerList = await distributedCache.GetAsync(cacheKey);
             var customerList = redisCustomerList == null
                 ? await StoreCustomerListInRedis(cacheKey)
                 : ReadCustomerListFromRedis(redisCustomerList);
@@ -47,14 +39,14 @@ namespace AspNetCoreRepositoryPattern.Controllers.V2
         
         private async Task<List<Customer>> StoreCustomerListInRedis(string cacheKey)
         {
-            var customerList = await _context.Customers.ToListAsync();
+            var customerList = await context.Customers.ToListAsync();
             var serializedCustomerList = JsonConvert.SerializeObject(customerList);
             var redisCustomerList = Encoding.UTF8.GetBytes(serializedCustomerList);
             var options = new DistributedCacheEntryOptions()
                 .SetAbsoluteExpiration(DateTime.Now.AddMinutes(10))
                 .SetSlidingExpiration(TimeSpan.FromMinutes(2));
 
-            await _distributedCache.SetAsync(cacheKey, redisCustomerList, options);
+            await distributedCache.SetAsync(cacheKey, redisCustomerList, options);
             return customerList;
         }
     }
