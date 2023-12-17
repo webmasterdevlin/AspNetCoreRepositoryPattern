@@ -1,7 +1,6 @@
-namespace AspNetCoreRepositoryPattern.Helpers
+namespace AspNetCoreRepositoryPattern.Helpers;
+
+public class AuthSettings
 {
-    public class AuthSettings
-    {
-        public string Secret { get; set; }
-    }
+    public string Secret { get; set; }
 }

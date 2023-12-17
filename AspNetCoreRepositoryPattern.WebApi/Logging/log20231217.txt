@@ -98,3 +98,539 @@ IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Crea
 12/17/2023 11:41:10 +01:00 Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
 ""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
 VALUES (N'20231215224957_initial', N'8.0.0');"
+12/17/2023 11:41:26 +01:00 Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+12/17/2023 11:41:26 +01:00 Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+12/17/2023 11:41:26 +01:00 Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+12/17/2023 11:41:26 +01:00 Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+12/17/2023 11:41:26 +01:00 Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+12/17/2023 11:41:26 +01:00 No migrations were applied. The database is already up to date.
+12/17/2023 11:42:10 +01:00 Now listening on: "https://localhost:5001"
+12/17/2023 11:42:10 +01:00 Now listening on: "http://localhost:5000"
+12/17/2023 11:42:10 +01:00 Starting Hangfire Server using job storage: 'In-Memory Storage'
+12/17/2023 11:42:10 +01:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+12/17/2023 11:42:10 +01:00 Server eedb9221-7b19-4e93-b6e5-2c8bc8627aac successfully announced in 1.329 ms
+12/17/2023 11:42:10 +01:00 Server eedb9221-7b19-4e93-b6e5-2c8bc8627aac is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+12/17/2023 11:42:10 +01:00 Server eedb9221-7b19-4e93-b6e5-2c8bc8627aac all the dispatchers started
+12/17/2023 11:42:10 +01:00 Application started. Press Ctrl+C to shut down.
+12/17/2023 11:42:10 +01:00 Hosting environment: "Development"
+12/17/2023 11:42:10 +01:00 Content root path: "/Users/devlinduldulao/Documents/DEVELOPMENT/ASP.NET/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern.WebApi"
+12/17/2023 11:42:11 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - null null
+12/17/2023 11:42:11 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 60.5908ms
+12/17/2023 11:42:11 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - null null
+12/17/2023 11:42:11 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 72.1726ms
+12/17/2023 11:56:04 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/api/users/auth""?version=1.0" - "application/json" 69
+12/17/2023 11:56:04 +01:00 CORS policy execution successful.
+12/17/2023 11:56:05 +01:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 11:56:05 +01:00 Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateRequest)" on controller "AspNetCoreRepositoryPattern.Controllers.V1.UsersController" ("AspNetCoreRepositoryPattern.WebApi").
+12/17/2023 11:56:05 +01:00 Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'.
+12/17/2023 11:56:05 +01:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern.WebApi)" in 21.0917ms
+12/17/2023 11:56:05 +01:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 11:56:05 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/api/users/auth""?version=1.0" - 400 null "application/problem+json; charset=utf-8" 138.2767ms
+12/17/2023 12:03:22 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/api/users/auth""?version=1.0" - "application/json" 70
+12/17/2023 12:03:22 +01:00 CORS policy execution successful.
+12/17/2023 12:03:22 +01:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 12:03:22 +01:00 Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateRequest)" on controller "AspNetCoreRepositoryPattern.Controllers.V1.UsersController" ("AspNetCoreRepositoryPattern.WebApi").
+12/17/2023 12:03:22 +01:00 Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'.
+12/17/2023 12:03:22 +01:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern.WebApi)" in 1.4623ms
+12/17/2023 12:03:22 +01:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 12:03:22 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/api/users/auth""?version=1.0" - 400 null "application/problem+json; charset=utf-8" 23.4713ms
+12/17/2023 12:03:39 +01:00 Server eedb9221-7b19-4e93-b6e5-2c8bc8627aac caught stopping signal...
+12/17/2023 12:03:39 +01:00 Application is shutting down...
+12/17/2023 12:03:39 +01:00 Server eedb9221-7b19-4e93-b6e5-2c8bc8627aac All dispatchers stopped
+12/17/2023 12:03:39 +01:00 Server eedb9221-7b19-4e93-b6e5-2c8bc8627aac successfully reported itself as stopped in 0.4419 ms
+12/17/2023 12:03:39 +01:00 Server eedb9221-7b19-4e93-b6e5-2c8bc8627aac has been stopped in total 4.3717 ms
+12/17/2023 12:03:52 +01:00 Now listening on: "https://localhost:5001"
+12/17/2023 12:03:52 +01:00 Now listening on: "http://localhost:5000"
+12/17/2023 12:03:52 +01:00 Starting Hangfire Server using job storage: 'In-Memory Storage'
+12/17/2023 12:03:52 +01:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+12/17/2023 12:03:52 +01:00 Application started. Press Ctrl+C to shut down.
+12/17/2023 12:03:52 +01:00 Hosting environment: "Development"
+12/17/2023 12:03:52 +01:00 Content root path: "/Users/devlinduldulao/Documents/DEVELOPMENT/ASP.NET/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern.WebApi"
+12/17/2023 12:03:52 +01:00 Server c42095b2-0b57-4bf4-b62c-e9ffe4c28a63 successfully announced in 2.2095 ms
+12/17/2023 12:03:52 +01:00 Server c42095b2-0b57-4bf4-b62c-e9ffe4c28a63 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+12/17/2023 12:03:53 +01:00 Server c42095b2-0b57-4bf4-b62c-e9ffe4c28a63 all the dispatchers started
+12/17/2023 12:04:09 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/api/users/auth""?version=1.0" - "application/json" 70
+12/17/2023 12:04:09 +01:00 CORS policy execution successful.
+12/17/2023 12:04:09 +01:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 12:04:09 +01:00 Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateRequest)" on controller "AspNetCoreRepositoryPattern.Controllers.V1.UsersController" ("AspNetCoreRepositoryPattern.WebApi").
+12/17/2023 12:04:09 +01:00 Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'.
+12/17/2023 12:04:09 +01:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern.WebApi)" in 42.3865ms
+12/17/2023 12:04:09 +01:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 12:04:09 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/api/users/auth""?version=1.0" - 400 null "application/problem+json; charset=utf-8" 177.1947ms
+12/17/2023 12:04:14 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/api/users/auth""?version=1.0" - "application/json" 68
+12/17/2023 12:04:14 +01:00 CORS policy execution successful.
+12/17/2023 12:04:14 +01:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 12:04:14 +01:00 Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateRequest)" on controller "AspNetCoreRepositoryPattern.Controllers.V1.UsersController" ("AspNetCoreRepositoryPattern.WebApi").
+12/17/2023 12:04:15 +01:00 Executing action method "AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern.WebApi)" - Validation state: Valid
+12/17/2023 12:04:16 +01:00 Executed DbCommand ("73"ms) [Parameters=["@__model_Email_0='?' (Size = 54), @__model_Password_1='?' (Size = 54)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0 AND [u].[Password] = @__model_Password_1"
+12/17/2023 12:04:16 +01:00 Executed action method "AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern.WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 1157.4256ms.
+12/17/2023 12:04:16 +01:00 Executing "OkObjectResult", writing value of type '"AspNetCoreRepositoryPattern.Models.Dtos.AuthenticateResponse"'.
+12/17/2023 12:04:16 +01:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern.WebApi)" in 1177.1331ms
+12/17/2023 12:04:16 +01:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.UsersController.Authenticate (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 12:04:16 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/api/users/auth""?version=1.0" - 200 null "application/json; charset=utf-8" 1206.652ms
+12/17/2023 12:04:30 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/books""?version=1.0" - null null
+12/17/2023 12:04:30 +01:00 Executed DbCommand ("10"ms) [Parameters=["@__id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0"
+12/17/2023 12:04:30 +01:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.BooksController.GetBooks (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 12:04:30 +01:00 Route matched with "{action = \"GetBooks\", controller = \"Books\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[AspNetCoreRepositoryPattern.Models.Dtos.BookDto]]] GetBooks(System.String)" on controller "AspNetCoreRepositoryPattern.Controllers.V1.BooksController" ("AspNetCoreRepositoryPattern.WebApi").
+12/17/2023 12:04:30 +01:00 Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'.
+12/17/2023 12:04:30 +01:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1.BooksController.GetBooks (AspNetCoreRepositoryPattern.WebApi)" in 83.1501ms
+12/17/2023 12:04:30 +01:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.BooksController.GetBooks (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 12:04:30 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/books""?version=1.0" - 400 null "application/problem+json; charset=utf-8" 174.2013ms
+12/17/2023 12:05:00 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/todos""?version=1.0" - null null
+12/17/2023 12:05:00 +01:00 Executed DbCommand ("30"ms) [Parameters=["@__id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0"
+12/17/2023 12:05:00 +01:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.TodosController.GetTodos (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 12:05:00 +01:00 Route matched with "{action = \"GetTodos\", controller = \"Todos\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodos()" on controller "AspNetCoreRepositoryPattern.Controllers.V1.TodosController" ("AspNetCoreRepositoryPattern.WebApi").
+12/17/2023 12:05:00 +01:00 Executing action method "AspNetCoreRepositoryPattern.Controllers.V1.TodosController.GetTodos (AspNetCoreRepositoryPattern.WebApi)" - Validation state: Valid
+12/17/2023 12:05:00 +01:00 Executed DbCommand ("23"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[CreatedAt], [t].[Done], [t].[Name]
+FROM [Todos] AS [t]"
+12/17/2023 12:05:00 +01:00 Executed action method "AspNetCoreRepositoryPattern.Controllers.V1.TodosController.GetTodos (AspNetCoreRepositoryPattern.WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 82.3457ms.
+12/17/2023 12:05:00 +01:00 Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[AspNetCoreRepositoryPattern.Models.Dtos.TodoDto, AspNetCoreRepositoryPattern.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+12/17/2023 12:05:00 +01:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1.TodosController.GetTodos (AspNetCoreRepositoryPattern.WebApi)" in 93.8668ms
+12/17/2023 12:05:00 +01:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.TodosController.GetTodos (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 12:05:00 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/todos""?version=1.0" - 200 null "application/json; charset=utf-8" 232.3783ms
+12/17/2023 12:05:18 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/todos/892ed1f0-52bc-455f-999a-c3be73790dfa""?version=1.0" - null null
+12/17/2023 12:05:18 +01:00 Executed DbCommand ("9"ms) [Parameters=["@__id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0"
+12/17/2023 12:05:18 +01:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.TodosController.GetTodoById (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 12:05:18 +01:00 Route matched with "{action = \"GetTodoById\", controller = \"Todos\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodoById(System.Guid)" on controller "AspNetCoreRepositoryPattern.Controllers.V1.TodosController" ("AspNetCoreRepositoryPattern.WebApi").
+12/17/2023 12:05:18 +01:00 Executing action method "AspNetCoreRepositoryPattern.Controllers.V1.TodosController.GetTodoById (AspNetCoreRepositoryPattern.WebApi)" - Validation state: Valid
+12/17/2023 12:05:18 +01:00 Executed DbCommand ("9"ms) [Parameters=["@__get_Item_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [t].[Id], [t].[CreatedAt], [t].[Done], [t].[Name]
+FROM [Todos] AS [t]
+WHERE [t].[Id] = @__get_Item_0"
+12/17/2023 12:05:18 +01:00 Executed action method "AspNetCoreRepositoryPattern.Controllers.V1.TodosController.GetTodoById (AspNetCoreRepositoryPattern.WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 63.6583ms.
+12/17/2023 12:05:18 +01:00 Executing "OkObjectResult", writing value of type '"AspNetCoreRepositoryPattern.Models.Dtos.TodoDto"'.
+12/17/2023 12:05:18 +01:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1.TodosController.GetTodoById (AspNetCoreRepositoryPattern.WebApi)" in 65.288ms
+12/17/2023 12:05:18 +01:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1.TodosController.GetTodoById (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 12:05:18 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/todos/892ed1f0-52bc-455f-999a-c3be73790dfa""?version=1.0" - 200 null "application/json; charset=utf-8" 94.3393ms
+12/17/2023 12:51:56 +01:00 Now listening on: "https://localhost:5001"
+12/17/2023 12:51:56 +01:00 Now listening on: "http://localhost:5000"
+12/17/2023 12:51:56 +01:00 Starting Hangfire Server using job storage: 'In-Memory Storage'
+12/17/2023 12:51:56 +01:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+12/17/2023 12:51:56 +01:00 Application started. Press Ctrl+C to shut down.
+12/17/2023 12:51:56 +01:00 Hosting environment: "Development"
+12/17/2023 12:51:56 +01:00 Content root path: "/Users/devlinduldulao/Documents/DEVELOPMENT/ASP.NET/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern.WebApi"
+12/17/2023 12:51:56 +01:00 Server b9798a97-fe70-449f-a127-540a6456b155 successfully announced in 1.2754 ms
+12/17/2023 12:51:56 +01:00 Server b9798a97-fe70-449f-a127-540a6456b155 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+12/17/2023 12:51:57 +01:00 Server b9798a97-fe70-449f-a127-540a6456b155 all the dispatchers started
+12/17/2023 12:51:57 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - null null
+12/17/2023 12:51:57 +01:00 An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Instances of abstract classes cannot be created.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions.CreateFilter[TFilter](FilterDescriptor filterDescriptor)
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions.<>c__DisplayClass4_0.<Configure>b__2(FilterDescriptor filterDescriptor)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions.Configure(SwaggerGeneratorOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions.<>c.<AddSwaggerGen>b__0_1(IServiceProvider s)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method3(Closure, Object, HttpContext, IServiceProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+12/17/2023 12:51:57 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - 500 null "text/html; charset=utf-8" 42.4595ms
+12/17/2023 12:51:57 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/favicon.ico""" - null null
+12/17/2023 12:51:57 +01:00 An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Instances of abstract classes cannot be created.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions.CreateFilter[TFilter](FilterDescriptor filterDescriptor)
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions.<>c__DisplayClass4_0.<Configure>b__2(FilterDescriptor filterDescriptor)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions.Configure(SwaggerGeneratorOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions.<>c.<AddSwaggerGen>b__0_1(IServiceProvider s)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method3(Closure, Object, HttpContext, IServiceProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+12/17/2023 12:51:57 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/favicon.ico""" - 500 null "text/plain; charset=utf-8" 3.7235ms
+12/17/2023 12:52:32 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - null null
+12/17/2023 12:52:32 +01:00 An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Instances of abstract classes cannot be created.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions.CreateFilter[TFilter](FilterDescriptor filterDescriptor)
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions.<>c__DisplayClass4_0.<Configure>b__2(FilterDescriptor filterDescriptor)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions.Configure(SwaggerGeneratorOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions.<>c.<AddSwaggerGen>b__0_1(IServiceProvider s)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method3(Closure, Object, HttpContext, IServiceProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+12/17/2023 12:52:32 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - 500 null "text/html; charset=utf-8" 21.2972ms
+12/17/2023 12:52:32 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/favicon.ico""" - null null
+12/17/2023 12:52:32 +01:00 An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Instances of abstract classes cannot be created.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions.CreateFilter[TFilter](FilterDescriptor filterDescriptor)
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions.<>c__DisplayClass4_0.<Configure>b__2(FilterDescriptor filterDescriptor)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions.Configure(SwaggerGeneratorOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions.<>c.<AddSwaggerGen>b__0_1(IServiceProvider s)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method3(Closure, Object, HttpContext, IServiceProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+12/17/2023 12:52:32 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/favicon.ico""" - 500 null "text/plain; charset=utf-8" 1.851ms
+12/17/2023 12:52:45 +01:00 Server b9798a97-fe70-449f-a127-540a6456b155 caught stopping signal...
+12/17/2023 12:52:45 +01:00 Application is shutting down...
+12/17/2023 12:52:45 +01:00 Server b9798a97-fe70-449f-a127-540a6456b155 All dispatchers stopped
+12/17/2023 12:52:45 +01:00 Server b9798a97-fe70-449f-a127-540a6456b155 successfully reported itself as stopped in 0.4927 ms
+12/17/2023 12:52:45 +01:00 Server b9798a97-fe70-449f-a127-540a6456b155 has been stopped in total 4.8936 ms
+12/17/2023 12:52:48 +01:00 Now listening on: "https://localhost:5001"
+12/17/2023 12:52:48 +01:00 Now listening on: "http://localhost:5000"
+12/17/2023 12:52:48 +01:00 Starting Hangfire Server using job storage: 'In-Memory Storage'
+12/17/2023 12:52:48 +01:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+12/17/2023 12:52:48 +01:00 Application started. Press Ctrl+C to shut down.
+12/17/2023 12:52:48 +01:00 Hosting environment: "Development"
+12/17/2023 12:52:48 +01:00 Content root path: "/Users/devlinduldulao/Documents/DEVELOPMENT/ASP.NET/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern.WebApi"
+12/17/2023 12:52:48 +01:00 Server 53ee8783-fb03-4d2c-a595-d18a2c7baa59 successfully announced in 1.3592 ms
+12/17/2023 12:52:48 +01:00 Server 53ee8783-fb03-4d2c-a595-d18a2c7baa59 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+12/17/2023 12:52:48 +01:00 Server 53ee8783-fb03-4d2c-a595-d18a2c7baa59 all the dispatchers started
+12/17/2023 12:52:48 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - null null
+12/17/2023 12:52:48 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 57.3333ms
+12/17/2023 12:52:48 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/swagger-ui-bundle.js""" - null null
+12/17/2023 12:52:48 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/swagger-ui-standalone-preset.js""" - null null
+12/17/2023 12:52:49 +01:00 Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+12/17/2023 12:52:49 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/swagger-ui-standalone-preset.js""" - 200 312163 "text/javascript" 12.1147ms
+12/17/2023 12:52:49 +01:00 Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+12/17/2023 12:52:49 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/swagger-ui-bundle.js""" - 200 1061536 "text/javascript" 13.7414ms
+12/17/2023 12:52:49 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - null null
+12/17/2023 12:52:49 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 67.703ms
+12/17/2023 12:56:14 +01:00 Server 53ee8783-fb03-4d2c-a595-d18a2c7baa59 caught stopping signal...
+12/17/2023 12:56:14 +01:00 Application is shutting down...
+12/17/2023 12:56:14 +01:00 Server 53ee8783-fb03-4d2c-a595-d18a2c7baa59 All dispatchers stopped
+12/17/2023 12:56:14 +01:00 Server 53ee8783-fb03-4d2c-a595-d18a2c7baa59 successfully reported itself as stopped in 0.3501 ms
+12/17/2023 12:56:14 +01:00 Server 53ee8783-fb03-4d2c-a595-d18a2c7baa59 has been stopped in total 4.404 ms
+12/17/2023 12:56:17 +01:00 Now listening on: "https://localhost:5001"
+12/17/2023 12:56:17 +01:00 Now listening on: "http://localhost:5000"
+12/17/2023 12:56:17 +01:00 Starting Hangfire Server using job storage: 'In-Memory Storage'
+12/17/2023 12:56:17 +01:00 Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+12/17/2023 12:56:17 +01:00 Application started. Press Ctrl+C to shut down.
+12/17/2023 12:56:17 +01:00 Hosting environment: "Development"
+12/17/2023 12:56:17 +01:00 Content root path: "/Users/devlinduldulao/Documents/DEVELOPMENT/ASP.NET/AspNetCoreRepositoryPattern/AspNetCoreRepositoryPattern.WebApi"
+12/17/2023 12:56:17 +01:00 Server d514438d-3264-48f0-869b-706aae657f59 successfully announced in 1.6008 ms
+12/17/2023 12:56:17 +01:00 Server d514438d-3264-48f0-869b-706aae657f59 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, Worker, DelayedJobScheduler, RecurringJobScheduler...
+12/17/2023 12:56:17 +01:00 Server d514438d-3264-48f0-869b-706aae657f59 all the dispatchers started
+12/17/2023 12:56:18 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - null null
+12/17/2023 12:56:18 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 56.4051ms
+12/17/2023 12:56:18 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - null null
+12/17/2023 12:56:18 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 69.3941ms
+12/17/2023 12:56:24 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1.1/swagger.json""" - null null
+12/17/2023 12:56:24 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1.1/swagger.json""" - 200 null "application/json;charset=utf-8" 2.6293ms
+12/17/2023 12:56:33 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/job/fire-and-forget-job""?version=1.1" - null null
+12/17/2023 12:56:33 +01:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateFireAndForgetJob (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 12:56:33 +01:00 Route matched with "{action = \"CreateFireAndForgetJob\", controller = \"Job\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult CreateFireAndForgetJob()" on controller "AspNetCoreRepositoryPattern.Controllers.V1._1.JobController" ("AspNetCoreRepositoryPattern.WebApi").
+12/17/2023 12:56:33 +01:00 Authorization failed for the request at filter '"AspNetCoreRepositoryPattern.Helpers.AuthorizeAttribute"'.
+12/17/2023 12:56:33 +01:00 Executing JsonResult, writing value of type '"<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+12/17/2023 12:56:33 +01:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateFireAndForgetJob (AspNetCoreRepositoryPattern.WebApi)" in 4.1037ms
+12/17/2023 12:56:33 +01:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateFireAndForgetJob (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 12:56:33 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/job/fire-and-forget-job""?version=1.1" - 401 null "application/json; charset=utf-8" 101.8501ms
+12/17/2023 12:56:52 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/job/fire-and-forget-job""?version=1.1" - null null
+12/17/2023 12:56:53 +01:00 Executed DbCommand ("28"ms) [Parameters=["@__id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0"
+12/17/2023 12:56:53 +01:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateFireAndForgetJob (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 12:56:53 +01:00 Route matched with "{action = \"CreateFireAndForgetJob\", controller = \"Job\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult CreateFireAndForgetJob()" on controller "AspNetCoreRepositoryPattern.Controllers.V1._1.JobController" ("AspNetCoreRepositoryPattern.WebApi").
+12/17/2023 12:56:53 +01:00 Executing action method "AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateFireAndForgetJob (AspNetCoreRepositoryPattern.WebApi)" - Validation state: Valid
+12/17/2023 12:56:53 +01:00 Executed action method "AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateFireAndForgetJob (AspNetCoreRepositoryPattern.WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkResult" in 58.6912ms.
+12/17/2023 12:56:53 +01:00 Executing StatusCodeResult, setting HTTP status code 200
+12/17/2023 12:56:53 +01:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateFireAndForgetJob (AspNetCoreRepositoryPattern.WebApi)" in 68.6712ms
+12/17/2023 12:56:53 +01:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateFireAndForgetJob (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 12:56:53 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/job/fire-and-forget-job""?version=1.1" - 200 0 null 911.8032ms
+12/17/2023 12:57:00 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/job/delayed-job""?version=1.1" - null null
+12/17/2023 12:57:00 +01:00 Executed DbCommand ("6"ms) [Parameters=["@__id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0"
+12/17/2023 12:57:00 +01:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateDelayedJob (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 12:57:00 +01:00 Route matched with "{action = \"CreateDelayedJob\", controller = \"Job\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult CreateDelayedJob()" on controller "AspNetCoreRepositoryPattern.Controllers.V1._1.JobController" ("AspNetCoreRepositoryPattern.WebApi").
+12/17/2023 12:57:00 +01:00 Executing action method "AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateDelayedJob (AspNetCoreRepositoryPattern.WebApi)" - Validation state: Valid
+12/17/2023 12:57:00 +01:00 Executed action method "AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateDelayedJob (AspNetCoreRepositoryPattern.WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkResult" in 8.183ms.
+12/17/2023 12:57:00 +01:00 Executing StatusCodeResult, setting HTTP status code 200
+12/17/2023 12:57:00 +01:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateDelayedJob (AspNetCoreRepositoryPattern.WebApi)" in 9.4615ms
+12/17/2023 12:57:00 +01:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateDelayedJob (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 12:57:00 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/job/delayed-job""?version=1.1" - 200 0 null 60.466ms
+12/17/2023 12:57:09 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/job/recurring-job""?version=1.1" - null null
+12/17/2023 12:57:09 +01:00 Executed DbCommand ("5"ms) [Parameters=["@__id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0"
+12/17/2023 12:57:09 +01:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateRecurringJob (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 12:57:09 +01:00 Route matched with "{action = \"CreateRecurringJob\", controller = \"Job\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult CreateRecurringJob()" on controller "AspNetCoreRepositoryPattern.Controllers.V1._1.JobController" ("AspNetCoreRepositoryPattern.WebApi").
+12/17/2023 12:57:09 +01:00 Executing action method "AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateRecurringJob (AspNetCoreRepositoryPattern.WebApi)" - Validation state: Valid
+12/17/2023 12:57:09 +01:00 Executed action method "AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateRecurringJob (AspNetCoreRepositoryPattern.WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkResult" in 35.2972ms.
+12/17/2023 12:57:09 +01:00 Executing StatusCodeResult, setting HTTP status code 200
+12/17/2023 12:57:09 +01:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateRecurringJob (AspNetCoreRepositoryPattern.WebApi)" in 35.9626ms
+12/17/2023 12:57:09 +01:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateRecurringJob (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 12:57:09 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/job/recurring-job""?version=1.1" - 200 0 null 99.9699ms
+12/17/2023 12:57:16 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/job/continuation-job""?version=1.1" - null null
+12/17/2023 12:57:16 +01:00 Executed DbCommand ("5"ms) [Parameters=["@__id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0"
+12/17/2023 12:57:16 +01:00 Executing endpoint '"AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateContinuationJob (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 12:57:16 +01:00 Route matched with "{action = \"CreateContinuationJob\", controller = \"Job\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult CreateContinuationJob()" on controller "AspNetCoreRepositoryPattern.Controllers.V1._1.JobController" ("AspNetCoreRepositoryPattern.WebApi").
+12/17/2023 12:57:16 +01:00 Executing action method "AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateContinuationJob (AspNetCoreRepositoryPattern.WebApi)" - Validation state: Valid
+12/17/2023 12:57:17 +01:00 Executed action method "AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateContinuationJob (AspNetCoreRepositoryPattern.WebApi)", returned result "Microsoft.AspNetCore.Mvc.OkResult" in 22.1414ms.
+12/17/2023 12:57:17 +01:00 Executing StatusCodeResult, setting HTTP status code 200
+12/17/2023 12:57:17 +01:00 Executed action "AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateContinuationJob (AspNetCoreRepositoryPattern.WebApi)" in 23.0335ms
+12/17/2023 12:57:17 +01:00 Executed endpoint '"AspNetCoreRepositoryPattern.Controllers.V1._1.JobController.CreateContinuationJob (AspNetCoreRepositoryPattern.WebApi)"'
+12/17/2023 12:57:17 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/job/continuation-job""?version=1.1" - 200 0 null 35.9216ms
+12/17/2023 12:58:08 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/hangfire""" - null null
+12/17/2023 12:58:08 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/hangfire""" - 404 0 null 5.1527ms
+12/17/2023 12:58:08 +01:00 Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "https"://"localhost:5001""""/hangfire", Response status code: 404
+12/17/2023 12:58:14 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/hangfire""" - null null
+12/17/2023 12:58:14 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/hangfire""" - 404 0 null 0.6802ms
+12/17/2023 12:58:14 +01:00 Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "https"://"localhost:5001""""/hangfire", Response status code: 404
+12/17/2023 12:58:31 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/hangfire""" - null null
+12/17/2023 12:58:31 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/hangfire""" - 404 0 null 0.9197ms
+12/17/2023 12:58:31 +01:00 Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "https"://"localhost:5001""""/api/hangfire", Response status code: 404
+12/17/2023 13:00:01 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/chron-jobs-dashboard""" - null null
+12/17/2023 13:00:01 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/chron-jobs-dashboard""" - 200 null "text/html" 106.4896ms
+12/17/2023 13:00:01 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/chron-jobs-dashboard/css1860223022672""" - null null
+12/17/2023 13:00:01 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/chron-jobs-dashboard/css-dark1860355039493""" - null null
+12/17/2023 13:00:01 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/chron-jobs-dashboard/js186089004756""" - null null
+12/17/2023 13:00:01 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/chron-jobs-dashboard/css-dark1860355039493""" - 200 null "text/css" 4.4636ms
+12/17/2023 13:00:01 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/chron-jobs-dashboard/css1860223022672""" - 200 null "text/css" 6.2869ms
+12/17/2023 13:00:01 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/chron-jobs-dashboard/js186089004756""" - 200 null "application/javascript" 8.3554ms
+12/17/2023 13:00:01 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/chron-jobs-dashboard/js186089004756""" - null null
+12/17/2023 13:00:01 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/chron-jobs-dashboard/js186089004756""" - 200 null "application/javascript" 2.0016ms
+12/17/2023 13:00:01 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/chron-jobs-dashboard/fonts/glyphicons-halflings-regular/woff2""" - null null
+12/17/2023 13:00:01 +01:00 CORS policy execution successful.
+12/17/2023 13:00:01 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/chron-jobs-dashboard/fonts/glyphicons-halflings-regular/woff2""" - 200 null "font/woff2" 3.4767ms
+12/17/2023 13:00:03 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:03 +01:00 CORS policy execution successful.
+12/17/2023 13:00:03 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 42.294ms
+12/17/2023 13:00:05 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:05 +01:00 CORS policy execution successful.
+12/17/2023 13:00:05 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 3.4385ms
+12/17/2023 13:00:07 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:07 +01:00 CORS policy execution successful.
+12/17/2023 13:00:07 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 2.7202ms
+12/17/2023 13:00:09 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:09 +01:00 CORS policy execution successful.
+12/17/2023 13:00:09 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 12.2306ms
+12/17/2023 13:00:11 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:11 +01:00 CORS policy execution successful.
+12/17/2023 13:00:11 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 5.1894ms
+12/17/2023 13:00:13 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:13 +01:00 CORS policy execution successful.
+12/17/2023 13:00:13 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 4.5522ms
+12/17/2023 13:00:15 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:15 +01:00 CORS policy execution successful.
+12/17/2023 13:00:15 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 12.2151ms
+12/17/2023 13:00:17 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:17 +01:00 CORS policy execution successful.
+12/17/2023 13:00:17 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 7.3337ms
+12/17/2023 13:00:19 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:19 +01:00 CORS policy execution successful.
+12/17/2023 13:00:19 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 12.922ms
+12/17/2023 13:00:21 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:21 +01:00 CORS policy execution successful.
+12/17/2023 13:00:21 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 13.1388ms
+12/17/2023 13:00:22 +01:00 Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/chron-jobs-dashboard""" - null null
+12/17/2023 13:00:22 +01:00 Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/chron-jobs-dashboard""" - 200 null "text/html" 9.7857ms
+12/17/2023 13:00:24 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:24 +01:00 CORS policy execution successful.
+12/17/2023 13:00:24 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 9.2312ms
+12/17/2023 13:00:26 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:26 +01:00 CORS policy execution successful.
+12/17/2023 13:00:26 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 2.0005ms
+12/17/2023 13:00:28 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:28 +01:00 CORS policy execution successful.
+12/17/2023 13:00:28 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 4.0343ms
+12/17/2023 13:00:30 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:30 +01:00 CORS policy execution successful.
+12/17/2023 13:00:30 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 22.2986ms
+12/17/2023 13:00:32 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:32 +01:00 CORS policy execution successful.
+12/17/2023 13:00:32 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 5.2291ms
+12/17/2023 13:00:35 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:35 +01:00 CORS policy execution successful.
+12/17/2023 13:00:35 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 1.5764ms
+12/17/2023 13:00:38 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:38 +01:00 CORS policy execution successful.
+12/17/2023 13:00:38 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 1.9607ms
+12/17/2023 13:00:41 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:41 +01:00 CORS policy execution successful.
+12/17/2023 13:00:41 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 2.5077ms
+12/17/2023 13:00:44 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:44 +01:00 CORS policy execution successful.
+12/17/2023 13:00:44 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 17.7906ms
+12/17/2023 13:00:47 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:47 +01:00 CORS policy execution successful.
+12/17/2023 13:00:47 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 1.0117ms
+12/17/2023 13:00:50 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:50 +01:00 CORS policy execution successful.
+12/17/2023 13:00:50 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 1.6645ms
+12/17/2023 13:00:53 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:53 +01:00 CORS policy execution successful.
+12/17/2023 13:00:53 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 3.4377ms
+12/17/2023 13:00:56 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:56 +01:00 CORS policy execution successful.
+12/17/2023 13:00:56 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 2.0905ms
+12/17/2023 13:00:59 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:00:59 +01:00 CORS policy execution successful.
+12/17/2023 13:00:59 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 1.7042ms
+12/17/2023 13:01:02 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:01:02 +01:00 CORS policy execution successful.
+12/17/2023 13:01:02 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 1.6134ms
+12/17/2023 13:01:05 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:01:05 +01:00 CORS policy execution successful.
+12/17/2023 13:01:05 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 0.8561ms
+12/17/2023 13:01:08 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:01:08 +01:00 CORS policy execution successful.
+12/17/2023 13:01:08 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 2.0376ms
+12/17/2023 13:01:11 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:01:11 +01:00 CORS policy execution successful.
+12/17/2023 13:01:11 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 2.6179ms
+12/17/2023 13:01:14 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:01:14 +01:00 CORS policy execution successful.
+12/17/2023 13:01:14 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 2.4417ms
+12/17/2023 13:01:17 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:01:17 +01:00 CORS policy execution successful.
+12/17/2023 13:01:17 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 4.3012ms
+12/17/2023 13:01:20 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:01:20 +01:00 CORS policy execution successful.
+12/17/2023 13:01:20 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 1.5631ms
+12/17/2023 13:01:23 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:01:23 +01:00 CORS policy execution successful.
+12/17/2023 13:01:23 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 1.4325ms
+12/17/2023 13:01:26 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:01:26 +01:00 CORS policy execution successful.
+12/17/2023 13:01:26 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 0.747ms
+12/17/2023 13:01:29 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:01:29 +01:00 CORS policy execution successful.
+12/17/2023 13:01:29 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 0.8127ms
+12/17/2023 13:01:32 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:01:32 +01:00 CORS policy execution successful.
+12/17/2023 13:01:32 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 1.08ms
+12/17/2023 13:01:35 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:01:35 +01:00 CORS policy execution successful.
+12/17/2023 13:01:35 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 0.8113ms
+12/17/2023 13:01:38 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:01:38 +01:00 CORS policy execution successful.
+12/17/2023 13:01:38 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 1.2695ms
+12/17/2023 13:01:41 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:01:41 +01:00 CORS policy execution successful.
+12/17/2023 13:01:41 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 0.9063ms
+12/17/2023 13:01:44 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:01:44 +01:00 CORS policy execution successful.
+12/17/2023 13:01:44 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 1.175ms
+12/17/2023 13:01:47 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:01:47 +01:00 CORS policy execution successful.
+12/17/2023 13:01:47 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 2.6575ms
+12/17/2023 13:01:50 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:01:50 +01:00 CORS policy execution successful.
+12/17/2023 13:01:50 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 1.4023ms
+12/17/2023 13:01:53 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:01:53 +01:00 CORS policy execution successful.
+12/17/2023 13:01:53 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 0.6301ms
+12/17/2023 13:01:56 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:01:56 +01:00 CORS policy execution successful.
+12/17/2023 13:01:56 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 1.5752ms
+12/17/2023 13:01:59 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:01:59 +01:00 CORS policy execution successful.
+12/17/2023 13:01:59 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 0.5937ms
+12/17/2023 13:02:02 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:02:02 +01:00 CORS policy execution successful.
+12/17/2023 13:02:02 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 4.3582ms
+12/17/2023 13:02:05 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:02:05 +01:00 CORS policy execution successful.
+12/17/2023 13:02:05 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 1.499ms
+12/17/2023 13:02:08 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:02:08 +01:00 CORS policy execution successful.
+12/17/2023 13:02:08 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 2.028ms
+12/17/2023 13:02:11 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:02:11 +01:00 CORS policy execution successful.
+12/17/2023 13:02:11 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 0.7283ms
+12/17/2023 13:02:14 +01:00 Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - "application/x-www-form-urlencoded; charset=UTF-8" 258
+12/17/2023 13:02:14 +01:00 CORS policy execution successful.
+12/17/2023 13:02:14 +01:00 Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/chron-jobs-dashboard/stats""" - 200 null "application/json" 0.6785ms
+12/17/2023 13:02:16 +01:00 Server d514438d-3264-48f0-869b-706aae657f59 caught stopping signal...
+12/17/2023 13:02:16 +01:00 Application is shutting down...
+12/17/2023 13:02:16 +01:00 Server d514438d-3264-48f0-869b-706aae657f59 All dispatchers stopped
+12/17/2023 13:02:16 +01:00 Server d514438d-3264-48f0-869b-706aae657f59 successfully reported itself as stopped in 0.5898 ms
+12/17/2023 13:02:16 +01:00 Server d514438d-3264-48f0-869b-706aae657f59 has been stopped in total 5.5797 ms

@@ -1,23 +1,21 @@
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 
-namespace AspNetCoreRepositoryPattern.Extensions
+namespace AspNetCoreRepositoryPattern.Extensions;
+
+public static class AppExtensions
 {
-    public static class AppExtensions
-    {
-        /* Custom middleware */
+    /* Custom middleware */
         
-        public static void UseSwaggerExtension(this IApplicationBuilder app, IApiVersionDescriptionProvider provider)
+    public static void UseSwaggerExtension(this IApplicationBuilder app, IApiVersionDescriptionProvider provider)
+    {
+        app.UseSwagger();
+        app.UseSwaggerUI(c =>
         {
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
+            foreach (var description in provider.ApiVersionDescriptions)
             {
-                foreach (var description in provider.ApiVersionDescriptions)
-                {
-                    c.SwaggerEndpoint(
-                        $"/swagger/{description.GroupName}/swagger.json", description.GroupName.ToUpperInvariant());
-                }
-            });
-        }
+                c.SwaggerEndpoint(
+                    $"/swagger/{description.GroupName}/swagger.json", description.GroupName.ToUpperInvariant());
+            }
+        });
     }
 }

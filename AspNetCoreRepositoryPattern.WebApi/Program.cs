@@ -1,4 +1,4 @@
-/* Nullable and ImplicitUsings are enabled in the csproj */
+/* Nullable and Implicit Usings are enabled in the csproj */
 
 using System.Net;
 using AspNetCoreRepositoryPattern.Extensions;

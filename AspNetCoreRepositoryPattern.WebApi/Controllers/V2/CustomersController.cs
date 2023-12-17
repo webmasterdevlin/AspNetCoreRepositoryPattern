@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
 using System.Text;
-using System.Threading.Tasks;
 using AspNetCoreRepositoryPattern.Controllers.Base;
 using AspNetCoreRepositoryPattern.Models;
 using AspNetCoreRepositoryPattern.Models.Entities;

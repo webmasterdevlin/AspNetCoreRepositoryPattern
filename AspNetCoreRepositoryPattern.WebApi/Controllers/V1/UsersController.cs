@@ -3,29 +3,22 @@ using AspNetCoreRepositoryPattern.Models.Dtos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AspNetCoreRepositoryPattern.Controllers.V1
+namespace AspNetCoreRepositoryPattern.Controllers.V1;
+
+[ApiVersion("1.0")]
+[AllowAnonymous]
+[ApiController]
+[Route("api/users")]
+public class UsersController(IUserService userService) : ControllerBase
 {
-    [ApiVersion("1.0")]
-    [AllowAnonymous]
-    [ApiController]
-    [Route("api/users")]
-    public class UsersController :ControllerBase
+    [HttpPost("auth")]
+    public IActionResult Authenticate(AuthenticateRequest model)
     {
-        private readonly IUserService _userService;
-        public UsersController(IUserService userService)
-        {
-            _userService = userService;
-        }
+        var response = userService.Authenticate(model);
 
-        [HttpPost("auth")]
-        public IActionResult Authenticate(AuthenticateRequest model)
-        {
-            var response = _userService.Authenticate(model);
+        if (response == null)
+            return BadRequest(new { message = "Username or password is incorrect" });
 
-            if (response == null)
-                return BadRequest(new { message = "Username or password is incorrect" });
-
-            return Ok(response);
-        }
+        return Ok(response);
     }
 }

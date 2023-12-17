@@ -1,11 +1,10 @@
-namespace AspNetCoreRepositoryPattern.Contracts
+namespace AspNetCoreRepositoryPattern.Contracts;
+
+/* For Hangfire */
+public interface IJobService
 {
-    /* For Hangfire */
-    public interface IJobService
-    {
-        void FireAndForgetJob();
-        void RecurringJob();
-        void DelayedJob();
-        void ContinuationJob();
-    }
+    void FireAndForgetJob();
+    void RecurringJob();
+    void DelayedJob();
+    void ContinuationJob();
 }
